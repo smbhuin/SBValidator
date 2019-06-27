@@ -11,7 +11,9 @@ import Foundation
 /**
  `ValidationError` represents the error with message when validation fails.
  */
-public class ValidationError: Error {
+public class ValidationError: Error, CustomStringConvertible {
+    
+    /// Error Message String
     var message: String
     
     /**
@@ -31,6 +33,13 @@ public class ValidationError: Error {
      */
     class func inapplicable() -> ValidationError {
         return .init("Inapplicable Rule")
+    }
+    
+    /// Error Description
+    public var description: String {
+        get {
+            return message
+        }
     }
     
 }
