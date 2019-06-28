@@ -28,7 +28,7 @@ public class AlphaNumericRule: CharacterSetRule {
 public extension ValidationRule {
     
     /// Quick accessor for `AlphaNumericRule`
-    class var alphaNumeric: ValidationRule {
+    public class var alphaNumeric: ValidationRule {
         get  {
             return AlphaNumericRule()
         }

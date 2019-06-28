@@ -69,7 +69,7 @@ public class ConfirmRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ConfirmRule`
-    class func confirm(_ value: Any) -> ValidationRule {
+    public class func confirm(_ value: Any) -> ValidationRule {
         return ConfirmRule(confirmValue: value)
     }
     

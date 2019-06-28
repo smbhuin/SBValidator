@@ -39,7 +39,7 @@ public class PasswordRule : RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `PasswordRule`
-    class var password: ValidationRule {
+    public class var password: ValidationRule {
         get  {
             return PasswordRule()
         }

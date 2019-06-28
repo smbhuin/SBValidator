@@ -31,7 +31,7 @@ public class IPV4Rule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `IPV4Rule`
-    class var IPV4: ValidationRule {
+    public class var IPV4: ValidationRule {
         get  {
             return IPV4Rule()
         }

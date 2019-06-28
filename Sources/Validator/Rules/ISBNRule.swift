@@ -29,7 +29,7 @@ public class ISBNRule: ValidationRule {
      - parameter value: Any value to checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    open override func validate(_ value: Any?) -> ValidationError? {
+    public override func validate(_ value: Any?) -> ValidationError? {
         guard let ad = value
             else  {
                 return nil
@@ -55,7 +55,7 @@ public class ISBNRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ISBNRule`
-    class var ISBN: ValidationRule {
+    public class var ISBN: ValidationRule {
         get  {
             return ISBNRule()
         }

@@ -12,7 +12,7 @@ import Foundation
  `CharacterSetRule` is a subclass of `ValidationRule`. It is used to verify that a field has a
  valid list of characters.
  */
-public class CharacterSetRule: ValidationRule {
+open class CharacterSetRule: ValidationRule {
     
     /// NSCharacter that hold set of valid characters to hold
     private let characterSet: CharacterSet
@@ -34,7 +34,7 @@ public class CharacterSetRule: ValidationRule {
      - parameter value: String to checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
+    open override func validate(_ value: Any?) -> ValidationError? {
         guard let ad = value
             else  {
                 return nil
@@ -58,7 +58,7 @@ public class CharacterSetRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `CharacterSetRule`
-    class func characterSet(_ validCharacters: CharacterSet) -> ValidationRule {
+    public class func characterSet(_ validCharacters: CharacterSet) -> ValidationRule {
         return CharacterSetRule(characterSet: validCharacters)
     }
     

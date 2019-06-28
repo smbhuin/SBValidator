@@ -22,7 +22,7 @@ public class ValidationError: Error, CustomStringConvertible {
      - parameter message: String that holds error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    init(_ message: String) {
+    public init(_ message: String) {
         self.message = message
     }
     
@@ -31,7 +31,7 @@ public class ValidationError: Error, CustomStringConvertible {
      
      - returns: An `ValidationError` object
      */
-    class func inapplicable() -> ValidationError {
+    public class func inapplicable() -> ValidationError {
         return .init("Inapplicable Rule")
     }
     

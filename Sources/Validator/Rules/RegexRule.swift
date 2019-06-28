@@ -57,7 +57,7 @@ open class RegexRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RegexRule`
-    class func regex(_ pattern: String) -> ValidationRule {
+    public class func regex(_ pattern: String) -> ValidationRule {
         return RegexRule(regex: pattern)
     }
     

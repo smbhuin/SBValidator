@@ -31,7 +31,7 @@ public class HexColorRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `HexColorRule`
-    class var hexColor: ValidationRule {
+    public class var hexColor: ValidationRule {
         get  {
             return HexColorRule()
         }

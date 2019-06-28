@@ -31,7 +31,7 @@ public class PhoneNumberRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `PhoneNumberRule`
-    class var phoneNumber: ValidationRule {
+    public class var phoneNumber: ValidationRule {
         get  {
             return PhoneNumberRule()
         }

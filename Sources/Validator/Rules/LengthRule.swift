@@ -62,7 +62,7 @@ public class LengthRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `LengthRule`
-    class func length(min: Int, max: Int) -> ValidationRule {
+    public class func length(min: Int, max: Int) -> ValidationRule {
         return LengthRule(min: min, max: max)
     }
     

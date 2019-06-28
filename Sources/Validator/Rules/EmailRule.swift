@@ -31,7 +31,7 @@ public class EmailRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `EmailRule`
-    class var email: ValidationRule {
+    public class var email: ValidationRule {
         get  {
             return EmailRule()
         }

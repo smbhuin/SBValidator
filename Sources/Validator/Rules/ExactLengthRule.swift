@@ -60,7 +60,7 @@ public class ExactLengthRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ExactLengthRule`
-    class func exactLength(_ length: Int) -> ValidationRule {
+    public class func exactLength(_ length: Int) -> ValidationRule {
         return ExactLengthRule(length: length)
     }
     

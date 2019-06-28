@@ -58,7 +58,7 @@ public class CardExpiryMonthRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `CardExpiryMonthRule`
-    class func cardMonth() -> ValidationRule {
+    public class func cardMonth() -> ValidationRule {
         return CardExpiryMonthRule()
     }
     
