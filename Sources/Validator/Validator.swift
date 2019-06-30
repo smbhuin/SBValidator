@@ -32,7 +32,7 @@ open class Validator {
     }
     
     /**
-     Validate all validatables
+     Validate all validatables. If any error found, it will not try to validate next value.
      */
     public func validate() -> (Bool, Validatable?, ValidationError?) {
         for validatable in validatables {
