@@ -13,11 +13,13 @@ open class Validatable {
     public var name: String
     public var value: Any?
     public var rules: [ValidationRule]
+    public var message: String?
     
-    public init(name: String, value: Any?, rules: [ValidationRule]) {
+    public init(name: String, value: Any?, rules: [ValidationRule], message: String? = nil) {
         self.name = name
         self.value = value
         self.rules = rules
+        self.message = message
     }
     
     public func validate() -> ValidationError? {
