@@ -30,7 +30,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/smbhuin/Validator.git", .upToNextMinor(from: "1.0.0"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .upToNextMinor(from: "1.0.0"))
 ]
 ```
 
@@ -38,7 +38,7 @@ or more strict
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.0"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.0"))
 ]
 ```
 
