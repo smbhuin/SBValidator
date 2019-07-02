@@ -1,0 +1,14 @@
+module: Validator
+author: Soumen Bhuin
+github_url: https://github.com/smbhuin/Validator
+
+theme: fullwidth
+clean: true
+exclude: [Packages]
+
+readme: README.md
+
+skip_undocumented: false
+hide_documentation_coverage: false
+
+xcodebuild_arguments: [-project, Validator.xcodeproj, -target, Validator, LIBRARY_SEARCH_PATHS=.build/debug]
