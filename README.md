@@ -42,6 +42,21 @@ dependencies: [
 ]
 ```
 
-## How to use
+## Usage
 
+```swift
+let v = Validator()
+v.add(name: "Email", value: email, rules: [.required, .email])
+v.add(name: "Name", value: name, rules: [.required, .fullName])
+v.add(name: "Subject", value: subject, rules: [.required, .length(min: 10, max: 200)])
+v.add(name: "Message", value: message, rules: [.required, .length(min: 10, max: 2000)])
+let (status, validatable, error) = v.validate()
+```
 
+## API documentation
+
+For more information visit our [API reference](https://smbhuin.github.io/Validator/).
+
+## License
+
+This library is licensed under MIT. Full license text is available in [LICENSE](https://github.com/smbhuin/Validator/blob/master/LICENSE).
