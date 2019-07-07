@@ -31,7 +31,7 @@ open class CharacterSetRule: ValidationRule {
     /**
      Used to validate field.
      
-     - parameter value: String to checked for validation.
+     - parameter value: String to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     open override func validate(_ value: Any?) -> ValidationError? {
