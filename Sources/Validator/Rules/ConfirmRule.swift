@@ -32,7 +32,7 @@ public class ConfirmRule: ValidationRule {
     /**
      Used to validate a field.
      
-     - parameter value: String to checked for validation.
+     - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     public override func validate(_ value: Any?) -> ValidationError? {
