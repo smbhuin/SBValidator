@@ -37,7 +37,7 @@ public class RequiredRule: ValidationRule {
         }
         switch ad {
         case let d as String:
-            if d.count == 0 {
+            if d.trimmingCharacters(in: .whitespacesAndNewlines).count == 0 {
                 return error
             }
         case let d as Int:
@@ -50,6 +50,10 @@ public class RequiredRule: ValidationRule {
             }
         case let d as Double:
             if d == 0.0 {
+                return error
+            }
+        case let d as AnyCollection<Any>:
+            if d.count == 0 {
                 return error
             }
         default:
