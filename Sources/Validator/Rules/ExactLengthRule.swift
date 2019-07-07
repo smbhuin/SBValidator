@@ -23,15 +23,15 @@ public class ExactLengthRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `ExactLengthRule` object, or nil if an object could not be created for some reason. that would not result in an exception.
      */
-    public init(length: Int, message: String = "Must be exactly %ld characters long"){
+    public init(length: Int, message: String = "Must be exactly %ld characters/count in length"){
         self.length = length
         super.init(message: String(format: message, self.length))
     }
     
     /**
-     Used to validate a field.
+     Used to validate lenght of string or count of countable objects.
      
-     - parameter value: String to checked for validation.
+     - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     public override func validate(_ value: Any?) -> ValidationError? {
@@ -45,8 +45,16 @@ public class ExactLengthRule: ValidationRule {
             if d.count != length {
                 return error
             }
-        case let d as Int:
-            if String(d).count != length {
+        case let d as Array<Any>:
+            if d.count != length {
+                return error
+            }
+        case let d as Dictionary<AnyHashable,Any>:
+            if d.count != length {
+                return error
+            }
+        case let d as Set<AnyHashable>:
+            if d.count != length {
                 return error
             }
         default:
