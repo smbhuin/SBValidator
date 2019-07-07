@@ -1,5 +1,5 @@
 //
-//  LengthRule.swift
+//  RangeRule.swift
 //  Validator
 //
 //  Created by Soumen Bhuin on 25/06/19.
@@ -9,9 +9,9 @@
 import Foundation
 
 /**
- `LengthRule` is a subclass of `ValidationRule` that defines how lingth is validated with min & max limits.
+ `RangeRule` is a subclass of `ValidationRule` that defines how lingth is validated with min & max limits.
  */
-public class LengthRule: ValidationRule {
+public class RangeRule: ValidationRule {
     
     private let min: Int
     private let max: Int
@@ -19,8 +19,8 @@ public class LengthRule: ValidationRule {
     /**
      Initializes a `LengthRule` object to verify that length of value is in the range of min & max.
      
-     - parameter min: Minimum required length of value.
-     - parameter max: Maximum required length of value.
+     - parameter min: Minimum required length/quantity of value.
+     - parameter max: Maximum required length/quantity of value.
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
@@ -51,6 +51,18 @@ public class LengthRule: ValidationRule {
             if d < min || d > max {
                 return error
             }
+        case let d as Array<Any>:
+            if d.count < min || d.count > max {
+                return error
+            }
+        case let d as Dictionary<AnyHashable,Any>:
+            if d.count < min || d.count > max {
+                return error
+            }
+        case let d as Set<AnyHashable>:
+            if d.count < min || d.count > max {
+                return error
+            }
         default:
             return ValidationError.inapplicable()
         }
@@ -62,8 +74,8 @@ public class LengthRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `LengthRule`
-    public class func length(min: Int, max: Int) -> ValidationRule {
-        return LengthRule(min: min, max: max)
+    public class func range(min: Int, max: Int) -> ValidationRule {
+        return RangeRule(min: min, max: max)
     }
     
 }
