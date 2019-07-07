@@ -24,9 +24,9 @@ public class FloatRule: ValidationRule {
     }
     
     /**
-     Used to validate field.
+     Used to validate value. If value is Double or Float then its treated as valid without any special checking applied.
      
-     - parameter value: String to checked for validation.
+     - parameter value: String to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     public override func validate(_ value: Any?) -> ValidationError? {
@@ -46,6 +46,10 @@ public class FloatRule: ValidationRule {
             else {
                 fatalError("FloatRule: Failed to create Regex Expression")
             }
+        case _ as Double:
+            return nil
+        case _ as Float:
+            return nil
         default:
             return ValidationError.inapplicable()
         }
