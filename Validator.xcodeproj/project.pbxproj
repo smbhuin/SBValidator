@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5522D2463E00AA04D4 /* ArrayRule.swift */; };
+		DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */; };
 		DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2F8C422C34BC0007B08F4 /* Validatable.swift */; };
 		DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */; };
 		OBJ_44 /* AlphaNumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AlphaNumericRule.swift */; };
@@ -36,7 +38,7 @@
 		OBJ_54 /* HexColorRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* HexColorRule.swift */; };
 		OBJ_55 /* IPV4Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* IPV4Rule.swift */; };
 		OBJ_56 /* ISBNRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ISBNRule.swift */; };
-		OBJ_57 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* LengthRule.swift */; };
+		OBJ_57 /* RangeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* RangeRule.swift */; };
 		OBJ_58 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* PasswordRule.swift */; };
 		OBJ_59 /* PhoneNumberRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* PhoneNumberRule.swift */; };
 		OBJ_60 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* RegexRule.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF176D5522D2463E00AA04D4 /* ArrayRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRule.swift; sourceTree = "<group>"; };
+		DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
 		DFB2F8C422C34BC0007B08F4 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumRule.swift; sourceTree = "<group>"; };
 		OBJ_10 /* AlphaNumericRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaNumericRule.swift; sourceTree = "<group>"; };
@@ -84,7 +88,7 @@
 		OBJ_20 /* HexColorRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorRule.swift; sourceTree = "<group>"; };
 		OBJ_21 /* IPV4Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPV4Rule.swift; sourceTree = "<group>"; };
 		OBJ_22 /* ISBNRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNRule.swift; sourceTree = "<group>"; };
-		OBJ_23 /* LengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthRule.swift; sourceTree = "<group>"; };
+		OBJ_23 /* RangeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeRule.swift; sourceTree = "<group>"; };
 		OBJ_24 /* PasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
 		OBJ_25 /* PhoneNumberRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberRule.swift; sourceTree = "<group>"; };
 		OBJ_26 /* RegexRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
@@ -193,13 +197,15 @@
 				OBJ_20 /* HexColorRule.swift */,
 				OBJ_21 /* IPV4Rule.swift */,
 				OBJ_22 /* ISBNRule.swift */,
-				OBJ_23 /* LengthRule.swift */,
+				OBJ_23 /* RangeRule.swift */,
 				DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */,
 				OBJ_24 /* PasswordRule.swift */,
 				OBJ_25 /* PhoneNumberRule.swift */,
 				OBJ_26 /* RegexRule.swift */,
 				OBJ_27 /* RequiredRule.swift */,
 				OBJ_29 /* ZipCodeRule.swift */,
+				DF176D5522D2463E00AA04D4 /* ArrayRule.swift */,
+				DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -299,11 +305,12 @@
 				DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */,
 				OBJ_51 /* ExactLengthRule.swift in Sources */,
 				OBJ_52 /* FloatRule.swift in Sources */,
+				DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */,
 				OBJ_53 /* FullNameRule.swift in Sources */,
 				OBJ_54 /* HexColorRule.swift in Sources */,
 				OBJ_55 /* IPV4Rule.swift in Sources */,
 				OBJ_56 /* ISBNRule.swift in Sources */,
-				OBJ_57 /* LengthRule.swift in Sources */,
+				OBJ_57 /* RangeRule.swift in Sources */,
 				OBJ_58 /* PasswordRule.swift in Sources */,
 				OBJ_59 /* PhoneNumberRule.swift in Sources */,
 				OBJ_60 /* RegexRule.swift in Sources */,
@@ -311,6 +318,7 @@
 				OBJ_62 /* ValidationRule.swift in Sources */,
 				OBJ_63 /* ZipCodeRule.swift in Sources */,
 				OBJ_64 /* ValidationError.swift in Sources */,
+				DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */,
 				OBJ_65 /* Validator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
