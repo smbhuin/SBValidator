@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LengthRule Class Reference</title>
+    <title>ArrayRule Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/LengthRule" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/ArrayRule" class="dashAnchor"></a>
 
-    <a title="LengthRule Class Reference"></a>
+    <a title="ArrayRule Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Validator Reference</a>
       <img class="carat" src="../img/carat.png" />
-      LengthRule Class Reference
+      ArrayRule Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -60,6 +60,9 @@
                 <a class="nav-group-task-link" href="../Classes/AlphaRule.html">AlphaRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ArrayRule.html">ArrayRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CardExpiryMonthRule.html">CardExpiryMonthRule</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +73,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ConfirmRule.html">ConfirmRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/EmailRule.html">EmailRule</a>
@@ -96,13 +102,16 @@
                 <a class="nav-group-task-link" href="../Classes/ISBNRule.html">ISBNRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/LengthRule.html">LengthRule</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PasswordRule/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RangeRule.html">RangeRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/RegexRule.html">RegexRule</a>
@@ -133,14 +142,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>LengthRule</h1>
+            <h1>ArrayRule</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LengthRule</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ArrayRule</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
 
                 </div>
               </div>
-            <p><code>LengthRule</code> is a subclass of <code><a href="../Classes/ValidationRule.html">ValidationRule</a></code> that defines how lingth is validated with min &amp; max limits.</p>
+            <p><code>ArrayRule</code> is a subclass of ValidationRule that defines how check if all array elements are valid.</p>
 
           </div>
         </section>
@@ -152,9 +161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator10LengthRuleC3min3max7messageACSi_SiSStcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(min:max:message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator10LengthRuleC3min3max7messageACSi_SiSStcfc">init(min:max:message:)</a>
+                    <a name="/s:9Validator9ArrayRuleC7message5rulesACSS_SayAA010ValidationC0CGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(message:rules:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator9ArrayRuleC7message5rulesACSS_SayAA010ValidationC0CGtcfc">init(message:rules:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,14 +171,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes a <code>LengthRule</code> object to verify that length of value is in the range of min &amp; max.</p>
+                        <p>Initializes a <code>ArrayRule</code> object to validate that provided array has valid elements.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Length is invalid"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"contains invalid element"</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ValidationRule.html">ValidationRule</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -177,30 +186,6 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>min</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Minimum required length of value.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>max</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Maximum required length of value.</p>
-                                </div>
-                              </td>
-                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -226,9 +211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator10LengthRuleC8validateyAA15ValidationErrorCSgypSgF"></a>
+                    <a name="/s:9Validator9ArrayRuleC8validateyAA15ValidationErrorCSgypSgF"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator10LengthRuleC8validateyAA15ValidationErrorCSgypSgF">validate(_:)</a>
+                    <a class="token" href="#/s:9Validator9ArrayRuleC8validateyAA15ValidationErrorCSgypSgF">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -236,7 +221,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Method used to validate the provided value.</p>
+                        <p>Used to validate value.</p>
 
                       </div>
                       <div class="declaration">
@@ -259,7 +244,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Any value to checked for validation.</p>
+                                  <p>Array to be checked for validation.</p>
                                 </div>
                               </td>
                             </tr>
@@ -281,7 +266,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-02)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

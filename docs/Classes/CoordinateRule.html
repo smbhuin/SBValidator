@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FullNameRule Class Reference</title>
+    <title>CoordinateRule Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/FullNameRule" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/CoordinateRule" class="dashAnchor"></a>
 
-    <a title="FullNameRule Class Reference"></a>
+    <a title="CoordinateRule Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Validator Reference</a>
       <img class="carat" src="../img/carat.png" />
-      FullNameRule Class Reference
+      CoordinateRule Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -142,14 +142,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>FullNameRule</h1>
+            <h1>CoordinateRule</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FullNameRule</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CoordinateRule</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
 
                 </div>
               </div>
-            <p><code>FullNameRule</code> is a subclass of Rule that defines how a full name is validated.</p>
+            <p><code>CoordinateRule</code> is a subclass of ValidationRule that defines how check if a value is a latitude or longitude value. Value must be array of string or double. longitude should be first element.</p>
 
           </div>
         </section>
@@ -161,9 +161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator12FullNameRuleC7messageACSS_tcfc"></a>
+                    <a name="/s:9Validator14CoordinateRuleC7messageACSS_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator12FullNameRuleC7messageACSS_tcfc">init(message:)</a>
+                    <a class="token" href="#/s:9Validator14CoordinateRuleC7messageACSS_tcfc">init(message:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -171,14 +171,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes a <code>FullNameRule</code> object that is used to verify that text in field is a full name.</p>
+                        <p>Initializes a <code>CoordinateRule</code> object to validate that provided value is valid lat or long coordinate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"is not a valid full name"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"is not a valid geo coordinate"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -203,7 +203,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An initialized <code>FullNameRule</code> object, or nil if an object could not be created for some reason that would not result in an exception.</p>
+                        <p>An initialized object, or nil if an object could not be created for some reason that would not result in an exception.</p>
                       </div>
                     </section>
                   </div>
@@ -211,9 +211,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator12FullNameRuleC8validateyAA15ValidationErrorCSgypSgF"></a>
+                    <a name="/s:9Validator14CoordinateRuleC8validateyAA15ValidationErrorCSgypSgF"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator12FullNameRuleC8validateyAA15ValidationErrorCSgypSgF">validate(_:)</a>
+                    <a class="token" href="#/s:9Validator14CoordinateRuleC8validateyAA15ValidationErrorCSgypSgF">validate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -221,7 +221,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Used to validate a name String.</p>
+                        <p>Used to validate Coordinate value.</p>
 
                       </div>
                       <div class="declaration">
@@ -244,7 +244,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>String to be checked for validation.</p>
+                                  <p>array of String/Double to be checked for validation. longitude should be first element.</p>
                                 </div>
                               </td>
                             </tr>

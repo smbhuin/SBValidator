@@ -60,6 +60,9 @@
                 <a class="nav-group-task-link" href="../Classes/AlphaRule.html">AlphaRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ArrayRule.html">ArrayRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/CardExpiryMonthRule.html">CardExpiryMonthRule</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +73,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ConfirmRule.html">ConfirmRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/EmailRule.html">EmailRule</a>
@@ -96,13 +102,16 @@
                 <a class="nav-group-task-link" href="../Classes/ISBNRule.html">ISBNRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/LengthRule.html">LengthRule</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PasswordRule/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RangeRule.html">RangeRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/RegexRule.html">RegexRule</a>
@@ -299,6 +308,37 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9Validator14ValidationRuleC5array5rulesACSayACG_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/array(rules:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC5array5rulesACSayACG_tFZ">array(rules:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for <code><a href="../Classes/ArrayRule.html">ArrayRule</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">array</span><span class="p">(</span><span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="kt">ValidationRule</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9Validator14ValidationRuleC9cardMonthACyFZ"></a>
                     <a name="//apple_ref/swift/Method/cardMonth()" class="dashAnchor"></a>
                     <a class="token" href="#/s:9Validator14ValidationRuleC9cardMonthACyFZ">cardMonth()</a>
@@ -410,6 +450,37 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">confirm</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator14ValidationRuleC10coordinateACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/coordinate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC10coordinateACvpZ">coordinate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for <code><a href="../Classes/CoordinateRule.html">CoordinateRule</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">ValidationRule</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -671,40 +742,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator14ValidationRuleC6length3min3maxACSi_SitFZ"></a>
-                    <a name="//apple_ref/swift/Method/length(min:max:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator14ValidationRuleC6length3min3maxACSi_SitFZ">length(min:max:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Quick accessor for <code><a href="../Classes/LengthRule.html">LengthRule</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Validator14ValidationRuleC8passwordACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/password" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator14ValidationRuleC8passwordACvpZ">password</a>
+                    <a name="/s:9Validator14ValidationRuleC8password8strengthAcA08PasswordC0C8StrengthO_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/password(strength:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC8password8strengthAcA08PasswordC0C8StrengthO_tFZ">password(strength:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -719,7 +759,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">ValidationRule</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">password</span><span class="p">(</span><span class="nv">strength</span><span class="p">:</span> <span class="kt"><a href="../Classes/PasswordRule.html">PasswordRule</a></span><span class="o">.</span><span class="kt">Strength</span> <span class="o">=</span> <span class="o">.</span><span class="k">weak</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
 
                         </div>
                       </div>
@@ -764,9 +804,40 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator14ValidationRuleC5regexyACSSFZ"></a>
-                    <a name="//apple_ref/swift/Method/regex(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator14ValidationRuleC5regexyACSSFZ">regex(_:)</a>
+                    <a name="/s:9Validator14ValidationRuleC5range3min3maxACSi_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/range(min:max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC5range3min3maxACSi_SitFZ">range(min:max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for <code><a href="../Classes/RangeRule.html">RangeRule</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">range</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator14ValidationRuleC5regex7patternACSS_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/regex(pattern:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC5regex7patternACSS_tFZ">regex(pattern:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -781,7 +852,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">regex</span><span class="p">(</span><span class="n">_</span> <span class="nv">pattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">regex</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span></code></pre>
 
                         </div>
                       </div>
@@ -826,9 +897,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator14ValidationRuleC7zipcodeACvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/zipcode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator14ValidationRuleC7zipcodeACvpZ">zipcode</a>
+                    <a name="/s:9Validator14ValidationRuleC7zipCodeACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/zipCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14ValidationRuleC7zipCodeACvpZ">zipCode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -843,7 +914,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">zipcode</span><span class="p">:</span> <span class="kt">ValidationRule</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">zipCode</span><span class="p">:</span> <span class="kt">ValidationRule</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -858,7 +929,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-02)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

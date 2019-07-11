@@ -59,6 +59,9 @@
                 <a class="nav-group-task-link" href="Classes/AlphaRule.html">AlphaRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ArrayRule.html">ArrayRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CardExpiryMonthRule.html">CardExpiryMonthRule</a>
               </li>
               <li class="nav-group-task">
@@ -69,6 +72,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ConfirmRule.html">ConfirmRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/EmailRule.html">EmailRule</a>
@@ -95,13 +101,16 @@
                 <a class="nav-group-task-link" href="Classes/ISBNRule.html">ISBNRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/LengthRule.html">LengthRule</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PasswordRule/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/RangeRule.html">RangeRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/RegexRule.html">RegexRule</a>
@@ -139,7 +148,8 @@
 
 <p><a href="#installation"><img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20Linux-4E4E4E.svg?colorA=4BC51D" alt="Platform"></a>
 <a href="#carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
-<a href="#spm"><img src="https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat" alt="SPM Compatible"></a></p>
+<a href="#spm"><img src="https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat" alt="SPM Compatible"></a>
+<a href="#license"><img src="https://img.shields.io/badge/License-MIT-4BC51D.svg?style=flat" alt="LICENSE"></a></p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>To install Validator, add it as a submodule to your project (on the top level project directory):</p>
@@ -168,7 +178,20 @@ Specify in Cartfile:</p>
     <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"1.0.0"</span><span class="p">))</span>
 <span class="p">]</span>
 </code></pre>
-<h2 id='how-to-use' class='heading'>How to use</h2>
+<h2 id='usage' class='heading'>Usage</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">v</span> <span class="o">=</span> <span class="kt">Validator</span><span class="p">()</span>
+<span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Email"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="n">email</span><span class="p">])</span>
+<span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Name"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="n">fullName</span><span class="p">])</span>
+<span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Subject"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">subject</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">200</span><span class="p">)])</span>
+<span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">2000</span><span class="p">)])</span>
+<span class="k">let</span> <span class="p">(</span><span class="nv">status</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">,</span> <span class="nv">error</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
+</code></pre>
+<h2 id='api-documentation' class='heading'>API documentation</h2>
+
+<p>For more information visit our <a href="https://smbhuin.github.io/Validator/">API reference</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This library is licensed under MIT. Full license text is available in <a href="https://github.com/smbhuin/Validator/blob/master/LICENSE">LICENSE</a>.</p>
 
           </div>
         </section>
@@ -177,7 +200,7 @@ Specify in Cartfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-02)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

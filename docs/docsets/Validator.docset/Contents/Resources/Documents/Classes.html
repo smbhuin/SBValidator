@@ -60,6 +60,9 @@
                 <a class="nav-group-task-link" href="Classes/AlphaRule.html">AlphaRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ArrayRule.html">ArrayRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CardExpiryMonthRule.html">CardExpiryMonthRule</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +73,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ConfirmRule.html">ConfirmRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/EmailRule.html">EmailRule</a>
@@ -96,13 +102,16 @@
                 <a class="nav-group-task-link" href="Classes/ISBNRule.html">ISBNRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/LengthRule.html">LengthRule</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PasswordRule/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/RangeRule.html">RangeRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/RegexRule.html">RegexRule</a>
@@ -244,6 +253,38 @@ valid list of alpha characters.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9Validator9ArrayRuleC"></a>
+                    <a name="//apple_ref/swift/Class/ArrayRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator9ArrayRuleC">ArrayRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ArrayRule</code> is a subclass of ValidationRule that defines how check if all array elements are valid.</p>
+
+                        <a href="Classes/ArrayRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ArrayRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9Validator19CardExpiryMonthRuleC"></a>
                     <a name="//apple_ref/swift/Class/CardExpiryMonthRule" class="dashAnchor"></a>
                     <a class="token" href="#/s:9Validator19CardExpiryMonthRuleC">CardExpiryMonthRule</a>
@@ -361,6 +402,38 @@ to another value is validated.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ConfirmRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator14CoordinateRuleC"></a>
+                    <a name="//apple_ref/swift/Class/CoordinateRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14CoordinateRuleC">CoordinateRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>CoordinateRule</code> is a subclass of ValidationRule that defines how check if a value is a latitude or longitude value. Value must be array of string or double. longitude should be first element.</p>
+
+                        <a href="Classes/CoordinateRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CoordinateRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
 
                         </div>
                       </div>
@@ -630,38 +703,6 @@ to another value is validated.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator10LengthRuleC"></a>
-                    <a name="//apple_ref/swift/Class/LengthRule" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator10LengthRuleC">LengthRule</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>LengthRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how lingth is validated with min &amp; max limits.</p>
-
-                        <a href="Classes/LengthRule.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LengthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:9Validator12PasswordRuleC"></a>
                     <a name="//apple_ref/swift/Class/PasswordRule" class="dashAnchor"></a>
                     <a class="token" href="#/s:9Validator12PasswordRuleC">PasswordRule</a>
@@ -713,6 +754,38 @@ to another value is validated.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PhoneNumberRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/RegexRule.html">RegexRule</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator9RangeRuleC"></a>
+                    <a name="//apple_ref/swift/Class/RangeRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator9RangeRuleC">RangeRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>RangeRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how lingth is validated with min &amp; max limits.</p>
+
+                        <a href="Classes/RangeRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RangeRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
 
                         </div>
                       </div>
@@ -919,7 +992,7 @@ to another value is validated.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-02)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
