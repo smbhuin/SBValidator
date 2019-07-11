@@ -42,8 +42,11 @@ open class RegexRule: ValidationRule {
         let error = ValidationError(self.message)
         switch ad {
         case let d as String:
-            let test = NSPredicate(format: "SELF MATCHES %@", self._regex)
-            if !test.evaluate(with: d) {
+            guard let regex = try? NSRegularExpression(pattern: self._regex, options: []) else {
+                fatalError("RegexRule: Failed to create Regex Expression")
+            }
+            let match = regex.numberOfMatches(in: d, options: [], range: NSRange(location: 0, length: d.count))
+            if match != 1 {
                 return error
             }
         default:
