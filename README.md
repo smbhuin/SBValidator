@@ -13,8 +13,6 @@ To install Validator, add it as a submodule to your project (on the top level pr
 
 `git submodule add https://github.com/smbhuin/Validator.git`
 
-It is recommended to enable [Whole-Module Optimization](https://swift.org/blog/whole-module-optimizations/) to gain better performance. Non-optimized build results in significantly worse performance.
-
 #### Carthage 
 You can use [Carthage](https://github.com/Carthage/Carthage). 
 Specify in Cartfile:
