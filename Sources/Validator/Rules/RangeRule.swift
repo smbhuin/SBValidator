@@ -17,14 +17,14 @@ public class RangeRule: ValidationRule {
     private let max: Int
     
     /**
-     Initializes a `LengthRule` object to verify that length of value is in the range of min & max.
+     Initializes a `RangeRule` object to verify that length/size of value is in the range of min & max.
      
-     - parameter min: Minimum required length/quantity of value.
-     - parameter max: Maximum required length/quantity of value.
+     - parameter min: Minimum required length/size/quantity of value.
+     - parameter max: Maximum required length/size/quantity of value.
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(min: Int, max: Int, message: String = "Length is invalid") {
+    public init(min: Int, max: Int, message: String = "length/size is invalid") {
         self.min = min
         self.max = max
         super.init(message: message)
@@ -73,7 +73,7 @@ public class RangeRule: ValidationRule {
 
 public extension ValidationRule {
     
-    /// Quick accessor for `LengthRule`
+    /// Quick accessor for `RangeRule`
     public class func range(min: Int, max: Int) -> ValidationRule {
         return RangeRule(min: min, max: max)
     }
