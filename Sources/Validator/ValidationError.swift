@@ -32,7 +32,7 @@ public class ValidationError: Error, CustomStringConvertible {
      - returns: An `ValidationError` object
      */
     public class func inapplicable() -> ValidationError {
-        return .init("Inapplicable Rule")
+        return .init("inapplicable rule")
     }
     
     /// Error Description
