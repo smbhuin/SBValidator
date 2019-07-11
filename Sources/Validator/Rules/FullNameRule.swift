@@ -19,7 +19,7 @@ public class FullNameRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `FullNameRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "Please provide a first & last name") {
+    public override init(message: String = "is not a valid full name") {
         super.init(message: message)
     }
     

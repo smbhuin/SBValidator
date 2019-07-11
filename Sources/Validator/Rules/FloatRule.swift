@@ -19,7 +19,7 @@ public class FloatRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "This must be a number with or without a decimal"){
+    public override init(message: String = "must be a number with or without a decimal"){
         super.init(message: message)
     }
     

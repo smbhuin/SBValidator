@@ -22,7 +22,7 @@ public class CardExpiryYearRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `CardExpiryYearRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message : String = "Must be within 3 years of validity"){
+    public override init(message : String = "must be within 3 years of validity"){
         super.init(message: message)
     }
 

@@ -23,7 +23,7 @@ public class ExactLengthRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `ExactLengthRule` object, or nil if an object could not be created for some reason. that would not result in an exception.
      */
-    public init(length: Int, message: String = "Must be exactly %ld characters/count in length"){
+    public init(length: Int, message: String = "must be exactly %ld characters/count in length"){
         self.length = length
         super.init(message: String(format: message, self.length))
     }

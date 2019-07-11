@@ -19,7 +19,7 @@ public class CardExpiryMonthRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `CardExpiryYearRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message : String = "Not a valid month. Must be 01 to 12"){
+    public override init(message : String = "not a valid month. must be 01 to 12"){
         super.init(message: message)
     }
     

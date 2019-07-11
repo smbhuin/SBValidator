@@ -24,13 +24,13 @@ public class ConfirmRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(confirmValue: Any, message: String = "This field does not match"){
+    public init(confirmValue: Any, message: String = "does not match"){
         self.confirmValue = confirmValue
         super.init(message: message)
     }
     
     /**
-     Used to validate a field.
+     Used to validate a value.
      
      - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
