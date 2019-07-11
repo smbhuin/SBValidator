@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- `CoordinateRule` is a subclass of ValidationRule that defines how check if a value is a latitude or longitude value.
+ `CoordinateRule` is a subclass of ValidationRule that defines how check if a value is a latitude or longitude value. Value must be array of string or double. longitude should be first element.
  */
 public class CoordinateRule: ValidationRule {
     
@@ -19,14 +19,14 @@ public class CoordinateRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "This must be a coordinate number"){
+    public override init(message: String = "is not a valid geo coordinate"){
         super.init(message: message)
     }
     
     /**
      Used to validate Coordinate value.
      
-     - parameter value: String to be checked for validation.
+     - parameter value: array of String/Double to be checked for validation. longitude should be first element.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     public override func validate(_ value: Any?) -> ValidationError? {
@@ -36,22 +36,26 @@ public class CoordinateRule: ValidationRule {
         }
         let error = ValidationError(self.message)
         switch ad {
-        case let d as String:
-            if let regex = try? NSRegularExpression(pattern: "^[-+]?(\\d*[.])?\\d+$", options: []) {
-                let match = regex.numberOfMatches(in: d, options: [], range: NSRange(location: 0, length: d.count))
-                if match != 1 {
-                    return error
+        case let d as [String]:
+            if d.count == 2 {
+                if let long = Double(d[0]), let lat = Double(d[1]) {
+                    if long >= -180.0 && long <= 180.0 && lat >= -90.0 && lat <= 90.0 {
+                        return nil
+                    }
                 }
             }
-            else {
-                fatalError("CoordinateRule: Failed to create Regex Expression")
+        case let d as [Double]:
+            if d.count == 2 {
+                let long = d[0]
+                let lat = d[1]
+                if long >= -180.0 && long <= 180.0 && lat >= -90.0 && lat <= 90.0 {
+                    return nil
+                }
             }
-        case _ as Double:
-            return nil
         default:
             return ValidationError.inapplicable()
         }
-        return nil
+        return error
     }
     
 }
