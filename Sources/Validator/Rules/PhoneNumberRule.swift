@@ -20,10 +20,10 @@ public class PhoneNumberRule: RegexRule {
      Initializes a `PhoneNumberRule` object. Used to validate that a field has a valid phone number.
      
     - parameter message: Error message that is displayed if validation fails.
-    - returns: An initialized `PasswordRule` object, or nil if an object could not be created for some reason that would not result in an exception. 
+    - returns: An initialized `PhoneNumberRule` object, or nil if an object could not be created for some reason that would not result in an exception.
     */
-    public init(message: String = "Enter a valid 10 digit phone number") {
-        super.init(regex: PhoneNumberRule.regex, message : message)
+    public convenience init(message: String = "is not a valid 10 digit phone number") {
+        self.init(regex: PhoneNumberRule.regex, message : message)
     }
     
 }

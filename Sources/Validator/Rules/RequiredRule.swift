@@ -19,7 +19,7 @@ public class RequiredRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `RequiredRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "This is required") {
+    public override init(message: String = "can not be blank") {
         super.init(message: message)
     }
     

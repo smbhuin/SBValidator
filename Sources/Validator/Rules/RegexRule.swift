@@ -23,7 +23,7 @@ open class RegexRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized `RegexRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(regex: String, message: String = "Invalid Regular Expression"){
+    public init(regex: String, message: String = "is invalid"){
         self._regex = regex
         super.init(message: message)
     }
@@ -57,7 +57,7 @@ open class RegexRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RegexRule`
-    public class func regex(_ pattern: String) -> ValidationRule {
+    public class func regex(pattern: String) -> ValidationRule {
         return RegexRule(regex: pattern)
     }
     

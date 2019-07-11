@@ -15,7 +15,7 @@ public class EnumRule: ValidationRule {
     
     private let values: [Any]
     
-    public init(values: [Any], message: String = "Does'nt match with any possible values") {
+    public init(values: [Any], message: String = "does not match with any possible values") {
         self.values = values
         super.init(message: message)
     }
