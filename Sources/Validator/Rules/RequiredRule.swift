@@ -67,7 +67,7 @@ public class RequiredRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RequiredRule`
-    public class var required: ValidationRule {
+    class var required: ValidationRule {
         get  {
             return RequiredRule()
         }

@@ -61,7 +61,7 @@ public class FloatRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `FloatRule`
-    public class var floatingPoint: ValidationRule {
+    class var floatingPoint: ValidationRule {
         get  {
             return FloatRule()
         }

@@ -63,7 +63,7 @@ public class PasswordRule : RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `PasswordRule`
-    public class func password(strength: PasswordRule.Strength = .weak) -> ValidationRule {
+    class func password(strength: PasswordRule.Strength = .weak) -> ValidationRule {
         return PasswordRule(strength: strength)
     }
     

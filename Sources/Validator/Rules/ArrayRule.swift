@@ -59,7 +59,7 @@ public class ArrayRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ArrayRule`
-    public class func array(rules: [ValidationRule]) -> ValidationRule {
+    class func array(rules: [ValidationRule]) -> ValidationRule {
         return ArrayRule(rules: rules)
     }
     

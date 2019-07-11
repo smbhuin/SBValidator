@@ -31,7 +31,7 @@ public class ZipCodeRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ZipCodeRule`
-    public class var zipCode: ValidationRule {
+    class var zipCode: ValidationRule {
         get  {
             return ZipCodeRule()
         }

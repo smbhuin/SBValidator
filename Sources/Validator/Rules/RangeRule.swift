@@ -74,7 +74,7 @@ public class RangeRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RangeRule`
-    public class func range(min: Int, max: Int) -> ValidationRule {
+    class func range(min: Int, max: Int) -> ValidationRule {
         return RangeRule(min: min, max: max)
     }
     

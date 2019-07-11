@@ -58,7 +58,7 @@ open class CharacterSetRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `CharacterSetRule`
-    public class func characterSet(_ validCharacters: CharacterSet) -> ValidationRule {
+    class func characterSet(_ validCharacters: CharacterSet) -> ValidationRule {
         return CharacterSetRule(characterSet: validCharacters)
     }
     

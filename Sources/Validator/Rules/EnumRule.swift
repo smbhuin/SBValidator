@@ -68,7 +68,7 @@ public class EnumRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `EnumRule`
-    public class func `enum`(_ values: [Any]) -> ValidationRule {
+    class func `enum`(_ values: [Any]) -> ValidationRule {
         return EnumRule(values: values)
     }
     

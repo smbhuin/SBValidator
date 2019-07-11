@@ -28,7 +28,7 @@ public class AlphaRule: CharacterSetRule {
 public extension ValidationRule {
     
     /// Quick accessor for `AlphaRule`
-    public class var alpha: ValidationRule {
+    class var alpha: ValidationRule {
         get  {
             return AlphaRule()
         }

@@ -63,7 +63,7 @@ public class CoordinateRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `CoordinateRule`
-    public class var coordinate: ValidationRule {
+    class var coordinate: ValidationRule {
         get  {
             return CoordinateRule()
         }

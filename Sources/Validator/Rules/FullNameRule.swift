@@ -52,7 +52,7 @@ public class FullNameRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `FullNameRule`
-    public class var fullName: ValidationRule {
+    class var fullName: ValidationRule {
         get  {
             return FullNameRule()
         }

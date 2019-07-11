@@ -55,7 +55,7 @@ public class ISBNRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ISBNRule`
-    public class var ISBN: ValidationRule {
+    class var ISBN: ValidationRule {
         get  {
             return ISBNRule()
         }
