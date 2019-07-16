@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- `RangeRule` is a subclass of `ValidationRule` that defines how lingth is validated with min & max limits.
+ `RangeRule` is a subclass of `ValidationRule` that defines how value is validated with min & max limits.
  */
 public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, Value : CustomStringConvertible {
     
@@ -17,10 +17,10 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
     private let max: Value
     
     /**
-     Initializes a `RangeRule` object to verify that length/size of value is in the range of min & max.
+     Initializes a `RangeRule` object to verify that quantity of value is in the range of min & max.
      
-     - parameter min: Minimum required length/size/quantity of value.
-     - parameter max: Maximum required length/size/quantity of value.
+     - parameter min: Minimum required quantity of value.
+     - parameter max: Maximum required quantity of value.
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
@@ -33,12 +33,12 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
     /**
      Method used to validate the provided value.
      
-     - parameter value: Any value to checked for validation.
+     - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
     public override func validate(_ value: Value?) -> ValidationError? {
-        guard let ad = value else { return nil }
-        if ad >= min && ad <= max {
+        guard let v = value else { return nil }
+        if v >= min && v <= max {
             return nil
         }
         else {
