@@ -25,6 +25,8 @@
 		DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */; };
 		DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */; };
 		DF81AC1E22DE0534005034C2 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1C22DE0534005034C2 /* LengthRule.swift */; };
+		DF81ACD522DE2AF8005034C2 /* DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81ACD422DE2AF8005034C2 /* DateRule.swift */; };
+		DF81ACD722DE2E5A005034C2 /* ISO8601DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */; };
 		DFA295E822DCEAC4000A3370 /* PinCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */; };
 		DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2F8C422C34BC0007B08F4 /* Validatable.swift */; };
 		DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */; };
@@ -78,6 +80,8 @@
 		DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
 		DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayLengthRule.swift; sourceTree = "<group>"; };
 		DF81AC1C22DE0534005034C2 /* LengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthRule.swift; sourceTree = "<group>"; };
+		DF81ACD422DE2AF8005034C2 /* DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRule.swift; sourceTree = "<group>"; };
+		DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateRule.swift; sourceTree = "<group>"; };
 		DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeRule.swift; sourceTree = "<group>"; };
 		DFB2F8C422C34BC0007B08F4 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumRule.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				OBJ_14 /* CharacterSetRule.swift */,
 				OBJ_10 /* AlphaNumericRule.swift */,
 				OBJ_11 /* AlphaRule.swift */,
+				DF81ACD422DE2AF8005034C2 /* DateRule.swift */,
+				DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */,
 				OBJ_12 /* MonthRule.swift */,
 				OBJ_13 /* YearExpiryRule.swift */,
 				OBJ_15 /* ConfirmRule.swift */,
@@ -303,11 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				DF81ACD722DE2E5A005034C2 /* ISO8601DateRule.swift in Sources */,
 				OBJ_44 /* AlphaNumericRule.swift in Sources */,
 				DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */,
 				OBJ_45 /* AlphaRule.swift in Sources */,
 				OBJ_46 /* MonthRule.swift in Sources */,
 				OBJ_47 /* YearExpiryRule.swift in Sources */,
+				DF81ACD522DE2AF8005034C2 /* DateRule.swift in Sources */,
 				OBJ_48 /* CharacterSetRule.swift in Sources */,
 				OBJ_49 /* ConfirmRule.swift in Sources */,
 				DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */,
