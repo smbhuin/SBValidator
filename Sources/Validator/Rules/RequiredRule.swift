@@ -37,7 +37,11 @@ public class RequiredRule<Value>: ValidationRule<Value> {
             if d.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 return error
             }
-        case let d as AnyCollection<Any>:
+        case let d as [Any]:
+            if d.isEmpty {
+                return error
+            }
+        case let d as [AnyHashable:Any]:
             if d.isEmpty {
                 return error
             }
