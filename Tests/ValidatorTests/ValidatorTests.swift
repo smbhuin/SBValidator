@@ -57,16 +57,57 @@ final class ValidatorTests: XCTestCase {
     func testRange() {
         let validator = Validator()
         validator.add(name: "MonthNil", value: nil, rules: [.range(min:1, max:12)])
-        validator.add(name: "Month", value: 4, rules: [.range(min:1, max:12)])
+        validator.add(name: "Month", value: 3, rules: [.range(min:1, max:12)])
+        let (success, validatable, error) = validator.validate()
+        if let v = validatable?.description, let e = error?.description {
+            debugPrint("Range Error: " + v + " " + e)
+        }
+        XCTAssertEqual(success, true)
+    }
+    
+    func testExactLength() {
+        let validator = Validator()
+        validator.add(name: "Month", value: "JAN", rules: [.exactLength(3)])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
+    }
+    
+    func testConfirm() {
+        let validator = Validator()
+        validator.add(name: "Password", value: "Pass1234", rules: [.confirm("Pass1234")])
+        validator.add(name: "Gender", value: 1, rules: [.confirm(1)])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
+    }
+    
+    func testLength() {
+        let validator = Validator()
+        validator.add(name: "Password", value: "Pass1234", rules: [.length(min: 5, max: 16)])
+        validator.add(name: "Notes", value: [10, 20, 50, 100, 200, 500, 1000, 2000], rules: [.arrayLength(min: 5, max: 16)])
+        validator.add(name: "Days", value: ["Sun", "Mon", "Tue"], rules: [.arrayLength(min: 1, max: 7)])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
+    }
+    
+    func testCoordinate() {
+        let validator = Validator()
+        validator.add(name: "LatLong", value: [88.3639, 22.5726], rules: [.coordinate])
         let success = validator.validate().0
         XCTAssertEqual(success, true)
     }
     
     static var allTests = [
-        ("fullName", testFullname),
-        ("alpha", testAlpha),
-        ("alphaNumeric", testAlphaNumeric),
-        ("email", testEmail),
-        ("enum", testEnum),
+        ("FullName", testFullname),
+        ("Alpha", testAlpha),
+        ("AlphaNumeric", testAlphaNumeric),
+        ("Email", testEmail),
+        ("Enum", testEnum),
+        ("YearExpiry", testYearExpiry),
+        ("Month", testMonth),
+        ("Range", testRange),
+        ("ExactLength", testExactLength),
+        ("Confirm", testConfirm),
+        ("Length", testLength),
+        ("GPSCoordinate", testCoordinate),
     ]
 }

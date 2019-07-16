@@ -53,7 +53,7 @@ public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable 
 public extension ValidationRule {
     
     /// Quick accessor for `ConfirmRule`
-    class func confirm<Value>(_ value: Value) -> ValidationRule<Value> where Value: Equatable {
+    class func confirm<Value>(_ value: Value) -> ValidationRule<Value> where Value : Equatable {
         return ConfirmRule(confirmValue: value)
     }
     

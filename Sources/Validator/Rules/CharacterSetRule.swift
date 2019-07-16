@@ -29,7 +29,7 @@ open class CharacterSetRule : ValidationRule<String> {
     }
     
     /**
-     Used to validate field.
+     Used to validate string value.
      
      - parameter value: String to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.

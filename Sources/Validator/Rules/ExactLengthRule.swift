@@ -9,9 +9,9 @@
 import Foundation
 
 /**
- `ExactLengthRule` is a subclass of `ValidationRule` that is used to make sure a the text of a field is an exact length.
+ `ExactLengthRule` is a subclass of `ValidationRule` that is used to make sure a the value has an exact length.
  */
-public class ExactLengthRule<Value> : ValidationRule<Value> where Value : Collection {
+public class ExactLengthRule : ValidationRule<String> {
     
     /// parameter length: Integer value string length
     private var length : Int
@@ -25,16 +25,16 @@ public class ExactLengthRule<Value> : ValidationRule<Value> where Value : Collec
      */
     public init(length: Int, message: String = ""){
         self.length = length
-        super.init(message: message == "" ? String(format: "must be exactly %ld characters/count in length", self.length) : message)
+        super.init(message: message == "" ? "must be exactly \(length) characters/count in length" : message)
     }
     
     /**
-     Used to validate lenght of string or count of countable objects.
+     Used to validate length of string.
      
      - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Value?) -> ValidationError? {
+    public override func validate(_ value: String?) -> ValidationError? {
         guard let v = value else { return nil }
         if v.count == length {
             return nil
@@ -47,8 +47,8 @@ public class ExactLengthRule<Value> : ValidationRule<Value> where Value : Collec
 public extension ValidationRule {
     
     /// Quick accessor for `ExactLengthRule`
-    class func exactLength<Value>(_ length: Int) -> ValidationRule<Value> where Value : Collection {
-        return ExactLengthRule<Value>(length: length)
+    class func exactLength(_ length: Int) -> ValidationRule<String> {
+        return ExactLengthRule(length: length)
     }
     
 }
