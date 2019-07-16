@@ -13,7 +13,7 @@ import Foundation
  */
 open class Validator {
     
-    private var validatables: [Validatable] = []
+    private var validatables: [ValidatableProtocol] = []
     
     /**
      Initializes a `Validator` object.
@@ -27,14 +27,14 @@ open class Validator {
     /**
      Add a new validatable
      */
-    public func add(name: String, value: Any?, rules: [ValidationRule]) {
-        validatables.append(Validatable(name: name, value: value, rules: rules))
+    public func add<V>(name: String, value: V?, rules: [ValidationRule<V>]) {
+        validatables.append(Validatable<V>(name: name, value: value, rules: rules))
     }
     
     /**
      Validate all validatables. If any error found, it will not try to validate next value.
      */
-    public func validate() -> (Bool, Validatable?, ValidationError?) {
+    public func validate() -> (Bool, ValidatableProtocol?, ValidationError?) {
         for validatable in validatables {
             if let error = validatable.validate() {
                 return (false, validatable, error)
@@ -48,9 +48,9 @@ open class Validator {
      
      - parameter name: name of the validatable
      */
-    public func validate(name: String) -> (Bool, Validatable?, ValidationError?) {
+    public func validate(name: String) -> (Bool, ValidatableProtocol?, ValidationError?) {
         for validatable in validatables {
-            if name == validatable.name, let error = validatable.validate() {
+            if name == validatable.description, let error = validatable.validate() {
                 return (false, validatable, error)
             }
         }

@@ -9,9 +9,9 @@
 import Foundation
 
 /**
- `FullNameRule` is a subclass of Rule that defines how a full name is validated.
+ `FullNameRule` is a subclass of `ValidationRule` that defines how a full name is validated.
  */
-public class FullNameRule: ValidationRule {
+public class FullNameRule : ValidationRule<String> {
     
     /**
      Initializes a `FullNameRule` object that is used to verify that text in field is a full name.
@@ -29,20 +29,11 @@ public class FullNameRule: ValidationRule {
      - parameter value: String to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
-        }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            let nameArray: [String] = d.split { $0 == " " }.map { String($0) }
-            if nameArray.count < 2 {
-                return error
-            }
-        default:
-            return ValidationError.inapplicable()
+    public override func validate(_ value: String?) -> ValidationError? {
+        guard let v = value else { return nil }
+        let nameArray: [String] = v.split { $0 == " " }.map { String($0) }
+        if nameArray.count < 2 {
+            return ValidationError(self.message)
         }
         return nil
     }
@@ -52,7 +43,7 @@ public class FullNameRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `FullNameRule`
-    class var fullName: ValidationRule {
+    class var fullName: ValidationRule<String> {
         get  {
             return FullNameRule()
         }

@@ -9,9 +9,12 @@
 import Foundation
 
 /**
- `FloatRule` is a subclass of Rule that defines how check if a value is a floating point value.
+ `FloatRule` is a subclass of `RegexRule` that defines how check if a value is a floating point value.
  */
-public class FloatRule: ValidationRule {
+public class FloatRule : RegexRule {
+    
+    /// Floating point regular express string to be used in validation.
+    static let regex = "^[-+]?(\\d*[.])?\\d+$"
     
     /**
      Initializes a `FloatRule` object to validate that the text of a field is a floating point number.
@@ -19,41 +22,8 @@ public class FloatRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "must be a number with or without a decimal"){
-        super.init(message: message)
-    }
-    
-    /**
-     Used to validate value. If value is Double or Float then its treated as valid without any special checking applied.
-     
-     - parameter value: String to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
-     */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
-        }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            if let regex = try? NSRegularExpression(pattern: "^[-+]?(\\d*[.])?\\d+$", options: []) {
-                let match = regex.numberOfMatches(in: d, options: [], range: NSRange(location: 0, length: d.count))
-                if match != 1 {
-                    return error
-                }
-            }
-            else {
-                fatalError("FloatRule: Failed to create Regex Expression")
-            }
-        case _ as Double:
-            return nil
-        case _ as Float:
-            return nil
-        default:
-            return ValidationError.inapplicable()
-        }
-        return nil
+    public init(message: String = "must be a number with or without a decimal"){
+        super.init(regex: FloatRule.regex, message: message)
     }
     
 }
@@ -61,7 +31,7 @@ public class FloatRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `FloatRule`
-    class var floatingPoint: ValidationRule {
+    class var floatingPoint: ValidationRule<String> {
         get  {
             return FloatRule()
         }

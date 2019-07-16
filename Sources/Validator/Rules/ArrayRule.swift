@@ -11,10 +11,10 @@ import Foundation
 /**
  `ArrayRule` is a subclass of ValidationRule that defines how check if all array elements are valid.
  */
-public class ArrayRule: ValidationRule {
+public class ArrayRule: ValidationRule<[Any]> {
     
     /// Rules to be applied for each array elements
-    let rules: [ValidationRule]
+    let rules: [ValidationRule<Any>]
     
     /**
      Initializes a `ArrayRule` object to validate that provided array has valid elements.
@@ -22,7 +22,7 @@ public class ArrayRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(message: String = "contains invalid element", rules: [ValidationRule]){
+    public init(message: String = "contains invalid element", rules: [ValidationRule<Any>]){
         self.rules = rules
         super.init(message: message)
     }
@@ -33,23 +33,15 @@ public class ArrayRule: ValidationRule {
      - parameter value: Array to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
-        }
+    public override func validate(_ value: [Any]?) -> ValidationError? {
+        guard let v = value else { return nil }
         let error = ValidationError(self.message)
-        switch ad {
-        case let d as [Any]:
-            for e in d {
-                for rule in rules {
-                    if let _ = rule.validate(e) {
-                        return error
-                    }
+        for e in v {
+            for rule in rules {
+                if let _ = rule.validate(e) {
+                    return error
                 }
             }
-        default:
-            return ValidationError.inapplicable()
         }
         return nil
     }
@@ -59,7 +51,7 @@ public class ArrayRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ArrayRule`
-    class func array(rules: [ValidationRule]) -> ValidationRule {
+    class func array(rules: [ValidationRule<Any>]) -> ValidationRule<[Any]> {
         return ArrayRule(rules: rules)
     }
     

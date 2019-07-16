@@ -11,7 +11,7 @@ import Foundation
 /**
  `HexColorRule` is a subclass of `RegexRule`. It is used to verify whether a field is a hexadecimal color.
  */
-public class HexColorRule: RegexRule {
+public class HexColorRule : RegexRule {
     
     /// Regular expression string that is used to verify hexadecimal
     static let regex = "^#?([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$"
@@ -31,7 +31,7 @@ public class HexColorRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `HexColorRule`
-    class var hexColor: ValidationRule {
+    class var hexColor: ValidationRule<String> {
         get  {
             return HexColorRule()
         }

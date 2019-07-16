@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- `PhoneNumberRule` is a subclass of Rule that defines how a phone number is validated.
+ `PhoneNumberRule` is a subclass of `RegexRule` that defines how a phone number is validated.
  */
 public class PhoneNumberRule: RegexRule {
     
@@ -31,7 +31,7 @@ public class PhoneNumberRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `PhoneNumberRule`
-    class var phoneNumber: ValidationRule {
+    class var phoneNumber: ValidationRule<String> {
         get  {
             return PhoneNumberRule()
         }

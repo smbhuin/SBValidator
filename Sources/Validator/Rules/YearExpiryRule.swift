@@ -41,7 +41,7 @@ public class YearExpiryRule : ValidationRule<String> {
         }
         // Holds the current year
         let thisYear = Calendar.current.component(Calendar.Component.year, from: Date())
-        if year < thisYear || year > (thisYear + validity) {
+        if thisYear > (year + validity) {
             return error
         }
         return nil
@@ -53,7 +53,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `YearExpiryRule`
     class func yearExpiry(validity: Int = 3) -> ValidationRule<String> {
-        return YearExpiryRule(validity: 3)
+        return YearExpiryRule(validity: validity)
     }
     
 }

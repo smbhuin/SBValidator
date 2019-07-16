@@ -23,12 +23,13 @@
 /* Begin PBXBuildFile section */
 		DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5522D2463E00AA04D4 /* ArrayRule.swift */; };
 		DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */; };
+		DFA295E822DCEAC4000A3370 /* PinCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */; };
 		DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2F8C422C34BC0007B08F4 /* Validatable.swift */; };
 		DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */; };
 		OBJ_44 /* AlphaNumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AlphaNumericRule.swift */; };
 		OBJ_45 /* AlphaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AlphaRule.swift */; };
-		OBJ_46 /* CardExpiryMonthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CardExpiryMonthRule.swift */; };
-		OBJ_47 /* CardExpiryYearRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CardExpiryYearRule.swift */; };
+		OBJ_46 /* MonthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* MonthRule.swift */; };
+		OBJ_47 /* YearExpiryRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* YearExpiryRule.swift */; };
 		OBJ_48 /* CharacterSetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CharacterSetRule.swift */; };
 		OBJ_49 /* ConfirmRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ConfirmRule.swift */; };
 		OBJ_50 /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* EmailRule.swift */; };
@@ -73,12 +74,13 @@
 /* Begin PBXFileReference section */
 		DF176D5522D2463E00AA04D4 /* ArrayRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRule.swift; sourceTree = "<group>"; };
 		DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
+		DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeRule.swift; sourceTree = "<group>"; };
 		DFB2F8C422C34BC0007B08F4 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumRule.swift; sourceTree = "<group>"; };
 		OBJ_10 /* AlphaNumericRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaNumericRule.swift; sourceTree = "<group>"; };
 		OBJ_11 /* AlphaRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaRule.swift; sourceTree = "<group>"; };
-		OBJ_12 /* CardExpiryMonthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpiryMonthRule.swift; sourceTree = "<group>"; };
-		OBJ_13 /* CardExpiryYearRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpiryYearRule.swift; sourceTree = "<group>"; };
+		OBJ_12 /* MonthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRule.swift; sourceTree = "<group>"; };
+		OBJ_13 /* YearExpiryRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearExpiryRule.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CharacterSetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSetRule.swift; sourceTree = "<group>"; };
 		OBJ_15 /* ConfirmRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRule.swift; sourceTree = "<group>"; };
 		OBJ_16 /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
@@ -187,8 +189,8 @@
 				OBJ_14 /* CharacterSetRule.swift */,
 				OBJ_10 /* AlphaNumericRule.swift */,
 				OBJ_11 /* AlphaRule.swift */,
-				OBJ_12 /* CardExpiryMonthRule.swift */,
-				OBJ_13 /* CardExpiryYearRule.swift */,
+				OBJ_12 /* MonthRule.swift */,
+				OBJ_13 /* YearExpiryRule.swift */,
 				OBJ_15 /* ConfirmRule.swift */,
 				OBJ_16 /* EmailRule.swift */,
 				OBJ_17 /* ExactLengthRule.swift */,
@@ -204,6 +206,7 @@
 				OBJ_26 /* RegexRule.swift */,
 				OBJ_27 /* RequiredRule.swift */,
 				OBJ_29 /* ZipCodeRule.swift */,
+				DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */,
 				DF176D5522D2463E00AA04D4 /* ArrayRule.swift */,
 				DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */,
 			);
@@ -296,8 +299,8 @@
 			files = (
 				OBJ_44 /* AlphaNumericRule.swift in Sources */,
 				OBJ_45 /* AlphaRule.swift in Sources */,
-				OBJ_46 /* CardExpiryMonthRule.swift in Sources */,
-				OBJ_47 /* CardExpiryYearRule.swift in Sources */,
+				OBJ_46 /* MonthRule.swift in Sources */,
+				OBJ_47 /* YearExpiryRule.swift in Sources */,
 				OBJ_48 /* CharacterSetRule.swift in Sources */,
 				OBJ_49 /* ConfirmRule.swift in Sources */,
 				DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */,
@@ -311,6 +314,7 @@
 				OBJ_55 /* IPV4Rule.swift in Sources */,
 				OBJ_56 /* ISBNRule.swift in Sources */,
 				OBJ_57 /* RangeRule.swift in Sources */,
+				DFA295E822DCEAC4000A3370 /* PinCodeRule.swift in Sources */,
 				OBJ_58 /* PasswordRule.swift in Sources */,
 				OBJ_59 /* PhoneNumberRule.swift in Sources */,
 				OBJ_60 /* RegexRule.swift in Sources */,

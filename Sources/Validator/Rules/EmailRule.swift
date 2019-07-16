@@ -11,7 +11,7 @@ import Foundation
 /**
  `EmailRule` is a subclass of RegexRule that defines how a email is validated.
  */
-public class EmailRule: RegexRule {
+public class EmailRule : RegexRule {
     
     /// Regular express string to be used in validation.
     static let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -31,7 +31,7 @@ public class EmailRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `EmailRule`
-    class var email: ValidationRule {
+    class var email: ValidationRule<String> {
         get  {
             return EmailRule()
         }

@@ -11,7 +11,7 @@ import Foundation
 /**
  `ValidationRule` is the parent of all validation rules.
  */
-open class ValidationRule {
+open class ValidationRule<Value> {
     
     /// String that holds error message.
     var message: String
@@ -31,7 +31,7 @@ open class ValidationRule {
      - parameter value: Any value to be validated.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    open func validate(_ value: Any?) -> ValidationError? {
+    open func validate(_ value: Value?) -> ValidationError? {
         return nil
     }
     

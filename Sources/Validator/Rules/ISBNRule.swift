@@ -9,9 +9,9 @@
 import Foundation
 
 /**
- `ISBNRule` is a subclass of `Rule`. It is used to verify whether a field is a valid ISBN number.
+ `ISBNRule` is a subclass of `ValidationRule`. It is used to verify whether a value is a valid ISBN number.
  */
-public class ISBNRule: ValidationRule {
+public class ISBNRule : ValidationRule<String> {
     
     /**
      Initializes a `ISBNRule` object to verify that value is a ISBN number.
@@ -29,23 +29,14 @@ public class ISBNRule: ValidationRule {
      - parameter value: Any value to checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
+    public override func validate(_ value: String?) -> ValidationError? {
+        guard let v = value else { return nil }
+        guard let regex = try? NSRegularExpression(pattern: "[\\s-]", options: []) else {
+            fatalError("Invalid ISBN sanitizing regex")
         }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            guard let regex = try? NSRegularExpression(pattern: "[\\s-]", options: []) else {
-                fatalError("Invalid ISBN sanitizing regex")
-            }
-            let sanitized = regex.stringByReplacingMatches(in: d, options: [], range: NSMakeRange(0, d.count), withTemplate: "")
-            if !(ISBN10Validator().verify(sanitized) || ISBN13Validator().verify(sanitized)) {
-                return error
-            }
-        default:
-            return ValidationError.inapplicable()
+        let sanitized = regex.stringByReplacingMatches(in: v, options: [], range: NSMakeRange(0, v.count), withTemplate: "")
+        if !(ISBN10Validator().verify(sanitized) || ISBN13Validator().verify(sanitized)) {
+            return ValidationError(self.message)
         }
         return nil
     }
@@ -55,7 +46,7 @@ public class ISBNRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ISBNRule`
-    class var ISBN: ValidationRule {
+    class var ISBN: ValidationRule<String> {
         get  {
             return ISBNRule()
         }
@@ -188,7 +179,6 @@ private struct ISBN13Validator: ISBNValidator {
         
         for i in 0..<12 {
             if let intCharacter = Int(String(input[input.index(input.startIndex, offsetBy: i)])) {
-                print("\(factor[i%2]) * \(intCharacter)")
                 checksum += factor[i % 2] * intCharacter
             }
         }

@@ -11,10 +11,10 @@ import Foundation
 /**
  `RangeRule` is a subclass of `ValidationRule` that defines how lingth is validated with min & max limits.
  */
-public class RangeRule: ValidationRule {
+public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, Value : CustomStringConvertible {
     
-    private let min: Int
-    private let max: Int
+    private let min: Value
+    private let max: Value
     
     /**
      Initializes a `RangeRule` object to verify that length/size of value is in the range of min & max.
@@ -24,10 +24,10 @@ public class RangeRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(min: Int, max: Int, message: String = "length/size is invalid") {
+    public init(min: Value, max: Value, message: String? = nil) {
         self.min = min
         self.max = max
-        super.init(message: message)
+        super.init(message: message ?? "is invalid. must be between \(min) and \(max)")
     }
     
     /**
@@ -36,37 +36,14 @@ public class RangeRule: ValidationRule {
      - parameter value: Any value to checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
+    public override func validate(_ value: Value?) -> ValidationError? {
+        guard let ad = value else { return nil }
+        if ad >= min && ad <= max {
+            return nil
         }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            if d.count < min || d.count > max {
-                return error
-            }
-        case let d as Int:
-            if d < min || d > max {
-                return error
-            }
-        case let d as Array<Any>:
-            if d.count < min || d.count > max {
-                return error
-            }
-        case let d as Dictionary<AnyHashable,Any>:
-            if d.count < min || d.count > max {
-                return error
-            }
-        case let d as Set<AnyHashable>:
-            if d.count < min || d.count > max {
-                return error
-            }
-        default:
-            return ValidationError.inapplicable()
+        else {
+            return ValidationError(self.message)
         }
-        return nil
     }
     
 }
@@ -74,7 +51,7 @@ public class RangeRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RangeRule`
-    class func range(min: Int, max: Int) -> ValidationRule {
+    class func range<Value>(min: Value, max: Value) -> ValidationRule<Value> where Value : Comparable, Value : CustomStringConvertible {
         return RangeRule(min: min, max: max)
     }
     

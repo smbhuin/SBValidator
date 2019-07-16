@@ -9,21 +9,25 @@
 import Foundation
 
 /**
+ Represents a validatable.
+ */
+public protocol ValidatableProtocol: CustomStringConvertible {
+    func validate() -> ValidationError?
+}
+
+/**
  Represents all components required for single validation to perform.
  */
-open class Validatable {
+open class Validatable<Value> : ValidatableProtocol {
     
     /// Identifier.
     public var name: String
     
     /// Value to be validate.
-    public var value: Any?
+    public var value: Value?
     
     /// Rules to be applied on value.
-    public var rules: [ValidationRule]
-    
-    /// This will suppress the individual rule error message.
-    public var message: String?
+    public var rules: [ValidationRule<Value>]
     
     /**
      Initializes a `Validatable` object.
@@ -31,14 +35,13 @@ open class Validatable {
      - parameter name: String that used to identify.
      - parameter value: Value to be validate. It could be any type as long as rules support it.
      - parameter rules: Array of validation rules.
-     - parameter message: String for error message.
+     - parameter message: Error message string.
      - returns: An initialized object.
      */
-    public init(name: String, value: Any?, rules: [ValidationRule], message: String? = nil) {
+    public init(name: String, value: Value?, rules: [ValidationRule<Value>]) {
         self.name = name
         self.value = value
         self.rules = rules
-        self.message = message
     }
     
     /**
@@ -53,6 +56,11 @@ open class Validatable {
             }
         }
         return nil
+    }
+    
+    /// Description of Validatable
+    public var description: String {
+        return name
     }
     
 }

@@ -9,13 +9,13 @@
 import Foundation
 
 /**
- `ConfirmRule` is a subclass of Rule that defines how a value that has to be equal
+ `ConfirmRule` is a subclass of `ValidationRule` that defines how a value that has to be equal
  to another value is validated.
  */
-public class ConfirmRule: ValidationRule {
+public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable {
     
     /// value to which original text field will be compared to.
-    private let confirmValue: Any
+    private let confirmValue: Value
     
     /**
      Initializes a `ConfirmationRule` object to validate the value that should equal the value to be validated.
@@ -24,7 +24,7 @@ public class ConfirmRule: ValidationRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(confirmValue: Any, message: String = "does not match"){
+    public init(confirmValue: Value, message: String = "does not match"){
         self.confirmValue = confirmValue
         super.init(message: message)
     }
@@ -35,33 +35,17 @@ public class ConfirmRule: ValidationRule {
      - parameter value: Any value to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
+    public override func validate(_ value: Value?) -> ValidationError? {
         guard let ad = value
             else  {
                 return nil
         }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            if let c = confirmValue as? String, d != c {
-                return error
-            }
-        case let d as Int:
-            if let c = confirmValue as? Int, d != c {
-                return error
-            }
-        case let d as Float:
-            if let c = confirmValue as? Float, d != c {
-                return error
-            }
-        case let d as Double:
-            if let c = confirmValue as? Double, d != c {
-                return error
-            }
-        default:
-            return ValidationError.inapplicable()
+        if ad == confirmValue {
+            return nil
         }
-        return nil
+        else {
+            return ValidationError(self.message)
+        }
     }
     
 }
@@ -69,7 +53,7 @@ public class ConfirmRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `ConfirmRule`
-    class func confirm(_ value: Any) -> ValidationRule {
+    class func confirm<Value>(_ value: Value) -> ValidationRule<Value> where Value: Equatable {
         return ConfirmRule(confirmValue: value)
     }
     

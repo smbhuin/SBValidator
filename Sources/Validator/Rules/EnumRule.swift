@@ -11,11 +11,11 @@ import Foundation
 /**
  `EnumRule` is a subclass of `ValidationRule` that defines how a value is validated against mutiple possible values.
  */
-public class EnumRule: ValidationRule {
+public class EnumRule<Value>: ValidationRule<Value> where Value: Equatable {
     
-    private let values: [Any]
+    private let values: [Value]
     
-    public init(values: [Any], message: String = "does not match with any possible values") {
+    public init(values: [Value], message: String = "does not match with any possible values") {
         self.values = values
         super.init(message: message)
     }
@@ -26,41 +26,14 @@ public class EnumRule: ValidationRule {
      - parameter value: Any value to checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    public override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
+    public override func validate(_ value: Value?) -> ValidationError? {
+        guard let v = value else { return nil }
+        if values.contains(v) {
+            return nil
         }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            guard let vs = values as? [String],
-                vs.contains(d)
-                else {
-                    return error
-            }
-        case let d as Int:
-            guard let vs = values as? [Int],
-                vs.contains(d)
-                else {
-                    return error
-            }
-        case let d as Float:
-            guard let vs = values as? [Float],
-                vs.contains(d)
-                else {
-                    return error
-            }
-        case let d as Double:
-            guard let vs = values as? [Double],
-                vs.contains(d)
-                else {
-                    return error
-            }
-        default:
-            return ValidationError.inapplicable()
+        else {
+            return ValidationError(self.message)
         }
-        return nil
     }
     
 }
@@ -68,7 +41,7 @@ public class EnumRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `EnumRule`
-    class func `enum`(_ values: [Any]) -> ValidationRule {
+    class func `enum`<Value>(_ values: [Value]) -> ValidationRule<Value>  where Value: Equatable {
         return EnumRule(values: values)
     }
     

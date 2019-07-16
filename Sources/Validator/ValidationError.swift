@@ -26,15 +26,6 @@ public class ValidationError: Error, CustomStringConvertible {
         self.message = message
     }
     
-    /**
-     Initializes a `ValidationError` object with Inapplicable message String. When a value is not applicable to the validation rule is not app
-     
-     - returns: An `ValidationError` object
-     */
-    public class func inapplicable() -> ValidationError {
-        return .init("inapplicable rule")
-    }
-    
     /// Error Description
     public var description: String {
         get {

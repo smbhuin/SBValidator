@@ -9,12 +9,12 @@
 import Foundation
 
 /**
- `RegexRule` is a subclass of Rule that defines how a regular expression is validated.
+ `RegexRule` is a subclass of `ValidationRule` that defines how a regular expression is validated.
  */
-open class RegexRule: ValidationRule {
+open class RegexRule: ValidationRule<String> {
     
     /// Regular express string to be used in validation.
-    private var _regex: String = "^(?=.*?[A-Z]).{8,}$"
+    private var _regex: String = ""
     
     /**
      Method used to initialize `RegexRule` object.
@@ -34,23 +34,14 @@ open class RegexRule: ValidationRule {
      - parameter value: String to be checked for validation.
      - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
      */
-    open override func validate(_ value: Any?) -> ValidationError? {
-        guard let ad = value
-            else  {
-                return nil
+    open override func validate(_ value: String?) -> ValidationError? {
+        guard let v = value else { return nil }
+        guard let regex = try? NSRegularExpression(pattern: self._regex, options: []) else {
+            fatalError("RegexRule: Failed to create Regex Expression")
         }
-        let error = ValidationError(self.message)
-        switch ad {
-        case let d as String:
-            guard let regex = try? NSRegularExpression(pattern: self._regex, options: []) else {
-                fatalError("RegexRule: Failed to create Regex Expression")
-            }
-            let match = regex.numberOfMatches(in: d, options: [], range: NSRange(location: 0, length: d.count))
-            if match != 1 {
-                return error
-            }
-        default:
-            return ValidationError.inapplicable()
+        let match = regex.numberOfMatches(in: v, options: [], range: NSRange(location: 0, length: v.count))
+        if match != 1 {
+            return ValidationError(self.message)
         }
         return nil
     }
@@ -60,7 +51,7 @@ open class RegexRule: ValidationRule {
 public extension ValidationRule {
     
     /// Quick accessor for `RegexRule`
-    class func regex(pattern: String) -> ValidationRule {
+    class func regex(pattern: String) -> ValidationRule<String> {
         return RegexRule(regex: pattern)
     }
     
