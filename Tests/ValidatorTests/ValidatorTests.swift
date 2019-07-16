@@ -3,6 +3,14 @@ import XCTest
 
 final class ValidatorTests: XCTestCase {
     
+    func testRequired() {
+        let validator = Validator()
+        validator.add(name: "required", value: "asdf", rules: [.required])
+        validator.add(name: "required2", value: ["a","b"], rules: [.required])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
+    }
+    
     func testFullname() {
         let validator = Validator()
         validator.add(name: "myName", value: "Soumen Bhuin", rules: [FullNameRule()])
