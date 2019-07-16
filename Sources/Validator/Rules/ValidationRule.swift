@@ -14,7 +14,7 @@ import Foundation
 open class ValidationRule<Value> {
     
     /// String that holds error message.
-    var message: String
+    public var message: String
     
     /**
      Initializes an `ValidationRule` object. Should be inherited by child classes
