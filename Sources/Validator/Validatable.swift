@@ -11,14 +11,14 @@ import Foundation
 /**
  Represents a validatable.
  */
-public protocol ValidatableProtocol: CustomStringConvertible {
+public protocol Validatable: CustomStringConvertible {
     func validate() -> ValidationError?
 }
 
 /**
- Represents all components required for single validation to perform.
+ Represents all components required for single basic validation to perform.
  */
-open class Validatable<Value> : ValidatableProtocol {
+open class BasicValidatable<Value> : Validatable {
     
     /// Identifier.
     public var name: String
