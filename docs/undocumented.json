@@ -6,6 +6,13 @@
       "symbol": "EnumRule.init(values:message:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/soumen/Documents/Projects/Validator/Sources/Validator/Validatable.swift",
+      "line": 15,
+      "symbol": "Validatable.validate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/soumen/Documents/Projects/Validator"

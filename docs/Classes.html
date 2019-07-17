@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           Validator Docs
         </a>
-         (99% documented)
+         (98% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -60,13 +60,13 @@
                 <a class="nav-group-task-link" href="Classes/AlphaRule.html">AlphaRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ArrayLengthRule.html">ArrayLengthRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ArrayRule.html">ArrayRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/CardExpiryMonthRule.html">CardExpiryMonthRule</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/CardExpiryYearRule.html">CardExpiryYearRule</a>
+                <a class="nav-group-task-link" href="Classes/BasicValidatable.html">BasicValidatable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CharacterSetRule.html">CharacterSetRule</a>
@@ -76,6 +76,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CoordinateRule.html">CoordinateRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DateRule.html">DateRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/EmailRule.html">EmailRule</a>
@@ -102,6 +105,15 @@
                 <a class="nav-group-task-link" href="Classes/ISBNRule.html">ISBNRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ISO8601DateRule.html">ISO8601DateRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/LengthRule.html">LengthRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MonthRule.html">MonthRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
@@ -109,6 +121,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PinCodeRule.html">PinCodeRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/RangeRule.html">RangeRule</a>
@@ -120,7 +135,7 @@
                 <a class="nav-group-task-link" href="Classes/RequiredRule.html">RequiredRule</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/Validatable.html">Validatable</a>
+                <a class="nav-group-task-link" href="Classes/ValidatableRule.html">ValidatableRule</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ValidationError.html">ValidationError</a>
@@ -132,7 +147,18 @@
                 <a class="nav-group-task-link" href="Classes/Validator.html">Validator</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/YearExpiryRule.html">YearExpiryRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ZipCodeRule.html">ZipCodeRule</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Validatable.html">Validatable</a>
               </li>
             </ul>
           </li>
@@ -206,7 +232,7 @@ valid list of alphanumeric characters.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">ValidationRule</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -253,6 +279,38 @@ valid list of alpha characters.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9Validator15ArrayLengthRuleC"></a>
+                    <a name="//apple_ref/swift/Class/ArrayLengthRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator15ArrayLengthRuleC">ArrayLengthRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ArrayLengthRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how length is validated with min &amp; max limits.</p>
+
+                        <a href="Classes/ArrayLengthRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ArrayLengthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9Validator9ArrayRuleC"></a>
                     <a name="//apple_ref/swift/Class/ArrayRule" class="dashAnchor"></a>
                     <a class="token" href="#/s:9Validator9ArrayRuleC">ArrayRule</a>
@@ -271,71 +329,7 @@ valid list of alpha characters.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ArrayRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Validator19CardExpiryMonthRuleC"></a>
-                    <a name="//apple_ref/swift/Class/CardExpiryMonthRule" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator19CardExpiryMonthRuleC">CardExpiryMonthRule</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CardExpiryMonthRule</code> is a subclass of <code>Rule</code> that defines how a credit/debit&rsquo;s card expiry month field is validated</p>
-
-                        <a href="Classes/CardExpiryMonthRule.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CardExpiryMonthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9Validator18CardExpiryYearRuleC"></a>
-                    <a name="//apple_ref/swift/Class/CardExpiryYearRule" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator18CardExpiryYearRuleC">CardExpiryYearRule</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>CardExpiryYearRule</code> is a subclass of <code>Rule</code> that defines how a credit/debit&rsquo;s card expiry year field is validated</p>
-
-                        <a href="Classes/CardExpiryYearRule.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CardExpiryYearRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ArrayRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -368,7 +362,7 @@ valid list of characters.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">CharacterSetRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">CharacterSetRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -392,7 +386,7 @@ valid list of characters.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>ConfirmRule</code> is a subclass of Rule that defines how a value that has to be equal
+                        <p><code>ConfirmRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a value that has to be equal
 to another value is validated.</p>
 
                         <a href="Classes/ConfirmRule.html" class="slightly-smaller">See more</a>
@@ -401,7 +395,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ConfirmRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ConfirmRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
                       </div>
@@ -433,7 +427,39 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CoordinateRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CoordinateRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">Double</span><span class="p">]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator8DateRuleC"></a>
+                    <a name="//apple_ref/swift/Class/DateRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator8DateRuleC">DateRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>DateRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that means value can&rsquo;t be nil or blank. Make sure required rule is the first item in rules list</p>
+
+                        <a href="Classes/DateRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DateRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -497,7 +523,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EnumRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EnumRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
                       </div>
@@ -521,7 +547,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>ExactLengthRule</code> is a subclass of Rule that is used to make sure a the text of a field is an exact length.</p>
+                        <p><code>ExactLengthRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that is used to make sure a the value has an exact length.</p>
 
                         <a href="Classes/ExactLengthRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -529,7 +555,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ExactLengthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ExactLengthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -553,7 +579,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>FloatRule</code> is a subclass of Rule that defines how check if a value is a floating point value.</p>
+                        <p><code>FloatRule</code> is a subclass of <code><a href="Classes/RegexRule.html">RegexRule</a></code> that defines how check if a value is a floating point value.</p>
 
                         <a href="Classes/FloatRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -561,7 +587,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FloatRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FloatRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/RegexRule.html">RegexRule</a></span></code></pre>
 
                         </div>
                       </div>
@@ -585,7 +611,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>FullNameRule</code> is a subclass of Rule that defines how a full name is validated.</p>
+                        <p><code>FullNameRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a full name is validated.</p>
 
                         <a href="Classes/FullNameRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -593,7 +619,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FullNameRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FullNameRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -681,7 +707,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>ISBNRule</code> is a subclass of <code>Rule</code>. It is used to verify whether a field is a valid ISBN number.</p>
+                        <p><code>ISBNRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code>. It is used to verify whether a value is a valid ISBN number.</p>
 
                         <a href="Classes/ISBNRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -689,7 +715,104 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ISBNRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ISBNRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator15ISO8601DateRuleC"></a>
+                    <a name="//apple_ref/swift/Class/ISO8601DateRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator15ISO8601DateRuleC">ISO8601DateRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ISO8601DateRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that means value can&rsquo;t be nil or blank. Make sure required rule is the first item in rules list</p>
+
+                        <a href="Classes/ISO8601DateRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(OSX 10.12, *)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ISO8601DateRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator10LengthRuleC"></a>
+                    <a name="//apple_ref/swift/Class/LengthRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator10LengthRuleC">LengthRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>LengthRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how length is validated with min &amp; max limits.</p>
+
+                        <a href="Classes/LengthRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">LengthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator9MonthRuleC"></a>
+                    <a name="//apple_ref/swift/Class/MonthRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator9MonthRuleC">MonthRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>MonthRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a credit/debit&rsquo;s card expiry month field is validated</p>
+
+                        <a href="Classes/MonthRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MonthRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -745,7 +868,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>PhoneNumberRule</code> is a subclass of Rule that defines how a phone number is validated.</p>
+                        <p><code>PhoneNumberRule</code> is a subclass of <code><a href="Classes/RegexRule.html">RegexRule</a></code> that defines how a phone number is validated.</p>
 
                         <a href="Classes/PhoneNumberRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -754,6 +877,38 @@ to another value is validated.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PhoneNumberRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/RegexRule.html">RegexRule</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator11PinCodeRuleC"></a>
+                    <a name="//apple_ref/swift/Class/PinCodeRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator11PinCodeRuleC">PinCodeRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>PinCodeRule</code> is a subclass of <code><a href="Classes/RegexRule.html">RegexRule</a></code> that represents how indian pin codes are to be validated.</p>
+
+                        <a href="Classes/PinCodeRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PinCodeRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/RegexRule.html">RegexRule</a></span></code></pre>
 
                         </div>
                       </div>
@@ -777,7 +932,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>RangeRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how lingth is validated with min &amp; max limits.</p>
+                        <p><code>RangeRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how value is validated with min &amp; max limits.</p>
 
                         <a href="Classes/RangeRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -785,7 +940,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RangeRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RangeRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -809,7 +964,7 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>RegexRule</code> is a subclass of Rule that defines how a regular expression is validated.</p>
+                        <p><code>RegexRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a regular expression is validated.</p>
 
                         <a href="Classes/RegexRule.html" class="slightly-smaller">See more</a>
                       </div>
@@ -817,7 +972,7 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RegexRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RegexRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -849,7 +1004,71 @@ to another value is validated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RequiredRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RequiredRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator15ValidatableRuleC"></a>
+                    <a name="//apple_ref/swift/Class/ValidatableRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator15ValidatableRuleC">ValidatableRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ValidatableRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a object which conforms to <code><a href="Protocols/Validatable.html">Validatable</a></code> protocol is validated.</p>
+
+                        <a href="Classes/ValidatableRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ValidatableRule</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Validatable.html">Validatable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Validator14YearExpiryRuleC"></a>
+                    <a name="//apple_ref/swift/Class/YearExpiryRule" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator14YearExpiryRuleC">YearExpiryRule</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>YearExpiryRule</code> is a subclass of <code><a href="Classes/ValidationRule.html">ValidationRule</a></code> that defines how a credit/debit card&rsquo;s expiry year is validated</p>
+
+                        <a href="Classes/YearExpiryRule.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">YearExpiryRule</span> <span class="p">:</span> <span class="kt"><a href="Classes/ValidationRule.html">ValidationRule</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -895,9 +1114,9 @@ to another value is validated.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9Validator11ValidatableC"></a>
-                    <a name="//apple_ref/swift/Class/Validatable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9Validator11ValidatableC">Validatable</a>
+                    <a name="/s:9Validator16BasicValidatableC"></a>
+                    <a name="//apple_ref/swift/Class/BasicValidatable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Validator16BasicValidatableC">BasicValidatable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -905,15 +1124,15 @@ to another value is validated.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Represents all components required for single validation to perform.</p>
+                        <p>Represents all components required for single basic validation to perform.</p>
 
-                        <a href="Classes/Validatable.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/BasicValidatable.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Validatable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">BasicValidatable</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Validatable.html">Validatable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -992,7 +1211,7 @@ to another value is validated.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-11)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
