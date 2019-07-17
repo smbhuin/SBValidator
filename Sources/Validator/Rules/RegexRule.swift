@@ -32,16 +32,16 @@ open class RegexRule: ValidationRule<String> {
      Method used to validate the provided value.
      
      - parameter value: String to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    open override func validate(_ value: String?) -> ValidationError? {
+    open override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         guard let regex = try? NSRegularExpression(pattern: self._regex, options: []) else {
             fatalError("RegexRule: Failed to create Regex Expression")
         }
         let match = regex.numberOfMatches(in: v, options: [], range: NSRange(location: 0, length: v.count))
         if match != 1 {
-            return ValidationError(self.message)
+            return self.message
         }
         return nil
     }

@@ -7,6 +7,13 @@ Rule based validation library for swift.
 [![SPM Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](#spm)
 [![LICENSE](https://img.shields.io/badge/License-MIT-4BC51D.svg?style=flat)](#license)
 
+## Features
+
+- Rule based validation
+- Class/Struct validation
+- Validatable/Validator chaining
+- Linux Compatible (Can be used with [Kitura](https://www.kitura.io), [Vapor](https://vapor.codes), [Perfect](https://perfect.org))
+
 ## Installation
 
 To install Validator, add it as a submodule to your project (on the top level project directory):

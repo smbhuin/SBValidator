@@ -14,7 +14,7 @@ import Foundation
 public class ValidationError: Error, CustomStringConvertible {
     
     /// Error Message String
-    var message: String
+    private var message: String
     
     /**
      Initializes a `ValidationError` object with message String.

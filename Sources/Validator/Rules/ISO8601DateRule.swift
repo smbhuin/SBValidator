@@ -32,9 +32,9 @@ public class ISO8601DateRule: ValidationRule<String> {
      Method used to validate the provided value.
      
      - parameter value: Any value to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails. Returns error for empty string or collection
+     - returns: Error Message. nil if validation is successful; `String` if validation fails. Returns error for empty string or collection
      */
-    public override func validate(_ value: String?) -> ValidationError? {
+    public override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         let df = ISO8601DateFormatter()
         if !options.isEmpty {
@@ -43,7 +43,7 @@ public class ISO8601DateRule: ValidationRule<String> {
         if let _ = df.date(from: v) {
             return nil
         }
-        return ValidationError(self.message)
+        return self.message
     }
     
 }

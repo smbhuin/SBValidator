@@ -34,15 +34,15 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
      Method used to validate the provided value.
      
      - parameter value: Any value to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> ValidationError? {
+    public override func validate(_ value: Value?) -> String? {
         guard let v = value else { return nil }
         if v >= min && v <= max {
             return nil
         }
         else {
-            return ValidationError(self.message)
+            return self.message
         }
     }
     

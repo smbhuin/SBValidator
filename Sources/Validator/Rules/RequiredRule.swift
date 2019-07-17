@@ -27,23 +27,22 @@ public class RequiredRule<Value>: ValidationRule<Value> {
      Method used to validate the provided value.
      
      - parameter value: Any value to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails. Returns error for empty string or collection
+     - returns: Error Message. nil if validation is successful; `String` if validation fails. Returns error for empty string or collection
      */
-    public override func validate(_ value: Value?) -> ValidationError? {
-        let error = ValidationError(self.message)
-        guard let v = value else { return error }
+    public override func validate(_ value: Value?) -> String? {
+        guard let v = value else { return self.message }
         switch v {
         case let d as String:
             if d.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                return error
+                return self.message
             }
         case let d as [Any]:
             if d.isEmpty {
-                return error
+                return self.message
             }
         case let d as [AnyHashable:Any]:
             if d.isEmpty {
-                return error
+                return self.message
             }
         default:
             return nil

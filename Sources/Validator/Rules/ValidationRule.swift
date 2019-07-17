@@ -14,7 +14,7 @@ import Foundation
 open class ValidationRule<Value> {
     
     /// String that holds error message.
-    public var message: String
+    var message: String
     
     /**
      Initializes an `ValidationRule` object. Should be inherited by child classes
@@ -29,9 +29,9 @@ open class ValidationRule<Value> {
      Validates value.
      
      - parameter value: Any value to be validated.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    open func validate(_ value: Value?) -> ValidationError? {
+    open func validate(_ value: Value?) -> String? {
         return nil
     }
     

@@ -27,10 +27,10 @@ public class CoordinateRule: ValidationRule<[Double]> {
      Used to validate Coordinate value.
      
      - parameter value: Array of Double to be checked for validation. longitude should be first element.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: [Double]?) -> ValidationError? {
-        guard let v = value, v.isEmpty else { return nil }
+    public override func validate(_ value: [Double]?) -> String? {
+        guard let v = value, !v.isEmpty else { return nil }
         if v.count == 2 {
             let long = v[0]
             let lat = v[1]
@@ -38,7 +38,7 @@ public class CoordinateRule: ValidationRule<[Double]> {
                 return nil
             }
         }
-        return ValidationError(self.message)
+        return self.message
     }
     
 }

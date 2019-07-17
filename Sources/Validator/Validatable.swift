@@ -11,7 +11,7 @@ import Foundation
 /**
  Represents a validatable.
  */
-public protocol Validatable: CustomStringConvertible {
+public protocol Validatable : CustomStringConvertible {
     func validate() -> ValidationError?
 }
 
@@ -51,14 +51,14 @@ open class BasicValidatable<Value> : Validatable {
      */
     public func validate() -> ValidationError? {
         for rule in rules {
-            if let error = rule.validate(value) {
-                return error
+            if let errorMessage = rule.validate(value) {
+                let separator = value is Validatable ? "/" : " "
+                return ValidationError(self.name + separator + errorMessage)
             }
         }
         return nil
     }
     
-    /// Description of Validatable
     public var description: String {
         return name
     }

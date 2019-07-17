@@ -22,8 +22,8 @@ public class EmailRule : RegexRule {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public convenience init(message: String = "is invalid"){
-        self.init(regex: EmailRule.regex, message: message)
+    public init(message: String = "is invalid"){
+        super.init(regex: EmailRule.regex, message: message)
     }
     
 }

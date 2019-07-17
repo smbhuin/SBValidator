@@ -54,8 +54,8 @@ public class PasswordRule : RegexRule {
      - parameter message: String of error message.
      - returns: An initialized `PasswordRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public convenience init(strength: PasswordRule.Strength = .weak, message: String = "") {
-        self.init(regex: strength.regex(), message: message == "" ? strength.message() : message)
+    public init(strength: PasswordRule.Strength = .weak, message: String = "") {
+        super.init(regex: strength.regex(), message: message == "" ? strength.message() : message)
     }
     
 }

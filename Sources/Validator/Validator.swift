@@ -25,10 +25,17 @@ open class Validator {
     }
     
     /**
-     Add a new validatable
+     Add a new basic validatable
      */
     public func add<V>(name: String, value: V?, rules: [ValidationRule<V>]) {
         validatables.append(BasicValidatable<V>(name: name, value: value, rules: rules))
+    }
+    
+    /**
+     Add a new custom validatable
+     */
+    public func add(validatable: Validatable) {
+        validatables.append(validatable)
     }
     
     /**

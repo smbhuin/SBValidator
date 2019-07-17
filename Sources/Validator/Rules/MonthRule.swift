@@ -27,14 +27,14 @@ public class MonthRule : ValidationRule<String> {
      Validates a field.
      
      - parameter value: String to check for validation.
-     - returns: `ValidationError`. nil on successful validation, otherwise `ValidationError` on failed Validation.
+     - returns: Error Message. nil on successful validation, otherwise `String` on failed Validation.
      */
-    public override func validate(_ value: String?) -> ValidationError? {
+    public override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         if let month = Int(v), month >= 1 && month <= 12 {
             return nil
         }
-        return ValidationError(self.message)
+        return self.message
     }
     
 }

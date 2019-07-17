@@ -31,11 +31,11 @@ public class ArrayRule: ValidationRule<[Any]> {
      Used to validate value.
      
      - parameter value: Array to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: [Any]?) -> ValidationError? {
+    public override func validate(_ value: [Any]?) -> String? {
         guard let v = value else { return nil }
-        let error = ValidationError(self.message)
+        let error = self.message
         for e in v {
             for rule in rules {
                 if let _ = rule.validate(e) {

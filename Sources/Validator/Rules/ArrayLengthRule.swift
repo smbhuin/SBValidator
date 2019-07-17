@@ -34,15 +34,15 @@ public class ArrayLengthRule : ValidationRule<Array<Any>> {
      Method used to validate the provided value.
      
      - parameter value: Any Array value to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Array<Any>?) -> ValidationError? {
+    public override func validate(_ value: Array<Any>?) -> String? {
         guard let v = value else { return nil }
         if v.count >= min && v.count <= max {
             return nil
         }
         else {
-            return ValidationError(self.message)
+            return self.message
         }
     }
     

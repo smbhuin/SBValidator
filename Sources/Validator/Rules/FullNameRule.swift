@@ -27,13 +27,13 @@ public class FullNameRule : ValidationRule<String> {
      Used to validate a name String.
      
      - parameter value: String to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: String?) -> ValidationError? {
+    public override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         let nameArray: [String] = v.split { $0 == " " }.map { String($0) }
         if nameArray.count < 2 {
-            return ValidationError(self.message)
+            return self.message
         }
         return nil
     }

@@ -31,11 +31,11 @@ public class YearExpiryRule : ValidationRule<String> {
      Validates a field.
      
      - parameter value: String or Int to check for validation.
-     - returns: `ValidationError`. nil on successful validation, otherwise `ValidationError` on failed Validation.
+     - returns: Error Message. nil on successful validation, otherwise `String` on failed Validation.
      */
-    public override func validate(_ value: String?) -> ValidationError? {
+    public override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
-        let error = ValidationError(self.message)
+        let error = self.message
         guard let year = Int(v) else {
             return error
         }

@@ -32,13 +32,13 @@ open class CharacterSetRule : ValidationRule<String> {
      Used to validate string value.
      
      - parameter value: String to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    open override func validate(_ value: String?) -> ValidationError? {
+    open override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         for uni in v.unicodeScalars {
             guard let uniVal = UnicodeScalar(uni.value), characterSet.contains(uniVal) else {
-                return ValidationError(self.message)
+                return self.message
             }
         }
         return nil

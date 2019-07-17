@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5522D2463E00AA04D4 /* ArrayRule.swift */; };
 		DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */; };
+		DF6F11ED22DF0D9A00660480 /* ValidatableRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */; };
 		DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */; };
 		DF81AC1E22DE0534005034C2 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1C22DE0534005034C2 /* LengthRule.swift */; };
 		DF81ACD522DE2AF8005034C2 /* DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81ACD422DE2AF8005034C2 /* DateRule.swift */; };
@@ -78,6 +79,7 @@
 /* Begin PBXFileReference section */
 		DF176D5522D2463E00AA04D4 /* ArrayRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRule.swift; sourceTree = "<group>"; };
 		DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
+		DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableRule.swift; sourceTree = "<group>"; };
 		DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayLengthRule.swift; sourceTree = "<group>"; };
 		DF81AC1C22DE0534005034C2 /* LengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthRule.swift; sourceTree = "<group>"; };
 		DF81ACD422DE2AF8005034C2 /* DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRule.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */,
 				DF176D5522D2463E00AA04D4 /* ArrayRule.swift */,
 				DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */,
+				DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 0;
 			files = (
 				DF81ACD722DE2E5A005034C2 /* ISO8601DateRule.swift in Sources */,
+				DF6F11ED22DF0D9A00660480 /* ValidatableRule.swift in Sources */,
 				OBJ_44 /* AlphaNumericRule.swift in Sources */,
 				DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */,
 				OBJ_45 /* AlphaRule.swift in Sources */,

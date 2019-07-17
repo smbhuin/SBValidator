@@ -33,9 +33,9 @@ public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable 
      Used to validate a value.
      
      - parameter value: Any value to be checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> ValidationError? {
+    public override func validate(_ value: Value?) -> String? {
         guard let ad = value
             else  {
                 return nil
@@ -44,7 +44,7 @@ public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable 
             return nil
         }
         else {
-            return ValidationError(self.message)
+            return self.message
         }
     }
     

@@ -24,15 +24,15 @@ public class EnumRule<Value>: ValidationRule<Value> where Value: Equatable {
      Method used to validate the provided value.
      
      - parameter value: Any value to checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> ValidationError? {
+    public override func validate(_ value: Value?) -> String? {
         guard let v = value else { return nil }
         if values.contains(v) {
             return nil
         }
         else {
-            return ValidationError(self.message)
+            return self.message
         }
     }
     

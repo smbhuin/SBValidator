@@ -34,7 +34,7 @@ final class ValidatorTests: XCTestCase {
     
     func testEmail() {
         let validator = Validator()
-        validator.add(name: "email", value: "sbhuin@gmail.com", rules: [.required, .email])
+        validator.add(name: "email", value: "myemail@gmail.com", rules: [.required, .email])
         validator.add(name: "email1", value: "ABC67m@Gmail.com", rules: [.required, .email])
         let success = validator.validate().0
         XCTAssertEqual(success, true)
@@ -66,9 +66,9 @@ final class ValidatorTests: XCTestCase {
         let validator = Validator()
         validator.add(name: "MonthNil", value: nil, rules: [.range(min:1, max:12)])
         validator.add(name: "Month", value: 3, rules: [.range(min:1, max:12)])
-        let (success, validatable, error) = validator.validate()
-        if let v = validatable?.description, let e = error?.description {
-            debugPrint("Range Error: " + v + " " + e)
+        let (success, _, error) = validator.validate()
+        if let e = error?.description {
+            debugPrint("Range Error: ", e)
         }
         XCTAssertEqual(success, true)
     }
@@ -104,6 +104,72 @@ final class ValidatorTests: XCTestCase {
         XCTAssertEqual(success, true)
     }
     
+    struct User : Validatable {
+        
+        struct Address : Validatable {
+            
+            struct Location : Validatable {
+                var latitude: Double
+                var longitude: Double
+                
+                func validate() -> ValidationError? {
+                    let v = Validator()
+                    v.add(name: "Coordinate", value: [longitude, latitude], rules: [.coordinate])
+                    return v.validate().2
+                }
+                
+                var description: String {
+                    return "Location"
+                }
+            }
+            
+            var city: String
+            var country: String
+            var location: Location
+            
+            func validate() -> ValidationError? {
+                let v = Validator()
+                v.add(name: "City", value: city, rules: [.required , .alpha])
+                v.add(name: "Country", value: country, rules: [.required, .alpha])
+                v.add(name: "Location", value: location, rules: [.required, .validatable()])
+                return v.validate().2
+            }
+            
+            var description: String {
+                return "Address"
+            }
+            
+        }
+        
+        var name: String
+        var email: String
+        var address: Address?
+        
+        func validate() -> ValidationError? {
+            let v = Validator()
+            v.add(name: "Name", value: name, rules: [.required, .fullName])
+            v.add(name: "Email", value: email, rules: [.required, .email])
+            v.add(name: "Address", value: address, rules: [.required, .validatable()]) // address prpperty is optional but forced to be required
+            return v.validate().2
+        }
+        
+        var description: String {
+            return "User"
+        }
+        
+    }
+    
+    func testValidatable() {
+        let user = User(name: "Soumen Bhuin", email: "myemail@gmail.com", address: .init(city: "Kolkata", country: "India", location: .init(latitude: 88.3639, longitude: 22.5726)))
+        let validator = Validator()
+        validator.add(validatable: user) // Unnamed Validatable
+        let (success, _, error) = validator.validate()
+        if let e = error?.description {
+            debugPrint("Validatable Error: ", e)
+        }
+        XCTAssertEqual(success, true)
+    }
+    
     static var allTests = [
         ("FullName", testFullname),
         ("Alpha", testAlpha),
@@ -117,5 +183,6 @@ final class ValidatorTests: XCTestCase {
         ("Confirm", testConfirm),
         ("Length", testLength),
         ("GPSCoordinate", testCoordinate),
+        ("Validatable", testValidatable),
     ]
 }

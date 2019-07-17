@@ -27,16 +27,16 @@ public class ISBNRule : ValidationRule<String> {
      Method used to validate the provided value.
      
      - parameter value: Any value to checked for validation.
-     - returns: `ValidationError`. nil if validation is successful; `ValidationError` if validation fails.
+     - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: String?) -> ValidationError? {
+    public override func validate(_ value: String?) -> String? {
         guard let v = value else { return nil }
         guard let regex = try? NSRegularExpression(pattern: "[\\s-]", options: []) else {
             fatalError("Invalid ISBN sanitizing regex")
         }
         let sanitized = regex.stringByReplacingMatches(in: v, options: [], range: NSMakeRange(0, v.count), withTemplate: "")
         if !(ISBN10Validator().verify(sanitized) || ISBN13Validator().verify(sanitized)) {
-            return ValidationError(self.message)
+            return self.message
         }
         return nil
     }
