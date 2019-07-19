@@ -35,7 +35,7 @@ open class RegexRule: ValidationRule<String> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     open override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         guard let regex = try? NSRegularExpression(pattern: self._regex, options: []) else {
             fatalError("RegexRule: Failed to create Regex Expression")
         }

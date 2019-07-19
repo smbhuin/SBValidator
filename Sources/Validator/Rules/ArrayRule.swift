@@ -34,7 +34,7 @@ public class ArrayRule: ValidationRule<[Any]> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: [Any]?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         let error = self.message
         for e in v {
             for rule in rules {

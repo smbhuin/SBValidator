@@ -39,7 +39,7 @@ open class Validator {
     }
     
     /**
-     Validate all validatables. If any error found, it will not try to validate next value.
+     Validate all validatables. If any error found, it will not try to validate next validatable.
      */
     public func validate() -> (Bool, Validatable?, ValidationError?) {
         for validatable in validatables {
@@ -62,6 +62,19 @@ open class Validator {
             }
         }
         return (true, nil, nil)
+    }
+    
+    /**
+     Validate all validatables even if any error found for one validatable.
+     */
+    public func validateAll() -> [(Validatable?, ValidationError?)] {
+        var results: [(Validatable?, ValidationError?)] = []
+        for validatable in validatables {
+            if let error = validatable.validate() {
+                results.append((validatable, error))
+            }
+        }
+        return results
     }
     
 }

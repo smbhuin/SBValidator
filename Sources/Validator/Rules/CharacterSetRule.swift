@@ -35,7 +35,7 @@ open class CharacterSetRule : ValidationRule<String> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     open override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         for uni in v.unicodeScalars {
             guard let uniVal = UnicodeScalar(uni.value), characterSet.contains(uniVal) else {
                 return self.message

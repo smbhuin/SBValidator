@@ -30,7 +30,7 @@ public class MonthRule : ValidationRule<String> {
      - returns: Error Message. nil on successful validation, otherwise `String` on failed Validation.
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         if let month = Int(v), month >= 1 && month <= 12 {
             return nil
         }

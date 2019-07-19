@@ -37,7 +37,7 @@ public class ArrayLengthRule : ValidationRule<Array<Any>> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: Array<Any>?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         if v.count >= min && v.count <= max {
             return nil
         }

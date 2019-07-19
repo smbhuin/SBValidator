@@ -35,7 +35,7 @@ public class ExactLengthRule : ValidationRule<String> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         if v.count == length {
             return nil
         }

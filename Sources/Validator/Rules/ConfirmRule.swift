@@ -36,10 +36,7 @@ public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable 
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: Value?) -> String? {
-        guard let ad = value
-            else  {
-                return nil
-        }
+        guard let ad = value else { return nil }
         if ad == confirmValue {
             return nil
         }

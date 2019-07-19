@@ -30,7 +30,7 @@ public class FullNameRule : ValidationRule<String> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         let nameArray: [String] = v.split { $0 == " " }.map { String($0) }
         if nameArray.count < 2 {
             return self.message

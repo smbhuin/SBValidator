@@ -37,7 +37,7 @@ public class LengthRule : ValidationRule<String> {
      - returns: Error Message String. nil if validation is successful; `String` if validation fails.
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         if v.count >= min && v.count <= max {
             return nil
         }

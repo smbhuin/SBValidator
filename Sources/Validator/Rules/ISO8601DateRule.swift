@@ -35,7 +35,7 @@ public class ISO8601DateRule: ValidationRule<String> {
      - returns: Error Message. nil if validation is successful; `String` if validation fails. Returns error for empty string or collection
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         let df = ISO8601DateFormatter()
         if !options.isEmpty {
             df.formatOptions = options

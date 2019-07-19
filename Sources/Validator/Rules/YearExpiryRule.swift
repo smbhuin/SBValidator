@@ -34,7 +34,7 @@ public class YearExpiryRule : ValidationRule<String> {
      - returns: Error Message. nil on successful validation, otherwise `String` on failed Validation.
      */
     public override func validate(_ value: String?) -> String? {
-        guard let v = value else { return nil }
+        guard let v = value, !v.isEmpty else { return nil }
         let error = self.message
         guard let year = Int(v) else {
             return error
