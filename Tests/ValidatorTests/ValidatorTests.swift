@@ -104,7 +104,7 @@ final class ValidatorTests: XCTestCase {
         XCTAssertEqual(success, true)
     }
     
-    struct User : Validatable {
+    struct User : NamedValidatable {
         
         struct Address : Validatable {
             

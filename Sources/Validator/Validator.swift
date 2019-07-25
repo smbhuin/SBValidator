@@ -13,7 +13,7 @@ import Foundation
  */
 open class Validator {
     
-    private var validatables: [Validatable] = []
+    private var validatables: [NamedValidatable] = []
     
     /**
      Initializes a `Validator` object.
@@ -34,7 +34,7 @@ open class Validator {
     /**
      Add a new custom validatable
      */
-    public func add(validatable: Validatable) {
+    public func add(validatable: NamedValidatable) {
         validatables.append(validatable)
     }
     
