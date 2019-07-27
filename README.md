@@ -30,6 +30,25 @@ github "smbhuin/Validator"
 
 Run `carthage` to build the framework and drag the built Validator.framework into your Xcode project. Follow [build instructions](https://github.com/Carthage/Carthage#getting-started).
 
+#### CocoaPods
+
+You can use [CocoaPods](http://cocoapods.org/?q=Validator).
+
+```ruby
+platform :ios, '10.0'
+use_frameworks!
+
+target 'MyApp' do
+pod 'Validator'
+end
+```
+
+or for newest version from specified branch of code:
+
+```ruby
+pod 'Validator', :git => "https://github.com/smbhuin/Validator", :branch => "master"
+```
+
 #### Swift Package Manager
 
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
