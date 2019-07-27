@@ -158,6 +158,9 @@
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NamedValidatable.html">NamedValidatable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/Validatable.html">Validatable</a>
               </li>
             </ul>
@@ -228,7 +231,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Add a new basic validatable</p>
+                        <p>Add a new basic validatable.</p>
 
                       </div>
                       <div class="declaration">
@@ -239,15 +242,58 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the validatable. eg: Email</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value of the validatable. eg: <a href="mailto:name@domain.com">name@domain.com</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rules</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code><a href="../Classes/ValidationRule.html">ValidationRule</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ValidatorAAC3add11validatableyAA11Validatable_p_tF"></a>
+                    <a name="/s:9ValidatorAAC3add11validatableyAA16NamedValidatable_p_tF"></a>
                     <a name="//apple_ref/swift/Method/add(validatable:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ValidatorAAC3add11validatableyAA11Validatable_p_tF">add(validatable:)</a>
+                    <a class="token" href="#/s:9ValidatorAAC3add11validatableyAA16NamedValidatable_p_tF">add(validatable:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -262,9 +308,55 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">validatable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">validatable</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NamedValidatable.html">NamedValidatable</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ValidatorAAC6remove5namedySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/remove(named:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ValidatorAAC6remove5namedySS_tF">remove(named:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a validator by its name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the validatable. eg: Email</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -282,7 +374,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validate all validatables. If any error found, it will not try to validate next value.</p>
+                        <p>Validate all validatables. If any error found, it will not try to validate next validatable.</p>
 
                       </div>
                       <div class="declaration">
@@ -299,9 +391,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ValidatorAAC8validate4nameSb_AA11Validatable_pSgAA15ValidationErrorCSgtSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/validate(name:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ValidatorAAC8validate4nameSb_AA11Validatable_pSgAA15ValidationErrorCSgtSS_tF">validate(name:)</a>
+                    <a name="/s:9ValidatorAAC8validate5namedSb_AA11Validatable_pSgAA15ValidationErrorCSgtSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/validate(named:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ValidatorAAC8validate5namedSb_AA11Validatable_pSgAA15ValidationErrorCSgtSS_tF">validate(named:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -316,7 +408,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">?,</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">?,</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -327,7 +419,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>name</em>
+                                <em>named</em>
                                 </code>
                               </td>
                               <td>
@@ -342,6 +434,33 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ValidatorAAC11validateAllSayAA11Validatable_p_AA15ValidationErrorCtGyF"></a>
+                    <a name="//apple_ref/swift/Method/validateAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ValidatorAAC11validateAllSayAA11Validatable_p_AA15ValidationErrorCtGyF">validateAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Validate all validatables even if any error found for one validatable.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validateAll</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">,</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">)]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -350,7 +469,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-17)</p>
+      <p>&copy; 2019 <a class="link" href="https://github.com/smbhuin/Validator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2019-07-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
