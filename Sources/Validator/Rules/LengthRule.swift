@@ -27,7 +27,7 @@ public class LengthRule : ValidationRule<String> {
     public init(min: Int, max: Int, message: String? = nil) {
         self.min = min
         self.max = max
-        super.init(message: message ?? "is invalid. must be between \(min) and \(max)")
+        super.init(message: message ?? "is invalid. Must be between \(min) and \(max).")
     }
     
     /**

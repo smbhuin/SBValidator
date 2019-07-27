@@ -19,7 +19,7 @@ public class MonthRule : ValidationRule<String> {
      - parameter message: String of error message.
      - returns: An initialized `MonthRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message : String = "not a valid month. must be 01 to 12"){
+    public override init(message : String = "not a valid month. must be 01 to 12."){
         super.init(message: message)
     }
     

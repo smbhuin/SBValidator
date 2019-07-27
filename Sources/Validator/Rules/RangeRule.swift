@@ -27,7 +27,7 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
     public init(min: Value, max: Value, message: String? = nil) {
         self.min = min
         self.max = max
-        super.init(message: message ?? "is invalid. must be between \(min) and \(max)")
+        super.init(message: message ?? "is invalid. must be between \(min) and \(max).")
     }
     
     /**

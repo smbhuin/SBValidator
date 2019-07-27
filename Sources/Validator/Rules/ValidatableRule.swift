@@ -25,7 +25,15 @@ public class ValidatableRule<Value>: ValidationRule<Value> where Value : Validat
      */
     public override func validate(_ value: Value?) -> String? {
         guard let v = value else { return nil }
-        return v.validate()?.description
+        if let e = v.validate() {
+            if self.message == "" {
+                return e.description
+            }
+            else {
+                return self.message
+            }
+        }
+        return nil
     }
     
 }

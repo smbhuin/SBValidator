@@ -15,11 +15,11 @@ public class PasswordRule : RegexRule {
     
     /// Strength of password
     public enum Strength {
-        /// 5 characters.
+        /// Minimum 5 characters.
         case weak
-        /// 8 characters. One uppercase.
+        /// Minimum 8 characters. One uppercase.
         case medium
-        /// 8 characters. One uppercase. One Lowercase. One number.
+        /// Minimum 8 characters. One uppercase. One lowercase. One number.
         case strong
         
         /// Regular express string to be used in validation.
@@ -38,11 +38,11 @@ public class PasswordRule : RegexRule {
         func message() -> String {
             switch self {
             case .weak:
-                return "is invalid. it must contain 5 characters"
+                return "is invalid. it must contain minimum 5 characters."
             case .medium:
-                return "is invalid. it must contain 8 characters with 1 uppercase"
+                return "is invalid. it must contain minimum 8 characters with 1 uppercase."
             case .strong:
-                return "is invalid. it must contain 8 characters with 1 uppercase, 1 lowercase and 1 number"
+                return "is invalid. it must contain minimim 8 characters with 1 uppercase, 1 lowercase and 1 number."
             }
         }
     }

@@ -24,7 +24,7 @@ public class ConfirmRule<Value> : ValidationRule<Value> where Value : Equatable 
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(confirmValue: Value, message: String = "does not match"){
+    public init(confirmValue: Value, message: String = "does not match with desired value."){
         self.confirmValue = confirmValue
         super.init(message: message)
     }

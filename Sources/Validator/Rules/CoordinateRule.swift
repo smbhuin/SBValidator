@@ -19,7 +19,7 @@ public class CoordinateRule: ValidationRule<[Double]> {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public override init(message: String = "is not a valid geo coordinate") {
+    public override init(message: String = "is not a valid geo coordinate.") {
         super.init(message: message)
     }
     

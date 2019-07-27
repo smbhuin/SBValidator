@@ -24,7 +24,7 @@ public class YearExpiryRule : ValidationRule<String> {
      */
     public init(validity: Int = 3, message: String = "") {
         self.validity = validity
-        super.init(message: message == "" ? "must be within \(3) years of validity": message)
+        super.init(message: message == "" ? "must be within \(3) years of validity.": message)
     }
 
     /**

@@ -25,7 +25,7 @@ public class ExactLengthRule : ValidationRule<String> {
      */
     public init(length: Int, message: String = ""){
         self.length = length
-        super.init(message: message == "" ? "must be exactly \(length) characters/count in length" : message)
+        super.init(message: message == "" ? "must be exactly \(length) characters in length." : message)
     }
     
     /**

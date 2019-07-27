@@ -19,7 +19,7 @@ public class AlphaRule : CharacterSetRule {
 
      - returns: An initialized object, or nil if an object could not be created for some reason.
      */
-    public init(message: String = "can have alpha characters only") {
+    public init(message: String = "can have alpha characters only.") {
         super.init(characterSet: CharacterSet.letters, message: message)
     }
     

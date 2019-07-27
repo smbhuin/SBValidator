@@ -23,7 +23,7 @@ open class RegexRule: ValidationRule<String> {
      - parameter message: String of error message.
      - returns: An initialized `RegexRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(regex: String, message: String = "is invalid"){
+    public init(regex: String, message: String = "is invalid."){
         self._regex = regex
         super.init(message: message)
     }

@@ -22,7 +22,7 @@ public class ArrayRule: ValidationRule<[Any]> {
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(message: String = "contains invalid element", rules: [ValidationRule<Any>]){
+    public init(message: String = "contains invalid element.", rules: [ValidationRule<Any>]){
         self.rules = rules
         super.init(message: message)
     }

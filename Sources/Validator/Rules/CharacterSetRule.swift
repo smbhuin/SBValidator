@@ -23,7 +23,7 @@ open class CharacterSetRule : ValidationRule<String> {
      - parameter characterSet: NSCharacterSet that holds group of valid characters.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(characterSet: CharacterSet, message: String = "contains invalid characters") {
+    public init(characterSet: CharacterSet, message: String = "contains invalid characters.") {
         self.characterSet = characterSet
         super.init(message: message)
     }

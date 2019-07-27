@@ -22,7 +22,7 @@ public class DateRule: ValidationRule<String> {
      - parameter message: String of error message.
      - returns: An initialized `DateRule` object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(format: String, message: String = "is invalid") {
+    public init(format: String, message: String = "is invalid.") {
         self.format = format
         super.init(message: message)
     }
