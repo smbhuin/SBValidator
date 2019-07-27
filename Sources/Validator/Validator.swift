@@ -13,6 +13,7 @@ import Foundation
  */
 open class Validator {
     
+    /// Array holding all the validatables
     private var validatables: [NamedValidatable] = []
     
     /**

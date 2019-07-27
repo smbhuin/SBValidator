@@ -15,6 +15,9 @@ public protocol Validatable {
     func validate() -> ValidationError?
 }
 
+/**
+ Represents a named validatable.
+ */
 public protocol NamedValidatable : Validatable, CustomStringConvertible {
     var description: String { get }
 }
@@ -63,6 +66,7 @@ open class BasicValidatable<Value> : NamedValidatable {
         return nil
     }
     
+    /// Name of the validatable
     public var description: String {
         return name
     }
