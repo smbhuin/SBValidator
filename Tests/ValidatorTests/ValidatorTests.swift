@@ -34,10 +34,45 @@ final class ValidatorTests: XCTestCase {
     
     func testEmail() {
         let validator = Validator()
-        validator.add(name: "email", value: "myemail@gmail.com", rules: [.required, .email])
-        validator.add(name: "email1", value: "ABC67m@Gmail.com", rules: [.required, .email])
-        let success = validator.validate().0
+        let validEmails = ["email@domain.com","firstname.lastname@domain.com","email@subdomain.domain.com","firstname+lastname@domain.com","1234567890@domain.com","email@domain-one.com","_______@domain.com","email@domain.name","email@domain.co.jp","firstname-lastname@domain.com",]
+        for (i, v) in validEmails.enumerated() {
+            validator.add(name: "email\(i)", value: v, rules: [.email])
+        }
+        let (success, _, error) = validator.validate()
+        if let e = error {
+            debugPrint(e.description)
+        }
         XCTAssertEqual(success, true)
+        
+        let nvalidator = Validator()
+        let invalidEmails = ["email@domain.com email@domain.com",
+        "plainaddress",
+        "#@%^%#$@#$@#.com",
+        "@domain.com",
+        "Joe Smith <email@domain.com>",
+        "email.domain.com",
+        "email@domain@domain.com",
+        //".email@domain.com",
+        //"email.@domain.com",
+        //"email..email@domain.com",
+        "あいうえお@domain.com",
+        "email@domain.com (Joe Smith)",
+        "email@domain",
+        //"email@-domain.com",
+        //"email@domain..com",
+        "email@[123.123.123.123]",
+        "\"email\"@domain.com"]
+        for (i, v) in invalidEmails.enumerated() {
+            nvalidator.add(name: "email\(i)", value: v, rules: [.email])
+        }
+        let nsuccess = nvalidator.validateAll()
+        if nsuccess.count != invalidEmails.count {
+            for (_, e) in nsuccess {
+                debugPrint(e.description)
+            }
+        }
+        
+        XCTAssertEqual(nsuccess.count == invalidEmails.count, true)
     }
     
     func testEnum() {
