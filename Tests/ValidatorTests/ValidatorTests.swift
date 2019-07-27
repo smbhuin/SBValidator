@@ -104,62 +104,81 @@ final class ValidatorTests: XCTestCase {
         XCTAssertEqual(success, true)
     }
     
-    struct User : NamedValidatable {
+    func testPassword() {
+        let validator = Validator()
+        validator.add(name: "Password1", value: "shtey", rules: [.password()]) // weak password by default
+        validator.add(name: "Password2", value: "shteydB", rules: [.password(strength: .weak)])
+        validator.add(name: "Password3", value: "qwertyuA", rules: [.password(strength: .medium)])
+        validator.add(name: "Password4", value: "qwerfA8B", rules: [.password(strength: .strong)])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
         
-        struct Address : Validatable {
+        let nvalidator = Validator()
+        nvalidator.add(name: "Password1", value: "shte", rules: [.password()]) // weak password by default
+        nvalidator.add(name: "Password2", value: "sht7", rules: [.password(strength: .weak)])
+        nvalidator.add(name: "Password3", value: "qwertyuo", rules: [.password(strength: .medium)])
+        nvalidator.add(name: "Password4", value: "qwerf9yiu", rules: [.password(strength: .strong)])
+        nvalidator.add(name: "Password5", value: "qwyiu", rules: [.password(strength: .strong)])
+        let verrs = nvalidator.validateAll()
+        XCTAssertEqual(verrs.count == 5, true)
+    }
+    
+    func testValidatable() {
+        
+        struct User : NamedValidatable {
             
-            struct Location : Validatable {
-                var latitude: Double
-                var longitude: Double
+            struct Address : Validatable {
+                
+                struct Location : Validatable {
+                    var latitude: Double
+                    var longitude: Double
+                    
+                    func validate() -> ValidationError? {
+                        let v = Validator()
+                        v.add(name: "Coordinate", value: [longitude, latitude], rules: [.coordinate])
+                        return v.validate().2
+                    }
+                    
+                    var description: String {
+                        return "Location"
+                    }
+                }
+                
+                var city: String
+                var country: String
+                var location: Location
                 
                 func validate() -> ValidationError? {
                     let v = Validator()
-                    v.add(name: "Coordinate", value: [longitude, latitude], rules: [.coordinate])
+                    v.add(name: "City", value: city, rules: [.required , .alpha])
+                    v.add(name: "Country", value: country, rules: [.required, .alpha])
+                    v.add(name: "Location", value: location, rules: [.required, .validatable()])
                     return v.validate().2
                 }
                 
                 var description: String {
-                    return "Location"
+                    return "Address"
                 }
+                
             }
             
-            var city: String
-            var country: String
-            var location: Location
+            var name: String
+            var email: String
+            var address: Address?
             
             func validate() -> ValidationError? {
                 let v = Validator()
-                v.add(name: "City", value: city, rules: [.required , .alpha])
-                v.add(name: "Country", value: country, rules: [.required, .alpha])
-                v.add(name: "Location", value: location, rules: [.required, .validatable()])
+                v.add(name: "Name", value: name, rules: [.required, .fullName])
+                v.add(name: "Email", value: email, rules: [.required, .email])
+                v.add(name: "Address", value: address, rules: [.required, .validatable()]) // address prpperty is optional but forced to be required
                 return v.validate().2
             }
             
             var description: String {
-                return "Address"
+                return "User"
             }
             
         }
-        
-        var name: String
-        var email: String
-        var address: Address?
-        
-        func validate() -> ValidationError? {
-            let v = Validator()
-            v.add(name: "Name", value: name, rules: [.required, .fullName])
-            v.add(name: "Email", value: email, rules: [.required, .email])
-            v.add(name: "Address", value: address, rules: [.required, .validatable()]) // address prpperty is optional but forced to be required
-            return v.validate().2
-        }
-        
-        var description: String {
-            return "User"
-        }
-        
-    }
-    
-    func testValidatable() {
         let user = User(name: "Soumen Bhuin", email: "myemail@gmail.com", address: .init(city: "Kolkata", country: "India", location: .init(latitude: 88.3639, longitude: 22.5726)))
         let validator = Validator()
         validator.add(validatable: user) // Unnamed Validatable
@@ -183,6 +202,7 @@ final class ValidatorTests: XCTestCase {
         ("Confirm", testConfirm),
         ("Length", testLength),
         ("GPSCoordinate", testCoordinate),
+        ("Password", testPassword),
         ("Validatable", testValidatable),
     ]
 }
