@@ -14,7 +14,7 @@ import Foundation
 public class EmailRule : RegexRule {
     
     /// Regular express string to be used in validation.
-    static let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    static let regex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$"
     
     /**
      Initializes an `EmailRule` object to validate an email field.
@@ -25,6 +25,25 @@ public class EmailRule : RegexRule {
     public init(message: String = "is invalid."){
         super.init(regex: EmailRule.regex, message: message)
     }
+    
+    /*public override func validate(_ value: String?) -> String? {
+        if let error = super.validate(value) {
+            return error
+        }
+        
+        if let coms = value?.components(separatedBy: "@") {
+            for cs in coms {
+                let scoms = cs.components(separatedBy: ".")
+                for c in scoms {
+                    if c.isEmpty || c.hasPrefix("-") || c.hasSuffix("-") {
+                        return self.message
+                    }
+                }
+            }
+        }
+        
+        return nil
+    }*/
     
 }
 
