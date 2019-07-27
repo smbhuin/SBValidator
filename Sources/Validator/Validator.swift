@@ -26,7 +26,10 @@ open class Validator {
     }
     
     /**
-     Add a new basic validatable
+     Add a new basic validatable.
+     - parameter name: Name of the validatable. eg: Email
+     - parameter value: Value of the validatable. eg: name@domain.com
+     - parameter rules: Array of `ValidationRule`
      */
     public func add<V>(name: String, value: V?, rules: [ValidationRule<V>]) {
         validatables.append(BasicValidatable<V>(name: name, value: value, rules: rules))
@@ -37,6 +40,16 @@ open class Validator {
      */
     public func add(validatable: NamedValidatable) {
         validatables.append(validatable)
+    }
+    
+    /**
+     Removes a validator by its name.
+     - parameter name: Name of the validatable. eg: Email
+     */
+    public func remove(named: String) {
+        validatables.removeAll { (v) -> Bool in
+            return v.description == named
+        }
     }
     
     /**
@@ -54,11 +67,11 @@ open class Validator {
     /**
      Validate specific validatable by its name
      
-     - parameter name: name of the validatable
+     - parameter named: name of the validatable
      */
-    public func validate(name: String) -> (Bool, Validatable?, ValidationError?) {
+    public func validate(named: String) -> (Bool, Validatable?, ValidationError?) {
         for validatable in validatables {
-            if name == validatable.description, let error = validatable.validate() {
+            if named == validatable.description, let error = validatable.validate() {
                 return (false, validatable, error)
             }
         }
