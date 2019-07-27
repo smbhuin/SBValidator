@@ -68,8 +68,8 @@ open class Validator {
     /**
      Validate all validatables even if any error found for one validatable.
      */
-    public func validateAll() -> [(Validatable?, ValidationError?)] {
-        var results: [(Validatable?, ValidationError?)] = []
+    public func validateAll() -> [(Validatable, ValidationError)] {
+        var results: [(Validatable, ValidationError)] = []
         for validatable in validatables {
             if let error = validatable.validate() {
                 results.append((validatable, error))
