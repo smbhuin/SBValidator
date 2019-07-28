@@ -112,8 +112,8 @@
 		OBJ_34 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		OBJ_35 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		"Validator::Validator::Product" /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Validator::ValidatorTests::Product" /* ValidatorTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Validator::Validator::Product" /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Validator::ValidatorTests::Product" /* ValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,12 +286,21 @@
 			attributes = {
 				LastUpgradeCheck = 9999;
 				ORGANIZATIONNAME = SMB;
+				TargetAttributes = {
+					"Validator::Validator" = {
+						LastSwiftMigration = 1020;
+					};
+					"Validator::ValidatorTests" = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Validator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
@@ -445,7 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Validator;
 			};
 			name = Debug;
@@ -469,7 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Validator;
 			};
 			name = Release;
@@ -520,7 +529,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = ValidatorTests;
 			};
 			name = Debug;
@@ -541,7 +550,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = ValidatorTests;
 			};
 			name = Release;
