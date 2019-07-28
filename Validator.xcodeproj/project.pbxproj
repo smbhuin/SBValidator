@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Validator::ValidatorPackageTests::ProductTarget" /* ValidatorPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_74 /* Build configuration list for PBXAggregateTarget "ValidatorPackageTests" */;
+			buildConfigurationList = OBJ_97 /* Build configuration list for PBXAggregateTarget "ValidatorPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_77 /* PBXTargetDependency */,
+				OBJ_100 /* PBXTargetDependency */,
 			);
 			name = ValidatorPackageTests;
 			productName = ValidatorPackageTests;
@@ -21,53 +21,53 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5522D2463E00AA04D4 /* ArrayRule.swift */; };
-		DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */; };
-		DF6F11ED22DF0D9A00660480 /* ValidatableRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */; };
-		DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */; };
-		DF81AC1E22DE0534005034C2 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81AC1C22DE0534005034C2 /* LengthRule.swift */; };
-		DF81ACD522DE2AF8005034C2 /* DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81ACD422DE2AF8005034C2 /* DateRule.swift */; };
-		DF81ACD722DE2E5A005034C2 /* ISO8601DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */; };
-		DFA295E822DCEAC4000A3370 /* PinCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */; };
-		DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB2F8C422C34BC0007B08F4 /* Validatable.swift */; };
-		DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */; };
-		OBJ_44 /* AlphaNumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AlphaNumericRule.swift */; };
-		OBJ_45 /* AlphaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AlphaRule.swift */; };
-		OBJ_46 /* MonthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* MonthRule.swift */; };
-		OBJ_47 /* YearExpiryRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* YearExpiryRule.swift */; };
-		OBJ_48 /* CharacterSetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CharacterSetRule.swift */; };
-		OBJ_49 /* ConfirmRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ConfirmRule.swift */; };
-		OBJ_50 /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* EmailRule.swift */; };
-		OBJ_51 /* ExactLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ExactLengthRule.swift */; };
-		OBJ_52 /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* FloatRule.swift */; };
-		OBJ_53 /* FullNameRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* FullNameRule.swift */; };
-		OBJ_54 /* HexColorRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* HexColorRule.swift */; };
-		OBJ_55 /* IPV4Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* IPV4Rule.swift */; };
-		OBJ_56 /* ISBNRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* ISBNRule.swift */; };
-		OBJ_57 /* RangeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* RangeRule.swift */; };
-		OBJ_58 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* PasswordRule.swift */; };
-		OBJ_59 /* PhoneNumberRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* PhoneNumberRule.swift */; };
-		OBJ_60 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* RegexRule.swift */; };
-		OBJ_61 /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* RequiredRule.swift */; };
-		OBJ_62 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ValidationRule.swift */; };
-		OBJ_63 /* ZipCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ZipCodeRule.swift */; };
-		OBJ_64 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ValidationError.swift */; };
-		OBJ_65 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Validator.swift */; };
-		OBJ_72 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_83 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* ValidatorTests.swift */; };
-		OBJ_84 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* XCTestManifests.swift */; };
-		OBJ_86 /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Validator::Validator::Product" /* Validator.framework */; };
+		OBJ_106 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* ValidatorTests.swift */; };
+		OBJ_107 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* XCTestManifests.swift */; };
+		OBJ_109 /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Validator::Validator::Product" /* Validator.framework */; };
+		OBJ_57 /* AlphaNumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AlphaNumericRule.swift */; };
+		OBJ_58 /* AlphaRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* AlphaRule.swift */; };
+		OBJ_59 /* ArrayLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ArrayLengthRule.swift */; };
+		OBJ_60 /* ArrayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ArrayRule.swift */; };
+		OBJ_61 /* CharacterSetRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CharacterSetRule.swift */; };
+		OBJ_62 /* ConfirmRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ConfirmRule.swift */; };
+		OBJ_63 /* CoordinateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CoordinateRule.swift */; };
+		OBJ_64 /* DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* DateRule.swift */; };
+		OBJ_65 /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* EmailRule.swift */; };
+		OBJ_66 /* EnumRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* EnumRule.swift */; };
+		OBJ_67 /* ExactLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ExactLengthRule.swift */; };
+		OBJ_68 /* FloatRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* FloatRule.swift */; };
+		OBJ_69 /* FullNameRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* FullNameRule.swift */; };
+		OBJ_70 /* HexColorRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* HexColorRule.swift */; };
+		OBJ_71 /* IPV4Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* IPV4Rule.swift */; };
+		OBJ_72 /* ISBNRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ISBNRule.swift */; };
+		OBJ_73 /* ISO8601DateRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ISO8601DateRule.swift */; };
+		OBJ_74 /* LengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* LengthRule.swift */; };
+		OBJ_75 /* MonthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* MonthRule.swift */; };
+		OBJ_76 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* PasswordRule.swift */; };
+		OBJ_77 /* PhoneNumberRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* PhoneNumberRule.swift */; };
+		OBJ_78 /* PinCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* PinCodeRule.swift */; };
+		OBJ_79 /* RangeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* RangeRule.swift */; };
+		OBJ_80 /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* RegexRule.swift */; };
+		OBJ_81 /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* RequiredRule.swift */; };
+		OBJ_82 /* ValidatableRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ValidatableRule.swift */; };
+		OBJ_83 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* ValidationRule.swift */; };
+		OBJ_84 /* YearExpiryRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* YearExpiryRule.swift */; };
+		OBJ_85 /* ZipCodeRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ZipCodeRule.swift */; };
+		OBJ_86 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Validatable.swift */; };
+		OBJ_87 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ValidationError.swift */; };
+		OBJ_88 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Validator.swift */; };
+		OBJ_95 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DFB2F8C222C33DC0007B08F4 /* PBXContainerItemProxy */ = {
+		DFCEFE4122ED843600AB39D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Validator::Validator";
 			remoteInfo = Validator;
 		};
-		DFB2F8C322C33FF5007B08F4 /* PBXContainerItemProxy */ = {
+		DFCEFE4222ED843700AB39D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -77,83 +77,83 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DF176D5522D2463E00AA04D4 /* ArrayRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRule.swift; sourceTree = "<group>"; };
-		DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
-		DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatableRule.swift; sourceTree = "<group>"; };
-		DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayLengthRule.swift; sourceTree = "<group>"; };
-		DF81AC1C22DE0534005034C2 /* LengthRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthRule.swift; sourceTree = "<group>"; };
-		DF81ACD422DE2AF8005034C2 /* DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRule.swift; sourceTree = "<group>"; };
-		DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateRule.swift; sourceTree = "<group>"; };
-		DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeRule.swift; sourceTree = "<group>"; };
-		DFB2F8C422C34BC0007B08F4 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
-		DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumRule.swift; sourceTree = "<group>"; };
 		OBJ_10 /* AlphaNumericRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaNumericRule.swift; sourceTree = "<group>"; };
 		OBJ_11 /* AlphaRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaRule.swift; sourceTree = "<group>"; };
-		OBJ_12 /* MonthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRule.swift; sourceTree = "<group>"; };
-		OBJ_13 /* YearExpiryRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearExpiryRule.swift; sourceTree = "<group>"; };
+		OBJ_12 /* ArrayLengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayLengthRule.swift; sourceTree = "<group>"; };
+		OBJ_13 /* ArrayRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRule.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CharacterSetRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSetRule.swift; sourceTree = "<group>"; };
 		OBJ_15 /* ConfirmRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRule.swift; sourceTree = "<group>"; };
-		OBJ_16 /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
-		OBJ_17 /* ExactLengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactLengthRule.swift; sourceTree = "<group>"; };
-		OBJ_18 /* FloatRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRule.swift; sourceTree = "<group>"; };
-		OBJ_19 /* FullNameRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameRule.swift; sourceTree = "<group>"; };
-		OBJ_20 /* HexColorRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorRule.swift; sourceTree = "<group>"; };
-		OBJ_21 /* IPV4Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPV4Rule.swift; sourceTree = "<group>"; };
-		OBJ_22 /* ISBNRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNRule.swift; sourceTree = "<group>"; };
-		OBJ_23 /* RangeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeRule.swift; sourceTree = "<group>"; };
-		OBJ_24 /* PasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
-		OBJ_25 /* PhoneNumberRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberRule.swift; sourceTree = "<group>"; };
-		OBJ_26 /* RegexRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
-		OBJ_27 /* RequiredRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredRule.swift; sourceTree = "<group>"; };
-		OBJ_28 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
-		OBJ_29 /* ZipCodeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeRule.swift; sourceTree = "<group>"; };
-		OBJ_30 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
-		OBJ_31 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		OBJ_34 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
-		OBJ_35 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_16 /* CoordinateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRule.swift; sourceTree = "<group>"; };
+		OBJ_17 /* DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRule.swift; sourceTree = "<group>"; };
+		OBJ_18 /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
+		OBJ_19 /* EnumRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumRule.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ExactLengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactLengthRule.swift; sourceTree = "<group>"; };
+		OBJ_21 /* FloatRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatRule.swift; sourceTree = "<group>"; };
+		OBJ_22 /* FullNameRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameRule.swift; sourceTree = "<group>"; };
+		OBJ_23 /* HexColorRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorRule.swift; sourceTree = "<group>"; };
+		OBJ_24 /* IPV4Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPV4Rule.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ISBNRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNRule.swift; sourceTree = "<group>"; };
+		OBJ_26 /* ISO8601DateRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601DateRule.swift; sourceTree = "<group>"; };
+		OBJ_27 /* LengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthRule.swift; sourceTree = "<group>"; };
+		OBJ_28 /* MonthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRule.swift; sourceTree = "<group>"; };
+		OBJ_29 /* PasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
+		OBJ_30 /* PhoneNumberRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberRule.swift; sourceTree = "<group>"; };
+		OBJ_31 /* PinCodeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeRule.swift; sourceTree = "<group>"; };
+		OBJ_32 /* RangeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeRule.swift; sourceTree = "<group>"; };
+		OBJ_33 /* RegexRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexRule.swift; sourceTree = "<group>"; };
+		OBJ_34 /* RequiredRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredRule.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ValidatableRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableRule.swift; sourceTree = "<group>"; };
+		OBJ_36 /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		OBJ_37 /* YearExpiryRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearExpiryRule.swift; sourceTree = "<group>"; };
+		OBJ_38 /* ZipCodeRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeRule.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Validatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		OBJ_40 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		OBJ_41 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		OBJ_44 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		OBJ_45 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		"Validator::Validator::Product" /* Validator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Validator::ValidatorTests::Product" /* ValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Validator::Validator::Product" /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Validator::ValidatorTests::Product" /* ValidatorTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_66 /* Frameworks */ = {
+		OBJ_108 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_109 /* Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_85 /* Frameworks */ = {
+		OBJ_89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_86 /* Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_32 /* Tests */ = {
+		OBJ_42 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* ValidatorTests */,
+				OBJ_43 /* ValidatorTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_33 /* ValidatorTests */ = {
+		OBJ_43 /* ValidatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_34 /* ValidatorTests.swift */,
-				OBJ_35 /* XCTestManifests.swift */,
+				OBJ_44 /* ValidatorTests.swift */,
+				OBJ_45 /* XCTestManifests.swift */,
 			);
 			name = ValidatorTests;
 			path = Tests/ValidatorTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_36 /* Products */ = {
+		OBJ_49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"Validator::ValidatorTests::Product" /* ValidatorTests.xctest */,
@@ -167,8 +167,8 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_32 /* Tests */,
-				OBJ_36 /* Products */,
+				OBJ_42 /* Tests */,
+				OBJ_49 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Rules */,
-				OBJ_30 /* ValidationError.swift */,
-				OBJ_31 /* Validator.swift */,
-				DFB2F8C422C34BC0007B08F4 /* Validatable.swift */,
+				OBJ_39 /* Validatable.swift */,
+				OBJ_40 /* ValidationError.swift */,
+				OBJ_41 /* Validator.swift */,
 			);
 			name = Validator;
 			path = Sources/Validator;
@@ -195,35 +195,35 @@
 		OBJ_9 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* ValidationRule.swift */,
-				OBJ_14 /* CharacterSetRule.swift */,
 				OBJ_10 /* AlphaNumericRule.swift */,
 				OBJ_11 /* AlphaRule.swift */,
-				DF81ACD422DE2AF8005034C2 /* DateRule.swift */,
-				DF81ACD622DE2E5A005034C2 /* ISO8601DateRule.swift */,
-				OBJ_12 /* MonthRule.swift */,
-				OBJ_13 /* YearExpiryRule.swift */,
+				OBJ_12 /* ArrayLengthRule.swift */,
+				OBJ_13 /* ArrayRule.swift */,
+				OBJ_14 /* CharacterSetRule.swift */,
 				OBJ_15 /* ConfirmRule.swift */,
-				OBJ_16 /* EmailRule.swift */,
-				OBJ_17 /* ExactLengthRule.swift */,
-				DF81AC1C22DE0534005034C2 /* LengthRule.swift */,
-				DF81AC1B22DE0534005034C2 /* ArrayLengthRule.swift */,
-				OBJ_18 /* FloatRule.swift */,
-				OBJ_19 /* FullNameRule.swift */,
-				OBJ_20 /* HexColorRule.swift */,
-				OBJ_21 /* IPV4Rule.swift */,
-				OBJ_22 /* ISBNRule.swift */,
-				OBJ_23 /* RangeRule.swift */,
-				DFBCD62022C4FF7700AA1DCD /* EnumRule.swift */,
-				OBJ_24 /* PasswordRule.swift */,
-				OBJ_25 /* PhoneNumberRule.swift */,
-				OBJ_26 /* RegexRule.swift */,
-				OBJ_27 /* RequiredRule.swift */,
-				OBJ_29 /* ZipCodeRule.swift */,
-				DFA295E722DCEAC4000A3370 /* PinCodeRule.swift */,
-				DF176D5522D2463E00AA04D4 /* ArrayRule.swift */,
-				DF176D5722D24B6E00AA04D4 /* CoordinateRule.swift */,
-				DF6F11EC22DF0D9A00660480 /* ValidatableRule.swift */,
+				OBJ_16 /* CoordinateRule.swift */,
+				OBJ_17 /* DateRule.swift */,
+				OBJ_18 /* EmailRule.swift */,
+				OBJ_19 /* EnumRule.swift */,
+				OBJ_20 /* ExactLengthRule.swift */,
+				OBJ_21 /* FloatRule.swift */,
+				OBJ_22 /* FullNameRule.swift */,
+				OBJ_23 /* HexColorRule.swift */,
+				OBJ_24 /* IPV4Rule.swift */,
+				OBJ_25 /* ISBNRule.swift */,
+				OBJ_26 /* ISO8601DateRule.swift */,
+				OBJ_27 /* LengthRule.swift */,
+				OBJ_28 /* MonthRule.swift */,
+				OBJ_29 /* PasswordRule.swift */,
+				OBJ_30 /* PhoneNumberRule.swift */,
+				OBJ_31 /* PinCodeRule.swift */,
+				OBJ_32 /* RangeRule.swift */,
+				OBJ_33 /* RegexRule.swift */,
+				OBJ_34 /* RequiredRule.swift */,
+				OBJ_35 /* ValidatableRule.swift */,
+				OBJ_36 /* ValidationRule.swift */,
+				OBJ_37 /* YearExpiryRule.swift */,
+				OBJ_38 /* ZipCodeRule.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -233,9 +233,9 @@
 /* Begin PBXNativeTarget section */
 		"Validator::SwiftPMPackageDescription" /* ValidatorPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_68 /* Build configuration list for PBXNativeTarget "ValidatorPackageDescription" */;
+			buildConfigurationList = OBJ_91 /* Build configuration list for PBXNativeTarget "ValidatorPackageDescription" */;
 			buildPhases = (
-				OBJ_71 /* Sources */,
+				OBJ_94 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -247,10 +247,10 @@
 		};
 		"Validator::Validator" /* Validator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_40 /* Build configuration list for PBXNativeTarget "Validator" */;
+			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "Validator" */;
 			buildPhases = (
-				OBJ_43 /* Sources */,
-				OBJ_66 /* Frameworks */,
+				OBJ_56 /* Sources */,
+				OBJ_89 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,15 +263,15 @@
 		};
 		"Validator::ValidatorTests" /* ValidatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_79 /* Build configuration list for PBXNativeTarget "ValidatorTests" */;
+			buildConfigurationList = OBJ_102 /* Build configuration list for PBXNativeTarget "ValidatorTests" */;
 			buildPhases = (
-				OBJ_82 /* Sources */,
-				OBJ_85 /* Frameworks */,
+				OBJ_105 /* Sources */,
+				OBJ_108 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_87 /* PBXTargetDependency */,
+				OBJ_110 /* PBXTargetDependency */,
 			);
 			name = ValidatorTests;
 			productName = ValidatorTests;
@@ -286,25 +286,16 @@
 			attributes = {
 				LastUpgradeCheck = 9999;
 				ORGANIZATIONNAME = SMB;
-				TargetAttributes = {
-					"Validator::Validator" = {
-						LastSwiftMigration = 1020;
-					};
-					"Validator::ValidatorTests" = {
-						LastSwiftMigration = 1020;
-					};
-				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Validator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_36 /* Products */;
+			productRefGroup = OBJ_49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -317,78 +308,120 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_43 /* Sources */ = {
+		OBJ_105 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				DF81ACD722DE2E5A005034C2 /* ISO8601DateRule.swift in Sources */,
-				DF6F11ED22DF0D9A00660480 /* ValidatableRule.swift in Sources */,
-				OBJ_44 /* AlphaNumericRule.swift in Sources */,
-				DF81AC1D22DE0534005034C2 /* ArrayLengthRule.swift in Sources */,
-				OBJ_45 /* AlphaRule.swift in Sources */,
-				OBJ_46 /* MonthRule.swift in Sources */,
-				OBJ_47 /* YearExpiryRule.swift in Sources */,
-				DF81ACD522DE2AF8005034C2 /* DateRule.swift in Sources */,
-				OBJ_48 /* CharacterSetRule.swift in Sources */,
-				OBJ_49 /* ConfirmRule.swift in Sources */,
-				DFBCD62122C4FF7700AA1DCD /* EnumRule.swift in Sources */,
-				OBJ_50 /* EmailRule.swift in Sources */,
-				DFB2F8C522C34BC0007B08F4 /* Validatable.swift in Sources */,
-				OBJ_51 /* ExactLengthRule.swift in Sources */,
-				DF81AC1E22DE0534005034C2 /* LengthRule.swift in Sources */,
-				OBJ_52 /* FloatRule.swift in Sources */,
-				DF176D5822D24B6E00AA04D4 /* CoordinateRule.swift in Sources */,
-				OBJ_53 /* FullNameRule.swift in Sources */,
-				OBJ_54 /* HexColorRule.swift in Sources */,
-				OBJ_55 /* IPV4Rule.swift in Sources */,
-				OBJ_56 /* ISBNRule.swift in Sources */,
-				OBJ_57 /* RangeRule.swift in Sources */,
-				DFA295E822DCEAC4000A3370 /* PinCodeRule.swift in Sources */,
-				OBJ_58 /* PasswordRule.swift in Sources */,
-				OBJ_59 /* PhoneNumberRule.swift in Sources */,
-				OBJ_60 /* RegexRule.swift in Sources */,
-				OBJ_61 /* RequiredRule.swift in Sources */,
-				OBJ_62 /* ValidationRule.swift in Sources */,
-				OBJ_63 /* ZipCodeRule.swift in Sources */,
-				OBJ_64 /* ValidationError.swift in Sources */,
-				DF176D5622D2463E00AA04D4 /* ArrayRule.swift in Sources */,
-				OBJ_65 /* Validator.swift in Sources */,
+				OBJ_106 /* ValidatorTests.swift in Sources */,
+				OBJ_107 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_71 /* Sources */ = {
+		OBJ_56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_72 /* Package.swift in Sources */,
+				OBJ_57 /* AlphaNumericRule.swift in Sources */,
+				OBJ_58 /* AlphaRule.swift in Sources */,
+				OBJ_59 /* ArrayLengthRule.swift in Sources */,
+				OBJ_60 /* ArrayRule.swift in Sources */,
+				OBJ_61 /* CharacterSetRule.swift in Sources */,
+				OBJ_62 /* ConfirmRule.swift in Sources */,
+				OBJ_63 /* CoordinateRule.swift in Sources */,
+				OBJ_64 /* DateRule.swift in Sources */,
+				OBJ_65 /* EmailRule.swift in Sources */,
+				OBJ_66 /* EnumRule.swift in Sources */,
+				OBJ_67 /* ExactLengthRule.swift in Sources */,
+				OBJ_68 /* FloatRule.swift in Sources */,
+				OBJ_69 /* FullNameRule.swift in Sources */,
+				OBJ_70 /* HexColorRule.swift in Sources */,
+				OBJ_71 /* IPV4Rule.swift in Sources */,
+				OBJ_72 /* ISBNRule.swift in Sources */,
+				OBJ_73 /* ISO8601DateRule.swift in Sources */,
+				OBJ_74 /* LengthRule.swift in Sources */,
+				OBJ_75 /* MonthRule.swift in Sources */,
+				OBJ_76 /* PasswordRule.swift in Sources */,
+				OBJ_77 /* PhoneNumberRule.swift in Sources */,
+				OBJ_78 /* PinCodeRule.swift in Sources */,
+				OBJ_79 /* RangeRule.swift in Sources */,
+				OBJ_80 /* RegexRule.swift in Sources */,
+				OBJ_81 /* RequiredRule.swift in Sources */,
+				OBJ_82 /* ValidatableRule.swift in Sources */,
+				OBJ_83 /* ValidationRule.swift in Sources */,
+				OBJ_84 /* YearExpiryRule.swift in Sources */,
+				OBJ_85 /* ZipCodeRule.swift in Sources */,
+				OBJ_86 /* Validatable.swift in Sources */,
+				OBJ_87 /* ValidationError.swift in Sources */,
+				OBJ_88 /* Validator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_82 /* Sources */ = {
+		OBJ_94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_83 /* ValidatorTests.swift in Sources */,
-				OBJ_84 /* XCTestManifests.swift in Sources */,
+				OBJ_95 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_77 /* PBXTargetDependency */ = {
+		OBJ_100 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Validator::ValidatorTests" /* ValidatorTests */;
-			targetProxy = DFB2F8C322C33FF5007B08F4 /* PBXContainerItemProxy */;
+			targetProxy = DFCEFE4222ED843700AB39D7 /* PBXContainerItemProxy */;
 		};
-		OBJ_87 /* PBXTargetDependency */ = {
+		OBJ_110 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Validator::Validator" /* Validator */;
-			targetProxy = DFB2F8C222C33DC0007B08F4 /* PBXContainerItemProxy */;
+			targetProxy = DFCEFE4122ED843600AB39D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		OBJ_103 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Validator.xcodeproj/ValidatorTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ValidatorTests;
+			};
+			name = Debug;
+		};
+		OBJ_104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Validator.xcodeproj/ValidatorTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ValidatorTests;
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -435,7 +468,7 @@
 			};
 			name = Release;
 		};
-		OBJ_41 /* Debug */ = {
+		OBJ_54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -454,12 +487,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Validator;
 			};
 			name = Debug;
 		};
-		OBJ_42 /* Release */ = {
+		OBJ_55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -478,12 +511,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGET_NAME = Validator;
 			};
 			name = Release;
 		};
-		OBJ_69 /* Debug */ = {
+		OBJ_92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -492,7 +525,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_70 /* Release */ = {
+		OBJ_93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -501,63 +534,30 @@
 			};
 			name = Release;
 		};
-		OBJ_75 /* Debug */ = {
+		OBJ_98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_76 /* Release */ = {
+		OBJ_99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_80 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Validator.xcodeproj/ValidatorTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = ValidatorTests;
-			};
-			name = Debug;
-		};
-		OBJ_81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Validator.xcodeproj/ValidatorTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = ValidatorTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		OBJ_102 /* Build configuration list for PBXNativeTarget "ValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_103 /* Debug */,
+				OBJ_104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Validator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -567,38 +567,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_40 /* Build configuration list for PBXNativeTarget "Validator" */ = {
+		OBJ_53 /* Build configuration list for PBXNativeTarget "Validator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_41 /* Debug */,
-				OBJ_42 /* Release */,
+				OBJ_54 /* Debug */,
+				OBJ_55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_68 /* Build configuration list for PBXNativeTarget "ValidatorPackageDescription" */ = {
+		OBJ_91 /* Build configuration list for PBXNativeTarget "ValidatorPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_69 /* Debug */,
-				OBJ_70 /* Release */,
+				OBJ_92 /* Debug */,
+				OBJ_93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_74 /* Build configuration list for PBXAggregateTarget "ValidatorPackageTests" */ = {
+		OBJ_97 /* Build configuration list for PBXAggregateTarget "ValidatorPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_75 /* Debug */,
-				OBJ_76 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_79 /* Build configuration list for PBXNativeTarget "ValidatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_80 /* Debug */,
-				OBJ_81 /* Release */,
+				OBJ_98 /* Debug */,
+				OBJ_99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

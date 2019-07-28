@@ -14,6 +14,8 @@ Rule based validation library for swift.
 - Validatable/Validator chaining
 - Linux Compatible (Can be used with [Kitura](https://www.kitura.io), [Vapor](https://vapor.codes), [Perfect](https://perfect.org))
 
+![Screenshot](https://raw.github.com/smbhuin/Validator/master/screenshot.png)
+
 ## Installation
 
 To install Validator, add it as a submodule to your project (on the top level project directory):
