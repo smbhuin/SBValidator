@@ -14,6 +14,8 @@ Rule based validation library for swift.
 - Validatable/Validator chaining
 - Linux Compatible (Can be used with [Kitura](https://www.kitura.io), [Vapor](https://vapor.codes), [Perfect](https://perfect.org))
 
+## iPhone Screenshot
+
 ![Screenshot](/screenshot.png)
 
 ## Installation
