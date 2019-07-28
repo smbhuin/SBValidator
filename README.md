@@ -16,7 +16,7 @@ Rule based validation library for swift.
 
 ## iPhone Screenshot
 
-![Screenshot](/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/smbhuin/Validator/master/screenshot.png)
 
 ## Installation
 
@@ -59,7 +59,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.2")
+    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.3")
 ]
 ```
 
@@ -67,7 +67,7 @@ or more strict
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.2"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.3"))
 ]
 ```
 
