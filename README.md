@@ -36,21 +36,21 @@ Run `carthage` to build the framework and drag the built Validator.framework int
 
 #### CocoaPods
 
-You can use [CocoaPods](http://cocoapods.org/?q=Validator).
+You can use [CocoaPods](http://cocoapods.org/?q=AnyValidator).
 
 ```ruby
 platform :ios, '10.0'
 use_frameworks!
 
 target 'MyApp' do
-pod 'Validator'
+pod 'AnyValidator'
 end
 ```
 
 or for newest version from specified branch of code:
 
 ```ruby
-pod 'Validator', :git => "https://github.com/smbhuin/Validator", :branch => "master"
+pod 'AnyValidator', :git => "https://github.com/smbhuin/Validator", :branch => "master"
 ```
 
 #### Swift Package Manager
