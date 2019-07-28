@@ -157,7 +157,7 @@
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/NamedValidatable.html">NamedValidatable</a>
+                <a class="nav-group-task-link" href="Protocols.html#/s:9Validator16NamedValidatableP">NamedValidatable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/Validatable.html">Validatable</a>
@@ -187,6 +187,9 @@
 <li>Validatable/Validator chaining</li>
 <li>Linux Compatible (Can be used with <a href="https://www.kitura.io">Kitura</a>, <a href="https://vapor.codes">Vapor</a>, <a href="https://perfect.org">Perfect</a>)</li>
 </ul>
+<h2 id='iphone-screenshot' class='heading'>iPhone Screenshot</h2>
+
+<p><img src="/screenshot.png" alt="Screenshot"></p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>To install Validator, add it as a submodule to your project (on the top level project directory):</p>
@@ -218,13 +221,13 @@ Specify in Cartfile:</p>
 
 <p>You can use <a href="https://swift.org/package-manager/">Swift Package Manager</a> and specify dependency in <code>Package.swift</code> by adding this:</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMinor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.1"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 
 <p>or more strict</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"1.0.0"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"1.0.1"</span><span class="p">))</span>
 <span class="p">]</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
@@ -233,7 +236,7 @@ Specify in Cartfile:</p>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Name"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="n">fullName</span><span class="p">])</span>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Subject"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">subject</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">200</span><span class="p">)])</span>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">2000</span><span class="p">)])</span>
-<span class="k">let</span> <span class="p">(</span><span class="nv">status</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">,</span> <span class="nv">error</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
+<span class="k">let</span> <span class="p">(</span><span class="nv">valid</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">,</span> <span class="nv">error</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
 </code></pre>
 <h2 id='api-documentation' class='heading'>API documentation</h2>
 

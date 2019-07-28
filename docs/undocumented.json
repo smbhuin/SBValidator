@@ -13,13 +13,6 @@
       "symbol": "Validatable.validate()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
-    },
-    {
-      "file": "/Users/soumen/Documents/Projects/Validator/Sources/Validator/Validatable.swift",
-      "line": 22,
-      "symbol": "NamedValidatable.description",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/soumen/Documents/Projects/Validator"
