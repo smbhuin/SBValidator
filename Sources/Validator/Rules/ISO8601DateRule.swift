@@ -11,7 +11,7 @@ import Foundation
 /**
  `ISO8601DateRule` is a subclass of `ValidationRule` that means value can't be nil or blank. Make sure required rule is the first item in rules list
  */
-@available(OSX 10.12, *)
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
 public class ISO8601DateRule: ValidationRule<String> {
     
     /// ISO8601Date Options
@@ -51,7 +51,7 @@ public class ISO8601DateRule: ValidationRule<String> {
 public extension ValidationRule {
     
     /// Quick accessor for `ISO8601DateRule`
-    @available(OSX 10.12, *)
+    @available(OSX 10.12, iOS 10.0, watchOS 3.0, *)
     class func iso8601date(options: ISO8601DateFormatter.Options = []) -> ValidationRule<String> {
         return ISO8601DateRule(options: options)
     }

@@ -59,7 +59,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.1")
+    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.2")
 ]
 ```
 
@@ -67,7 +67,7 @@ or more strict
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.1"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.2"))
 ]
 ```
 
