@@ -19,22 +19,22 @@ public protocol Validatable {
  Represents a named validatable.
  */
 public protocol NamedValidatable : Validatable, CustomStringConvertible {
-    var description: String { get }
+    
 }
 
 /**
  Represents all components required for single basic validation to perform.
  */
-open class BasicValidatable<Value> : NamedValidatable {
+public class BasicValidatable<Value> : NamedValidatable {
     
     /// Identifier.
-    public var name: String
+    private var name: String
     
     /// Value to be validate.
-    public var value: Value?
+    private var value: Value?
     
     /// Rules to be applied on value.
-    public var rules: [ValidationRule<Value>]
+    private var rules: [ValidationRule<Value>]
     
     /**
      Initializes a `Validatable` object.

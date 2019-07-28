@@ -216,7 +216,7 @@ final class ValidatorTests: XCTestCase {
         }
         let user = User(name: "Soumen Bhuin", email: "myemail@gmail.com", address: .init(city: "Kolkata", country: "India", location: .init(latitude: 88.3639, longitude: 22.5726)))
         let validator = Validator()
-        validator.add(validatable: user) // Unnamed Validatable
+        validator.add(validatable: user)
         let (success, _, error) = validator.validate()
         if let e = error?.description {
             debugPrint("Validatable Error: ", e)
