@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'Validator'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Rule based input validation.'
   s.description      = 'Rule based input validation library written in Swift. Object/Struct validation.'
   s.homepage         = 'https://github.com/smbhuin/Validator'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://github.com/smbhuin/Validator/screenshot.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Soumen Bhuin' => 'smbhuin@live.com' }
   s.source           = { :git => 'https://github.com/smbhuin/Validator.git', :tag => s.version.to_s }

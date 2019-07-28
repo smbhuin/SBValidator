@@ -55,7 +55,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", .upToNextMinor(from: "1.0.0"))
+    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.1")
 ]
 ```
 
@@ -63,7 +63,7 @@ or more strict
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.0"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.1"))
 ]
 ```
 
@@ -75,7 +75,7 @@ v.add(name: "Email", value: email, rules: [.required, .email])
 v.add(name: "Name", value: name, rules: [.required, .fullName])
 v.add(name: "Subject", value: subject, rules: [.required, .length(min: 10, max: 200)])
 v.add(name: "Message", value: message, rules: [.required, .length(min: 10, max: 2000)])
-let (status, validatable, error) = v.validate()
+let (valid, validatable, error) = v.validate()
 ```
 
 ## API documentation
