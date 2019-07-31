@@ -6,7 +6,7 @@
 //  Copyright © 2019 smbhuin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation
 
 //! Project version number for Validator.
 FOUNDATION_EXPORT double ValidatorVersionNumber;
