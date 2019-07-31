@@ -7,28 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF70A00D22F1C55500ACDFBB /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF70A00022F1C54F00ACDFBB /* Validator.framework */; };
 		DFE504CA22ECDCFD003EF552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE504C922ECDCFD003EF552 /* AppDelegate.swift */; };
 		DFE504CC22ECDCFD003EF552 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE504CB22ECDCFD003EF552 /* ViewController.swift */; };
 		DFE504CF22ECDCFD003EF552 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE504CD22ECDCFD003EF552 /* Main.storyboard */; };
 		DFE504D122ECDCFF003EF552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE504D022ECDCFF003EF552 /* Assets.xcassets */; };
 		DFE504D422ECDCFF003EF552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE504D222ECDCFF003EF552 /* LaunchScreen.storyboard */; };
-		DFE504E722ECDF0A003EF552 /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE504E322ECDEE0003EF552 /* Validator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DFE504E222ECDEE0003EF552 /* PBXContainerItemProxy */ = {
+		DF709FFF22F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = "Validator::Validator::Product";
-			remoteInfo = Validator;
+			remoteGlobalIDString = DF7026E622EEA070005700F5;
+			remoteInfo = "Validator iOS";
 		};
-		DFE504E422ECDEE0003EF552 /* PBXContainerItemProxy */ = {
+		DF70A00122F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = "Validator::ValidatorTests::Product";
-			remoteInfo = ValidatorTests;
+			remoteGlobalIDString = DF7026EF22EEA070005700F5;
+			remoteInfo = "Validator iOS Tests";
+		};
+		DF70A00322F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF709F5222F1BA3400ACDFBB;
+			remoteInfo = "Validator macOS";
+		};
+		DF70A00522F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF709F5A22F1BA3400ACDFBB;
+			remoteInfo = "Validator macOS Tests";
+		};
+		DF70A00722F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF709F9022F1C10700ACDFBB;
+			remoteInfo = "Validator tvOS";
+		};
+		DF70A00922F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF709F9822F1C10800ACDFBB;
+			remoteInfo = "Validator tvOS Tests";
+		};
+		DF70A00B22F1C54F00ACDFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE504DB22ECDEE0003EF552 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF709FCE22F1C35100ACDFBB;
+			remoteInfo = "Validator watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE504E722ECDF0A003EF552 /* Validator.framework in Frameworks */,
+				DF70A00D22F1C55500ACDFBB /* Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +124,13 @@
 		DFE504DC22ECDEE0003EF552 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFE504E322ECDEE0003EF552 /* Validator.framework */,
-				DFE504E522ECDEE0003EF552 /* ValidatorTests.xctest */,
+				DF70A00022F1C54F00ACDFBB /* Validator.framework */,
+				DF70A00222F1C54F00ACDFBB /* Validator iOS Tests.xctest */,
+				DF70A00422F1C54F00ACDFBB /* Validator.framework */,
+				DF70A00622F1C54F00ACDFBB /* Validator macOS Tests.xctest */,
+				DF70A00822F1C54F00ACDFBB /* Validator.framework */,
+				DF70A00A22F1C54F00ACDFBB /* Validator tvOS Tests.xctest */,
+				DF70A00C22F1C54F00ACDFBB /* Validator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +170,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = SMB;
+				ORGANIZATIONNAME = smbhuin;
 				TargetAttributes = {
 					DFE504C522ECDCFD003EF552 = {
 						CreatedOnToolsVersion = 10.1;
@@ -162,18 +202,53 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DFE504E322ECDEE0003EF552 /* Validator.framework */ = {
+		DF70A00022F1C54F00ACDFBB /* Validator.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Validator.framework;
-			remoteRef = DFE504E222ECDEE0003EF552 /* PBXContainerItemProxy */;
+			remoteRef = DF709FFF22F1C54F00ACDFBB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DFE504E522ECDEE0003EF552 /* ValidatorTests.xctest */ = {
+		DF70A00222F1C54F00ACDFBB /* Validator iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ValidatorTests.xctest;
-			remoteRef = DFE504E422ECDEE0003EF552 /* PBXContainerItemProxy */;
+			path = "Validator iOS Tests.xctest";
+			remoteRef = DF70A00122F1C54F00ACDFBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF70A00422F1C54F00ACDFBB /* Validator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Validator.framework;
+			remoteRef = DF70A00322F1C54F00ACDFBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF70A00622F1C54F00ACDFBB /* Validator macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Validator macOS Tests.xctest";
+			remoteRef = DF70A00522F1C54F00ACDFBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF70A00822F1C54F00ACDFBB /* Validator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Validator.framework;
+			remoteRef = DF70A00722F1C54F00ACDFBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF70A00A22F1C54F00ACDFBB /* Validator tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Validator tvOS Tests.xctest";
+			remoteRef = DF70A00922F1C54F00ACDFBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF70A00C22F1C54F00ACDFBB /* Validator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Validator.framework;
+			remoteRef = DF70A00B22F1C54F00ACDFBB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

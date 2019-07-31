@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file.
 `Validator` adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.4](https://github.com/smbhuin/Validator/releases/tag/1.0.4)
+Released on 2019-07-31.
+
+#### Updated
+- Package restructured.
+- XCode Project Config Updated.
+- Cocoapod Spec Updated.
+
+#### Renamed
+- var `ISBN` renamed to `isbn` in `ISBNRule`.
+- var `IPV4` renamed to `ipv4` in `IPV4Rule`.
+- var `iso8601date` renamed to `iso8601Date` in `ISO8601DateRule`.
+
 ## [1.0.3](https://github.com/smbhuin/Validator/releases/tag/1.0.3)
 Released on 2019-07-28.
 
