@@ -21,12 +21,10 @@ let package = Package(
         .target(
             name: "Validator",
             dependencies: [],
-            path: ".",
-            sources: ["Sources"]),
+            path: "Sources"),
         .testTarget(
             name: "ValidatorTests",
             dependencies: ["Validator"],
-            path: ".",
-            sources: ["Tests"]),
+            path: "Tests"),
     ]
 )
