@@ -224,6 +224,13 @@ final class ValidatorTests: XCTestCase {
         XCTAssertEqual(success, true)
     }
     
+    func testArray() {
+        let validator = Validator()
+        validator.add(name: "ArrayOfString", value: ["a", "b"], rules: [.array(rules: [.alpha])])
+        let success = validator.validate().0
+        XCTAssertEqual(success, true)
+    }
+    
     static var allTests = [
         ("FullName", testFullname),
         ("Alpha", testAlpha),
