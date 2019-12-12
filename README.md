@@ -59,7 +59,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.4")
+    .package(url: "https://github.com/smbhuin/Validator.git", from: "1.0.5")
 ]
 ```
 
@@ -67,13 +67,15 @@ or more strict
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.4"))
+    .package(url: "https://github.com/smbhuin/Validator.git", .exact("1.0.5"))
 ]
 ```
 
 ## Usage
 
 ```swift
+import Validator // If you are using Cocoapod then import AnyValidator
+
 let v = Validator()
 v.add(name: "Email", value: email, rules: [.required, .email])
 v.add(name: "Name", value: name, rules: [.required, .fullName])

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AnyValidator'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'Rule based input validation for iOS, macOS, watchOS, Linux'
   s.description      = 'Rule based input validation library written in Swift. Object/Struct validation.'
   s.homepage         = 'https://github.com/smbhuin/Validator'

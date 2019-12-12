@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 `Validator` adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.5](https://github.com/smbhuin/Validator/releases/tag/1.0.5)
+Released on 2019-12-12.
+
+#### Updated
+- `ArrayRule` updated.
+
 ## [1.0.4](https://github.com/smbhuin/Validator/releases/tag/1.0.4)
 Released on 2019-07-31.
 
