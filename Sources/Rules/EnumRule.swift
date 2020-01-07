@@ -1,6 +1,6 @@
 //
 //  EnumRule.swift
-//  Validator
+//  SBValidator
 //
 //  Created by Soumen Bhuin on 27/06/19.
 //  Copyright © 2019 smbhuin. All rights reserved.

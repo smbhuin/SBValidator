@@ -3,11 +3,11 @@
 //  Example
 //
 //  Created by Soumen Bhuin on 28/07/19.
-//  Copyright © 2019 SMB. All rights reserved.
+//  Copyright © 2019 smbhuin. All rights reserved.
 //
 
 import UIKit
-import Validator
+import SBValidator
 
 class ViewController: UITableViewController, UITextFieldDelegate {
 

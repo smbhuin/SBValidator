@@ -1,6 +1,6 @@
-module: Validator
+module: SBValidator
 author: Soumen Bhuin
-github_url: https://github.com/smbhuin/Validator
+github_url: https://github.com/smbhuin/SBValidator
 
 theme: fullwidth
 clean: true
@@ -11,4 +11,4 @@ readme: README.md
 skip_undocumented: false
 hide_documentation_coverage: false
 
-xcodebuild_arguments: [-project, Validator.xcodeproj, -target, Validator iOS, LIBRARY_SEARCH_PATHS=.build/debug]
+xcodebuild_arguments: [-project, SBValidator.xcodeproj, -target, SBValidator iOS, LIBRARY_SEARCH_PATHS=.build/debug]

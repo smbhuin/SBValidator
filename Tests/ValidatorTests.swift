@@ -1,5 +1,5 @@
 import XCTest
-@testable import Validator
+@testable import SBValidator
 
 final class ValidatorTests: XCTestCase {
     

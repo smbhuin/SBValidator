@@ -1,6 +1,6 @@
 //
 //  FloatRule.swift
-//  Validator
+//  SBValidator
 //
 //  Created by Soumen Bhuin on 26/06/19.
 //  Copyright © 2019 smbhuin. All rights reserved.

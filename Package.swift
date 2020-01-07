@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Validator",
+    name: "SBValidator",
     platforms: [
         .macOS(.v10_12),
         .iOS(.v10),
@@ -14,8 +14,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "Validator",
-            targets: ["Validator"]),
+            name: "SBValidator",
+            targets: ["SBValidator"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -25,12 +25,12 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "Validator",
+            name: "SBValidator",
             dependencies: [],
             path: "Sources"),
         .testTarget(
-            name: "ValidatorTests",
-            dependencies: ["Validator"],
+            name: "SBValidatorTests",
+            dependencies: ["SBValidator"],
             path: "Tests"),
     ],
     swiftLanguageVersions: [.v5]

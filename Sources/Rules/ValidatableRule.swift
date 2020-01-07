@@ -1,6 +1,6 @@
 //
 //  ValidatableRule.swift
-//  Validator
+//  SBValidator
 //
 //  Created by Soumen Bhuin on 17/07/19.
 //  Copyright © 2019 smbhuin. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  CoordinateRule.swift
-//  Validator
+//  SBValidator
 //
 //  Created by Soumen Bhuin on 07/07/19.
 //  Copyright © 2019 smbhuin. All rights reserved.

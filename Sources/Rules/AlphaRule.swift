@@ -1,6 +1,6 @@
 //
 //  AlphaRule.swift
-//  Validator
+//  SBValidator
 //
 //  Created by Soumen Bhuin on 25/06/19.
 //  Copyright © 2019 smbhuin. All rights reserved.

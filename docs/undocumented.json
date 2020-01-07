@@ -1,19 +1,19 @@
 {
   "warnings": [
     {
-      "file": "/Users/soumen/Documents/Projects/Validator/Sources/Rules/EnumRule.swift",
+      "file": "/Users/soumen/Documents/Projects/SBValidator/Sources/Rules/EnumRule.swift",
       "line": 18,
       "symbol": "EnumRule.init(values:message:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/soumen/Documents/Projects/Validator/Sources/Validatable.swift",
+      "file": "/Users/soumen/Documents/Projects/SBValidator/Sources/Validatable.swift",
       "line": 15,
       "symbol": "Validatable.validate()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/soumen/Documents/Projects/Validator"
+  "source_directory": "/Users/soumen/Documents/Projects/SBValidator"
 }
