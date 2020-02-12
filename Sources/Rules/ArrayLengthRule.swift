@@ -11,7 +11,7 @@ import Foundation
 /**
  `ArrayLengthRule` is a subclass of `ValidationRule` that defines how length is validated with min & max limits.
  */
-public class ArrayLengthRule : ValidationRule<Array<Any>> {
+public class ArrayLengthRule<V> : ValidationRule<Array<V>> {
     
     private let min: Int
     private let max: Int
@@ -36,7 +36,7 @@ public class ArrayLengthRule : ValidationRule<Array<Any>> {
      - parameter value: Any Array value to be checked for validation.
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Array<Any>?) -> String? {
+    public override func validate(_ value: Array<V>?) -> String? {
         guard let v = value, !v.isEmpty else { return nil }
         if v.count >= min && v.count <= max {
             return nil
@@ -51,7 +51,7 @@ public class ArrayLengthRule : ValidationRule<Array<Any>> {
 public extension ValidationRule {
     
     /// Quick accessor for `ArrayLengthRule`
-    class func arrayLength(min: Int, max: Int) -> ValidationRule<Array<Any>> {
+    class func arrayLength<V>(min: Int, max: Int) -> ValidationRule<Array<V>> {
         return ArrayLengthRule(min: min, max: max)
     }
     
