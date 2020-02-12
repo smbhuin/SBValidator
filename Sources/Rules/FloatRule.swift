@@ -32,9 +32,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `FloatRule`
     class var floatingPoint: ValidationRule<String> {
-        get  {
-            return FloatRule()
-        }
+        return FloatRule()
     }
     
 }

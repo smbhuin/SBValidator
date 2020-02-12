@@ -92,7 +92,7 @@ final class ValidatorTests: XCTestCase {
     
     func testMonth() {
         let validator = Validator()
-        validator.add(name: "Month", value: "05", rules: [.month()])
+        validator.add(name: "Month", value: "05", rules: [.month])
         let success = validator.validate().0
         XCTAssertEqual(success, true)
     }
@@ -174,25 +174,32 @@ final class ValidatorTests: XCTestCase {
                         return v.validate().2
                     }
                     
-                    var description: String {
-                        return "Location"
+                }
+                
+                struct NearByPlace : Validatable {
+                    var name: String
+                    var type: String
+                    
+                    func validate() -> ValidationError? {
+                        let v = Validator()
+                        v.add(name: "Name", value: name, rules: [.required, .length(min: 1, max: 20)])
+                        v.add(name: "Type", value: type, rules: [.required, .length(min: 1, max: 20)])
+                        return v.validate().2
                     }
                 }
                 
                 var city: String
                 var country: String
                 var location: Location
+                var nearByPlaces: [NearByPlace]
                 
                 func validate() -> ValidationError? {
                     let v = Validator()
                     v.add(name: "City", value: city, rules: [.required , .alpha])
                     v.add(name: "Country", value: country, rules: [.required, .alpha])
                     v.add(name: "Location", value: location, rules: [.required, .validatable()])
+                    v.add(name: "NearByPlaces", value: nearByPlaces, rules: [.required, .arrayLength(min: 1, max: 3), .array(rules: [.validatable()])])
                     return v.validate().2
-                }
-                
-                var description: String {
-                    return "Address"
                 }
                 
             }
@@ -214,7 +221,7 @@ final class ValidatorTests: XCTestCase {
             }
             
         }
-        let user = User(name: "Soumen Bhuin", email: "myemail@gmail.com", address: .init(city: "Kolkata", country: "India", location: .init(latitude: 88.3639, longitude: 22.5726)))
+        let user = User(name: "Soumen Bhuin", email: "myemail@gmail.com", address: .init(city: "Kolkata", country: "India", location: .init(latitude: 88.3639, longitude: 22.5726), nearByPlaces: [.init(name: "Unique Bank", type: "Bank")]))
         let validator = Validator()
         validator.add(validatable: user)
         let (success, _, error) = validator.validate()

@@ -32,9 +32,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `PhoneNumberRule`
     class var phoneNumber: ValidationRule<String> {
-        get  {
-            return PhoneNumberRule()
-        }
+        return PhoneNumberRule()
     }
     
 }

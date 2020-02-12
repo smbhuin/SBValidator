@@ -51,9 +51,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `EmailRule`
     class var email: ValidationRule<String> {
-        get  {
-            return EmailRule()
-        }
+        return EmailRule()
     }
     
 }

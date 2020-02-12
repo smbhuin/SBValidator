@@ -11,11 +11,11 @@ import Foundation
 /**
  `EnumRule` is a subclass of `ValidationRule` that defines how a value is validated against mutiple possible values.
  */
-public class EnumRule<Value>: ValidationRule<Value> where Value: Equatable {
+public class EnumRule<V>: ValidationRule<V> where V: Equatable {
     
-    private let values: [Value]
+    private let values: [V]
     
-    public init(values: [Value], message: String = "does not match with any possible values.") {
+    public init(values: [V], message: String = "does not match with any possible values.") {
         self.values = values
         super.init(message: message)
     }
@@ -26,7 +26,7 @@ public class EnumRule<Value>: ValidationRule<Value> where Value: Equatable {
      - parameter value: Any value to checked for validation.
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> String? {
+    public override func validate(_ value: V?) -> String? {
         guard let v = value else { return nil }
         if values.contains(v) {
             return nil
@@ -41,7 +41,7 @@ public class EnumRule<Value>: ValidationRule<Value> where Value: Equatable {
 public extension ValidationRule {
     
     /// Quick accessor for `EnumRule`
-    class func `enum`<Value>(_ values: [Value]) -> ValidationRule<Value>  where Value: Equatable {
+    class func `enum`<V>(_ values: [V]) -> ValidationRule<V>  where V: Equatable {
         return EnumRule(values: values)
     }
     

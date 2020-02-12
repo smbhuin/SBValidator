@@ -11,10 +11,10 @@ import Foundation
 /**
  `RangeRule` is a subclass of `ValidationRule` that defines how value is validated with min & max limits.
  */
-public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, Value : CustomStringConvertible {
+public class RangeRule<V> : ValidationRule<V> where V : Comparable, V : CustomStringConvertible {
     
-    private let min: Value
-    private let max: Value
+    private let min: V
+    private let max: V
     
     /**
      Initializes a `RangeRule` object to verify that quantity of value is in the range of min & max.
@@ -24,7 +24,7 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
      - parameter message: String of error message.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(min: Value, max: Value, message: String? = nil) {
+    public init(min: V, max: V, message: String? = nil) {
         self.min = min
         self.max = max
         super.init(message: message ?? "is invalid. must be between \(min) and \(max).")
@@ -36,7 +36,7 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
      - parameter value: Any value to be checked for validation.
      - returns: Error Message. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> String? {
+    public override func validate(_ value: V?) -> String? {
         guard let v = value else { return nil }
         if v >= min && v <= max {
             return nil
@@ -51,7 +51,7 @@ public class RangeRule<Value> : ValidationRule<Value> where Value : Comparable, 
 public extension ValidationRule {
     
     /// Quick accessor for `RangeRule`
-    class func range<Value>(min: Value, max: Value) -> ValidationRule<Value> where Value : Comparable, Value : CustomStringConvertible {
+    class func range<V>(min: V, max: V) -> ValidationRule<V> where V : Comparable, V : CustomStringConvertible {
         return RangeRule(min: min, max: max)
     }
     

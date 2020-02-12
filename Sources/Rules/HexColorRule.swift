@@ -32,9 +32,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `HexColorRule`
     class var hexColor: ValidationRule<String> {
-        get  {
-            return HexColorRule()
-        }
+        return HexColorRule()
     }
     
 }

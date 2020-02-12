@@ -32,9 +32,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `ZipCodeRule`
     class var zipCode: ValidationRule<String> {
-        get  {
-            return ZipCodeRule()
-        }
+        return ZipCodeRule()
     }
     
 }

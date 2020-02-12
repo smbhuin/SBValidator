@@ -32,9 +32,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `IPV4Rule`
     class var ipv4: ValidationRule<String> {
-        get  {
-            return IPV4Rule()
-        }
+        return IPV4Rule()
     }
     
 }

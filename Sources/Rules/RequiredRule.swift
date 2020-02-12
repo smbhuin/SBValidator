@@ -11,7 +11,7 @@ import Foundation
 /**
  `RequiredRule` is a subclass of `ValidationRule` that means value can't be nil or blank. Make sure required rule is the first item in rules list
  */
-public class RequiredRule<Value>: ValidationRule<Value> {
+public class RequiredRule<V>: ValidationRule<V> {
     
     /**
      Initializes a `RequiredRule` object that will validate a value is not nil.
@@ -29,7 +29,7 @@ public class RequiredRule<Value>: ValidationRule<Value> {
      - parameter value: Any value to be checked for validation.
      - returns: Error Message. nil if validation is successful; `String` if validation fails. Returns error for empty string or collection
      */
-    public override func validate(_ value: Value?) -> String? {
+    public override func validate(_ value: V?) -> String? {
         guard let v = value else { return self.message }
         switch v {
         case let d as String:

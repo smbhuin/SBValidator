@@ -25,16 +25,16 @@ public protocol NamedValidatable : Validatable, CustomStringConvertible {
 /**
  Represents all components required for single basic validation to perform.
  */
-public class BasicValidatable<Value> : NamedValidatable {
+public class BasicValidatable<V> : NamedValidatable {
     
     /// Identifier.
     private var name: String
     
     /// Value to be validate.
-    private var value: Value?
+    private var value: V?
     
     /// Rules to be applied on value.
-    private var rules: [ValidationRule<Value>]
+    private var rules: [ValidationRule<V>]
     
     /**
      Initializes a `Validatable` object.
@@ -45,7 +45,7 @@ public class BasicValidatable<Value> : NamedValidatable {
      - parameter message: Error message string.
      - returns: An initialized object.
      */
-    public init(name: String, value: Value?, rules: [ValidationRule<Value>]) {
+    public init(name: String, value: V?, rules: [ValidationRule<V>]) {
         self.name = name
         self.value = value
         self.rules = rules

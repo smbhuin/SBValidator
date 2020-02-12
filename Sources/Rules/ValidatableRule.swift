@@ -11,7 +11,7 @@ import Foundation
 /**
  `ValidatableRule` is a subclass of `ValidationRule` that defines how a object which conforms to `Validatable` protocol is validated.
  */
-public class ValidatableRule<Value>: ValidationRule<Value> where Value : Validatable {
+public class ValidatableRule<V>: ValidationRule<V> where V : Validatable {
     
     public override init(message: String = "") {
         super.init(message: message)
@@ -23,7 +23,7 @@ public class ValidatableRule<Value>: ValidationRule<Value> where Value : Validat
      - parameter value: Any value to checked for validation.
      - returns: `String`. nil if validation is successful; `String` if validation fails.
      */
-    public override func validate(_ value: Value?) -> String? {
+    public override func validate(_ value: V?) -> String? {
         guard let v = value else { return nil }
         if let e = v.validate() {
             if self.message == "" {
@@ -41,8 +41,8 @@ public class ValidatableRule<Value>: ValidationRule<Value> where Value : Validat
 public extension ValidationRule {
     
     /// Quick accessor for `ValidatableRule`
-    class func validatable<Value>() -> ValidationRule<Value> where Value : Validatable {
-        return ValidatableRule<Value>()
+    class func validatable<V>() -> ValidationRule<V> where V : Validatable {
+        return ValidatableRule<V>()
     }
     
 }

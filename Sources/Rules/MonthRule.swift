@@ -42,7 +42,7 @@ public class MonthRule : ValidationRule<String> {
 public extension ValidationRule {
     
     /// Quick accessor for `MonthRule`
-    class func month() -> ValidationRule<String> {
+    class var month: ValidationRule<String> {
         return MonthRule()
     }
     

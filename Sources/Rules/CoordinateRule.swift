@@ -47,9 +47,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `CoordinateRule`
     class var coordinate: ValidationRule<[Double]> {
-        get  {
-            return CoordinateRule()
-        }
+        return CoordinateRule()
     }
     
 }

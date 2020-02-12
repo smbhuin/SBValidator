@@ -29,9 +29,7 @@ public extension ValidationRule {
     
     /// Quick accessor for `AlphaNumericRule`
     class var alphaNumeric: ValidationRule<String> {
-        get  {
-            return AlphaNumericRule()
-        }
+        return AlphaNumericRule()
     }
     
 }
