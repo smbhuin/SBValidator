@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 `SBValidator` adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.0.1](https://github.com/smbhuin/SBValidator/releases/tag/2.0.1)
+Released on 2020-02-12.
+
+#### Renamed
+- func `month` renamed to var `month` in `MonthRule` extension.
+
+#### Updated
+- `ArrayLengthRule` changed to generic from `Any` type.
+
 ## [2.0.0](https://github.com/smbhuin/SBValidator/releases/tag/2.0.0)
 Released on 2020-01-07.
 
