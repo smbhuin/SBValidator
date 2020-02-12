@@ -171,7 +171,7 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='validator' class='heading'>Validator</h1>
+            <h1 id='sbvalidator' class='heading'>SBValidator</h1>
 
 <p>Rule based validation library for swift.</p>
 
@@ -194,44 +194,44 @@
 
 <p>To install Validator, add it as a submodule to your project (on the top level project directory):</p>
 
-<p><code>git submodule add https://github.com/smbhuin/Validator.git</code></p>
+<p><code>git submodule add https://github.com/smbhuin/SBValidator.git</code></p>
 <h4 id='carthage' class='heading'>Carthage</h4>
 
 <p>You can use <a href="https://github.com/Carthage/Carthage">Carthage</a>. 
 Specify in Cartfile:</p>
-<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"smbhuin/Validator"</span>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"smbhuin/SBValidator"</span>
 </code></pre>
 
-<p>Run <code>carthage</code> to build the framework and drag the built Validator.framework into your Xcode project. Follow <a href="https://github.com/Carthage/Carthage#getting-started">build instructions</a>.</p>
+<p>Run <code>carthage</code> to build the framework and drag the built SBValidator.framework into your Xcode project. Follow <a href="https://github.com/Carthage/Carthage#getting-started">build instructions</a>.</p>
 <h4 id='cocoapods' class='heading'>CocoaPods</h4>
 
-<p>You can use <a href="http://cocoapods.org/?q=AnyValidator">CocoaPods</a>.</p>
+<p>You can use <a href="http://cocoapods.org/?q=SBValidator">CocoaPods</a>.</p>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
 <span class="n">use_frameworks!</span>
 
 <span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
-<span class="n">pod</span> <span class="s1">'AnyValidator'</span>
+<span class="n">pod</span> <span class="s1">'SBValidator'</span>
 <span class="k">end</span>
 </code></pre>
 
 <p>or for newest version from specified branch of code:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'AnyValidator'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/smbhuin/Validator"</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s2">"master"</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SBValidator'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/smbhuin/SBValidator"</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s2">"master"</span>
 </code></pre>
 <h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
 
 <p>You can use <a href="https://swift.org/package-manager/">Swift Package Manager</a> and specify dependency in <code>Package.swift</code> by adding this:</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.5"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.0"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 
 <p>or more strict</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/Validator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"1.0.5"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"2.0.0"</span><span class="p">))</span>
 <span class="p">]</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Validator</span> <span class="c1">// If you are using Cocoapod then import AnyValidator</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SBValidator</span>
 
 <span class="k">let</span> <span class="nv">v</span> <span class="o">=</span> <span class="kt">Validator</span><span class="p">()</span>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Email"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="n">email</span><span class="p">])</span>
@@ -242,10 +242,10 @@ Specify in Cartfile:</p>
 </code></pre>
 <h2 id='api-documentation' class='heading'>API documentation</h2>
 
-<p>For more information visit our <a href="https://smbhuin.github.io/Validator/">API reference</a>.</p>
+<p>For more information visit our <a href="https://smbhuin.github.io/SBValidator/">API reference</a>.</p>
 <h2 id='license' class='heading'>License</h2>
 
-<p>This library is licensed under MIT. Full license text is available in <a href="https://github.com/smbhuin/Validator/blob/master/LICENSE">LICENSE</a>.</p>
+<p>This library is licensed under MIT. Full license text is available in <a href="https://github.com/smbhuin/SBValidator/blob/master/LICENSE">LICENSE</a>.</p>
 
           </div>
         </section>
@@ -254,7 +254,7 @@ Specify in Cartfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-01-07)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-02-12)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
