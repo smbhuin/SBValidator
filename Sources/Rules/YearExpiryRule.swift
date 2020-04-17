@@ -14,7 +14,7 @@ import Foundation
 public class YearExpiryRule : ValidationRule<String> {
     
     /// Default maximum validity period. Change to preferred value
-    private var validity: Int = 3
+    private var validity: Int!
 
     /**
      Initializes `YearExpiryRule` object with error message. Used to validate a card's expiry year.
@@ -24,7 +24,7 @@ public class YearExpiryRule : ValidationRule<String> {
      */
     public init(validity: Int = 3, message: String = "") {
         self.validity = validity
-        super.init(message: message == "" ? "must be within \(3) years of validity.": message)
+        super.init(message: message == "" ? "must be within \(validity) years of validity.": message)
     }
 
     /**
