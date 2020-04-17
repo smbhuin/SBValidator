@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- `FloatRule` is a subclass of `RegexRule` that defines how check if a value is a floating point value.
+ `FloatRule` is a subclass of `RegexRule` that defines how to check if a value is a floating point value.
  */
 public class FloatRule : RegexRule {
     
