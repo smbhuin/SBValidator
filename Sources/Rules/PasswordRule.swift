@@ -22,7 +22,7 @@ public class PasswordRule : RegexRule {
         /// Minimum 8 characters. One uppercase. One lowercase. One number.
         case strong
         
-        /// Regular express string to be used in validation.
+        /// Regular expression string to be used in validation.
         func regex() -> String {
             switch self {
             case .weak:

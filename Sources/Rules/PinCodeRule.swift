@@ -13,7 +13,7 @@ import Foundation
  */
 public class PinCodeRule: RegexRule {
     
-    /// PinCode regular express string to be used in validation.
+    /// PinCode regular expression string to be used in validation.
     static let regex = "\\d{6}"
     
     /**

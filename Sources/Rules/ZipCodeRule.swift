@@ -13,7 +13,7 @@ import Foundation
  */
 public class ZipCodeRule: RegexRule {
     
-    /// Zipcode regular express string to be used in validation.
+    /// Zipcode regular expression string to be used in validation.
     static let regex = "\\d{5}(-\\d{4})?"
     
     /**

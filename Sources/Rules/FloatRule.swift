@@ -13,7 +13,7 @@ import Foundation
  */
 public class FloatRule : RegexRule {
     
-    /// Floating point regular express string to be used in validation.
+    /// Floating point regular expression string to be used in validation.
     static let regex = "^[-+]?(\\d*[.])?\\d+$"
     
     /**

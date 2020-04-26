@@ -13,7 +13,7 @@ import Foundation
  */
 open class RegexRule: ValidationRule<String> {
     
-    /// Regular express string to be used in validation.
+    /// Regular expression string to be used in validation.
     private var _regex: String = ""
     
     /**
