@@ -31,19 +31,36 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         validator.add(name: "Password", value: txtPassword.text, rules: [.required, .password()])
         validator.add(name: "Confirm Password", value: txtConfirmPassword.text, rules: [.required, .confirm(txtPassword.text)])
         
-        let errors = validator.validateAll()
-        if errors.count == 0 {
+        if let errors = validator.validateAll() {
+            for error in errors {
+                switch error.validatable.description {
+                case "Name":
+                    lblNameError.text = error.description
+                case "Email":
+                    lblEmailError.text = error.description
+                case "Password":
+                    lblPasswordError.text = error.description
+                case "Confirm Password":
+                    lblConfirmPasswordError.text = error.description
+                default:
+                    break
+                }
+            }
+        }
+        else {
+            clearErrorMessages()
             let alert = UIAlertController(title: "YeH", message: "All is ok!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else {
-            lblNameError.text = validator.validate(named: "Name").error?.description
-            lblEmailError.text = validator.validate(named: "Email").error?.description
-            lblPasswordError.text = validator.validate(named: "Password").error?.description
-            lblConfirmPasswordError.text = validator.validate(named: "Confirm Password").error?.description
-        }
         
+    }
+    
+    func clearErrorMessages() {
+        lblNameError.text = ""
+        lblEmailError.text = ""
+        lblPasswordError.text = ""
+        lblConfirmPasswordError.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

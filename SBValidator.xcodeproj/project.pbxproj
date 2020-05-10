@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1D543824497C47008FCE97 /* CurrencyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D543724497C47008FCE97 /* CurrencyRule.swift */; };
+		DF1D543924497C47008FCE97 /* CurrencyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D543724497C47008FCE97 /* CurrencyRule.swift */; };
+		DF1D543A24497C47008FCE97 /* CurrencyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D543724497C47008FCE97 /* CurrencyRule.swift */; };
+		DF1D543B24497C47008FCE97 /* CurrencyRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D543724497C47008FCE97 /* CurrencyRule.swift */; };
 		DF7026F022EEA070005700F5 /* SBValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7026E622EEA070005700F5 /* SBValidator.framework */; };
 		DF7026F522EEA070005700F5 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7026F422EEA070005700F5 /* ValidatorTests.swift */; };
 		DF7026F722EEA070005700F5 /* SBValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7026E922EEA070005700F5 /* SBValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,6 +149,10 @@
 		DF709FF422F1C3C000ACDFBB /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF70270222EEA2BB005700F5 /* ValidationError.swift */; };
 		DF709FF522F1C3C000ACDFBB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF70270122EEA2BB005700F5 /* Validator.swift */; };
 		DF709FF622F1C42300ACDFBB /* SBValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7026E922EEA070005700F5 /* SBValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFD232C42451D4330003F88C /* NumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD232C32451D4320003F88C /* NumericRule.swift */; };
+		DFD232C52451D4330003F88C /* NumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD232C32451D4320003F88C /* NumericRule.swift */; };
+		DFD232C62451D4330003F88C /* NumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD232C32451D4320003F88C /* NumericRule.swift */; };
+		DFD232C72451D4330003F88C /* NumericRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD232C32451D4320003F88C /* NumericRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +180,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF1D543724497C47008FCE97 /* CurrencyRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRule.swift; sourceTree = "<group>"; };
 		DF7026E622EEA070005700F5 /* SBValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7026E922EEA070005700F5 /* SBValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBValidator.h; sourceTree = "<group>"; };
 		DF7026EA22EEA070005700F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,6 +224,7 @@
 		DF709F9022F1C10700ACDFBB /* SBValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF709F9822F1C10800ACDFBB /* SBValidator tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SBValidator tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF709FCE22F1C35100ACDFBB /* SBValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SBValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD232C32451D4320003F88C /* NumericRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +333,7 @@
 				DF70271E22EEA2BB005700F5 /* ValidationRule.swift */,
 				DF70271922EEA2BB005700F5 /* RequiredRule.swift */,
 				DF70271F22EEA2BB005700F5 /* AlphaRule.swift */,
+				DFD232C32451D4320003F88C /* NumericRule.swift */,
 				DF70270422EEA2BB005700F5 /* FullNameRule.swift */,
 				DF70270522EEA2BB005700F5 /* DateRule.swift */,
 				DF70270622EEA2BB005700F5 /* RangeRule.swift */,
@@ -331,6 +342,7 @@
 				DF70270922EEA2BB005700F5 /* ExactLengthRule.swift */,
 				DF70270A22EEA2BB005700F5 /* ConfirmRule.swift */,
 				DF70270B22EEA2BB005700F5 /* PinCodeRule.swift */,
+				DF1D543724497C47008FCE97 /* CurrencyRule.swift */,
 				DF70270C22EEA2BB005700F5 /* ArrayLengthRule.swift */,
 				DF70270D22EEA2BB005700F5 /* EnumRule.swift */,
 				DF70270F22EEA2BB005700F5 /* LengthRule.swift */,
@@ -667,11 +679,13 @@
 				DF70273922EEA2BB005700F5 /* RequiredRule.swift in Sources */,
 				DF70273B22EEA2BB005700F5 /* MonthRule.swift in Sources */,
 				DF70272422EEA2BB005700F5 /* FullNameRule.swift in Sources */,
+				DFD232C42451D4330003F88C /* NumericRule.swift in Sources */,
 				DF70272922EEA2BB005700F5 /* ExactLengthRule.swift in Sources */,
 				DF70272722EEA2BB005700F5 /* CharacterSetRule.swift in Sources */,
 				DF70272122EEA2BB005700F5 /* Validatable.swift in Sources */,
 				DF70273422EEA2BB005700F5 /* EmailRule.swift in Sources */,
 				DF70273822EEA2BB005700F5 /* ISO8601DateRule.swift in Sources */,
+				DF1D543824497C47008FCE97 /* CurrencyRule.swift in Sources */,
 				DF70273722EEA2BB005700F5 /* PhoneNumberRule.swift in Sources */,
 				DF70273622EEA2BB005700F5 /* AlphaNumericRule.swift in Sources */,
 				DF70273F22EEA2BB005700F5 /* AlphaRule.swift in Sources */,
@@ -714,11 +728,13 @@
 				DF709F7922F1C08100ACDFBB /* EmailRule.swift in Sources */,
 				DF709F7A22F1C08100ACDFBB /* ArrayRule.swift in Sources */,
 				DF709F7B22F1C08100ACDFBB /* AlphaNumericRule.swift in Sources */,
+				DFD232C52451D4330003F88C /* NumericRule.swift in Sources */,
 				DF709F7C22F1C08100ACDFBB /* PhoneNumberRule.swift in Sources */,
 				DF709F7D22F1C08100ACDFBB /* ISO8601DateRule.swift in Sources */,
 				DF709F7E22F1C08100ACDFBB /* RequiredRule.swift in Sources */,
 				DF709F7F22F1C08100ACDFBB /* IPV4Rule.swift in Sources */,
 				DF709F8022F1C08100ACDFBB /* MonthRule.swift in Sources */,
+				DF1D543924497C47008FCE97 /* CurrencyRule.swift in Sources */,
 				DF709F8122F1C08100ACDFBB /* CoordinateRule.swift in Sources */,
 				DF709F8222F1C08100ACDFBB /* YearExpiryRule.swift in Sources */,
 				DF709F8322F1C08100ACDFBB /* ValidationRule.swift in Sources */,
@@ -761,11 +777,13 @@
 				DF709FB722F1C18A00ACDFBB /* EmailRule.swift in Sources */,
 				DF709FB822F1C18A00ACDFBB /* ArrayRule.swift in Sources */,
 				DF709FB922F1C18A00ACDFBB /* AlphaNumericRule.swift in Sources */,
+				DFD232C62451D4330003F88C /* NumericRule.swift in Sources */,
 				DF709FBA22F1C18A00ACDFBB /* PhoneNumberRule.swift in Sources */,
 				DF709FBB22F1C18A00ACDFBB /* ISO8601DateRule.swift in Sources */,
 				DF709FBC22F1C18A00ACDFBB /* RequiredRule.swift in Sources */,
 				DF709FBD22F1C18A00ACDFBB /* IPV4Rule.swift in Sources */,
 				DF709FBE22F1C18A00ACDFBB /* MonthRule.swift in Sources */,
+				DF1D543A24497C47008FCE97 /* CurrencyRule.swift in Sources */,
 				DF709FBF22F1C18A00ACDFBB /* CoordinateRule.swift in Sources */,
 				DF709FC022F1C18A00ACDFBB /* YearExpiryRule.swift in Sources */,
 				DF709FC122F1C18A00ACDFBB /* ValidationRule.swift in Sources */,
@@ -808,11 +826,13 @@
 				DF709FE622F1C3C000ACDFBB /* EmailRule.swift in Sources */,
 				DF709FE722F1C3C000ACDFBB /* ArrayRule.swift in Sources */,
 				DF709FE822F1C3C000ACDFBB /* AlphaNumericRule.swift in Sources */,
+				DFD232C72451D4330003F88C /* NumericRule.swift in Sources */,
 				DF709FE922F1C3C000ACDFBB /* PhoneNumberRule.swift in Sources */,
 				DF709FEA22F1C3C000ACDFBB /* ISO8601DateRule.swift in Sources */,
 				DF709FEB22F1C3C000ACDFBB /* RequiredRule.swift in Sources */,
 				DF709FEC22F1C3C000ACDFBB /* IPV4Rule.swift in Sources */,
 				DF709FED22F1C3C000ACDFBB /* MonthRule.swift in Sources */,
+				DF1D543B24497C47008FCE97 /* CurrencyRule.swift in Sources */,
 				DF709FEE22F1C3C000ACDFBB /* CoordinateRule.swift in Sources */,
 				DF709FEF22F1C3C000ACDFBB /* YearExpiryRule.swift in Sources */,
 				DF709FF022F1C3C000ACDFBB /* ValidationRule.swift in Sources */,

@@ -11,6 +11,7 @@ Rule based validation library for swift.
 
 - Rule based validation
 - Class/Struct validation
+- JSON validation
 - Validatable/Validator chaining
 - Linux Compatible (Can be used with [Kitura](https://www.kitura.io), [Vapor](https://vapor.codes), [Perfect](https://perfect.org))
 
@@ -83,6 +84,42 @@ v.add(name: "Subject", value: subject, rules: [.required, .length(min: 10, max: 
 v.add(name: "Message", value: message, rules: [.required, .length(min: 10, max: 2000)])
 let (valid, validatable, error) = v.validate()
 ```
+
+### Validation Rules
+
+| Rules          | Description               |
+| -------------- | ------------------------- |
+| AlphaNumericRule | Only Alpha Numeric characters are allowed. |
+| AlphaRule | Only Alpha characters are allowed. |
+| ArrayLengthRule | Puts a limit on array length. |
+| ArrayRule |Apply rules on each element of array.|
+| CharacterSetRule |Provides set of characters to be allowed.|
+| ConfirmRule |Match with specific value.|
+| CoordinateRule |Takes latitude and longitude as `[Double]` and validates.|
+| CurrencyRule |Takes currency as `String` and validates.|
+| DateRule |Takes date as `String` and validates.|
+| EmailRule |Checks for valid email.|
+| EnumRule |Checks against a set of values.|
+| ExactLengthRule |Checks for fixed length of `String`|
+| FloatRule |Check for valid floating point number as `String`|
+| FullNameRule |Checks for full name of a person.|
+| HexColorRule ||
+| IPV4Rule ||
+| ISBNRule ||
+| ISO8601DateRule ||
+| LengthRule ||
+| MonthRule ||
+| NumericRule ||
+| PasswordRule ||
+| PhoneNumberRule ||
+| PinCodeRule ||
+| RangeRule ||
+| RegexRule ||
+| RequiredRule ||
+| ValidatableRule ||
+| ValidationRule ||
+| YearExpiryRule ||
+| ZipCodeRule ||
 
 ## API documentation
 

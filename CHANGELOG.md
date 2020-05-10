@@ -2,6 +2,24 @@
 All notable changes to this project will be documented in this file.
 `SBValidator` adheres to [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+#### Added
+- `CurrencyRule` added.
+- `NumericRule` added.
+- `errorOnValidate` method added in `Validator`
+
+#### Updated
+- `PhoneNumberRule` updated. You can now specify the `Format` of phone number.
+
+#### Breaking Changes
+- `validate()` method now throws exception and returns `Bool`
+- `validate(named: String)` method now throws exception and returns `Bool`
+- `validateAll()` method now returns `[ValidationError]?`
+
+**Previous** `validate() -> (valid: Bool, validatable: NamedValidatable?, error: ValidationError?)`
+**Now** `validate() throws -> Bool`
+
 ## [2.0.1](https://github.com/smbhuin/SBValidator/releases/tag/2.0.1)
 Released on 2020-02-12.
 
