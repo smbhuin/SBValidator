@@ -14,12 +14,12 @@ import Foundation
 public class Validator {
     
     /// Map holding all the validatables
-    private var validatables: [String : NamedValidatable] = [:]
+    private var validatables: [NamedValidatable] = []
     
     /**
      Initializes a `Validator` object.
      
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object
      */
     public init() {
         
@@ -32,64 +32,108 @@ public class Validator {
      - parameter rules: Array of `ValidationRule`
      */
     public func add<V>(name: String, value: V?, rules: [ValidationRule<V>]) {
-        validatables[name] = BasicValidatable<V>(name: name, value: value, rules: rules)
+        validatables.append(BasicValidatable<V>(name: name, value: value, rules: rules))
     }
     
     /**
      Add a new custom validatable
      */
     public func add(validatable: NamedValidatable) {
-        validatables[validatable.description] = validatable
+        validatables.append(validatable)
     }
     
     /**
      Removes a validator by its name.
-     - parameter name: Name of the validatable. eg: Email
+     - parameter name: Name of the validatable. It is case sensitive. eg: Email
      */
     public func remove(named: String) {
-        validatables[named] = nil
+        if let index = validatables.firstIndex(where: { $0.description == named }) {
+            validatables.remove(at: index)
+        }
     }
     
     /**
      Validate all validatables until error. If any error found, it will not try to validate next validatable.
-     - returns: `(valid: Bool, validatable: NamedValidatable?, error: ValidationError?)`
+     - throws: Throws `ValidationError` if any `Validatable` is invalid.
+     - returns: Returns `true` if valid.
      */
-    public func validate() -> (valid: Bool, validatable: NamedValidatable?, error: ValidationError?) {
-        for (_, validatable) in validatables {
+    @discardableResult
+    public func validate() throws -> Bool  {
+        for validatable in validatables {
             if let error = validatable.validate() {
-                return (false, validatable, error)
+                throw error
             }
         }
-        return (true, nil, nil)
+        return true
+    }
+    
+    /**
+     Validate all validatables until error. If any error found, it will not try to validate next validatable and return the error.
+     - returns: `ValidationError` if any `Validatable` is invalid.
+     */
+    public func errorOnValidate() -> ValidationError?  {
+        for validatable in validatables {
+            if let error = validatable.validate() {
+                return error
+            }
+        }
+        return nil
     }
     
     /**
      Validate specific validatable by its name
      
-     - parameter named: name of the validatable
-     - returns: `(valid: Bool, validatable: NamedValidatable?, error: ValidationError?)`
+     - parameter named: Name of the validatable
+     - throws: Throws `ValidationError` if any `Validatable` is invalid.
+     - returns: Returns `true` if valid.
      */
-    public func validate(named: String) -> (valid: Bool, validatable: NamedValidatable?, error: ValidationError?) {
-        for (_, validatable) in validatables {
-            if named == validatable.description, let error = validatable.validate() {
-                return (false, validatable, error)
+    @discardableResult
+    public func validate(named: String) throws -> Bool {
+        if let validatable = validatables.first(where: { $0.description == named }) {
+            if let error = validatable.validate() {
+                throw error
             }
         }
-        return (true, nil, nil)
+        return true
     }
     
     /**
      Validate all validatables even if any error found for one validatable.
-     - returns: Array of `(validatable: NamedValidatable, error: ValidationError)`
+     - returns: Array of `ValidationError` if any validatable is invalid otherwise nil.
      */
-    public func validateAll() -> [(validatable: NamedValidatable, error: ValidationError)] {
-        var results: [(NamedValidatable, ValidationError)] = []
-        for (_, validatable) in validatables {
+    public func validateAll() -> [ValidationError]? {
+        var results: [ValidationError] = []
+        for validatable in validatables {
             if let error = validatable.validate() {
-                results.append((validatable, error))
+                results.append(error)
             }
         }
-        return results
+        return results.count > 0 ? results : nil
     }
     
+    /**
+    Finds the first valid `Validatable`
+    - returns: `Validatable` that is valid.
+    */
+    public func firstValid() -> Validatable? {
+        for validatable in validatables {
+            if validatable.validate() == nil {
+                return validatable
+            }
+        }
+        return nil
+    }
+    
+    /**
+    Finds the first invalid `Validatable`
+    - returns: `Validatable` that is invalid.
+    */
+    public func firstInvalid() -> Validatable? {
+        for validatable in validatables {
+            if let _ = validatable.validate() {
+                return validatable
+            }
+        }
+        return nil
+    }
 }

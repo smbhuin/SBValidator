@@ -11,19 +11,24 @@ import Foundation
 /**
  `ValidationError` represents the error with message when validation fails.
  */
-public class ValidationError: Error, CustomStringConvertible {
+public struct ValidationError: Error, CustomStringConvertible {
     
     /// Error Message String
     private var message: String
+    
+    /// Validatible responsible for the error
+    public var validatable: NamedValidatable
     
     /**
      Initializes a `ValidationError` object with message String.
      
      - parameter message: String that holds error message.
+     - parameter for: Validatable responsible for the error.
      - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
      */
-    public init(_ message: String) {
+    public init(_ message: String, for validatable: NamedValidatable) {
         self.message = message
+        self.validatable = validatable
     }
     
     /// Error Description

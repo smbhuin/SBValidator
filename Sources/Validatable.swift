@@ -60,7 +60,7 @@ public class BasicValidatable<V> : NamedValidatable {
         for rule in rules {
             if let errorMessage = rule.validate(value) {
                 let separator = value is Validatable ? "/" : " "
-                return ValidationError(self.name + separator + errorMessage)
+                return ValidationError(self.name + separator + errorMessage, for: self)
             }
         }
         return nil
