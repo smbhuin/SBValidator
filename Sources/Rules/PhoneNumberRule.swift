@@ -13,8 +13,31 @@ import Foundation
  */
 public class PhoneNumberRule: RegexRule {
     
-    /// Phone number regular express string to be used in validation.
-    static let regex = "^\\d{10}$" //"^\\d{3}-\\d{3}-\\d{4}$"
+    /// Phone number formats. Each case represents different regular expression string to be used in validation.
+    public enum Format {
+        case national
+        case international // prefixed with +
+        
+        /// Regular expression string to be used in validation.
+        func regex() -> String {
+            switch self {
+            case .national:
+                return "^\\d{4,12}$"
+            case .international: // Recommended. Ref: https://www.itu.int/rec/T-REC-E.164
+                return "^\\+\\d{1,3}\\d{1,14}$"
+            }
+        }
+        
+        /// Error message for each strength types.
+        func message() -> String {
+            switch self {
+            case .national:
+                return "is not valid."
+            case .international:
+                return "is invalid. It must be in international format prefexed with +."
+            }
+        }
+    }
     
     /**
      Initializes a `PhoneNumberRule` object. Used to validate that a field has a valid phone number.
@@ -22,8 +45,8 @@ public class PhoneNumberRule: RegexRule {
     - parameter message: Error message that is displayed if validation fails.
     - returns: An initialized `PhoneNumberRule` object, or nil if an object could not be created for some reason that would not result in an exception.
     */
-    public init(message: String = "is not a valid 10 digit phone number.") {
-        super.init(regex: PhoneNumberRule.regex, message : message)
+    public init(format: PhoneNumberRule.Format, message: String = "") {
+        super.init(regex: format.regex(), message: message == "" ? format.message() : message)
     }
     
 }
@@ -31,8 +54,8 @@ public class PhoneNumberRule: RegexRule {
 public extension ValidationRule {
     
     /// Quick accessor for `PhoneNumberRule`
-    class var phoneNumber: ValidationRule<String> {
-        return PhoneNumberRule()
+    class func phoneNumber(format: PhoneNumberRule.Format = .national) -> ValidationRule<String> {
+        return PhoneNumberRule(format: format)
     }
     
 }
