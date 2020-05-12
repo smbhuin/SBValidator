@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          SBValidator Docs
+          SBValidator 2.0.1 Docs
         </a>
-         (98% documented)
+         (97% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -78,6 +78,9 @@
                 <a class="nav-group-task-link" href="../Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CurrencyRule.html">CurrencyRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateRule.html">DateRule</a>
               </li>
               <li class="nav-group-task">
@@ -114,6 +117,9 @@
                 <a class="nav-group-task-link" href="../Classes/MonthRule.html">MonthRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NumericRule.html">NumericRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
@@ -121,6 +127,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PhoneNumberRule/Format.html">– Format</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PinCodeRule.html">PinCodeRule</a>
@@ -136,9 +145,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ValidatableRule.html">ValidatableRule</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ValidationError.html">ValidationError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ValidationRule.html">ValidationRule</a>
@@ -165,12 +171,20 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ValidationError.html">ValidationError</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Validator</h1>
               <div class="declaration">
                 <div class="language">
@@ -213,7 +227,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An initialized object, or nil if an object could not be created for some reason that would not result in an exception.</p>
+                        <p>An initialized object</p>
                       </div>
                     </section>
                   </div>
@@ -223,7 +237,7 @@
                     <code>
                     <a name="/s:11SBValidator9ValidatorC3add4name5value5rulesySS_xSgSayAA14ValidationRuleCyxGGtlF"></a>
                     <a name="//apple_ref/swift/Method/add(name:value:rules:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC3add4name5value5rulesySS_xSgSayAA14ValidationRuleCyxGGtlF">add(name:value:rules:)</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC3add4name5value5rulesySS_xSgSayAA14ValidationRuleCyxGGtlF">add(name:<wbr>value:<wbr>rules:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -293,7 +307,7 @@
                     <code>
                     <a name="/s:11SBValidator9ValidatorC3add11validatableyAA16NamedValidatable_p_tF"></a>
                     <a name="//apple_ref/swift/Method/add(validatable:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC3add11validatableyAA16NamedValidatable_p_tF">add(validatable:)</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC3add11validatableyAA16NamedValidatable_p_tF">add(validatable:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -320,7 +334,7 @@
                     <code>
                     <a name="/s:11SBValidator9ValidatorC6remove5namedySS_tF"></a>
                     <a name="//apple_ref/swift/Method/remove(named:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC6remove5namedySS_tF">remove(named:)</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC6remove5namedySS_tF">remove(named:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -351,7 +365,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Name of the validatable. eg: Email</p>
+                                  <p>Name of the validatable. It is case sensitive. eg: Email</p>
                                 </div>
                               </td>
                             </tr>
@@ -364,9 +378,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SBValidator9ValidatorC8validateSb5valid_AA16NamedValidatable_pSg11validatableAA15ValidationErrorCSg5errortyF"></a>
+                    <a name="/s:11SBValidator9ValidatorC8validateSbyKF"></a>
                     <a name="//apple_ref/swift/Method/validate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC8validateSb5valid_AA16NamedValidatable_pSg11validatableAA15ValidationErrorCSg5errortyF">validate()</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC8validateSbyKF">validate()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,19 +389,25 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Validate all validatables until error. If any error found, it will not try to validate next validatable.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Structs/ValidationError.html">ValidationError</a></code> if any <code><a href="../Protocols/Validatable.html">Validatable</a></code> is invalid.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">valid</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:11SBValidator16NamedValidatableP">NamedValidatable</a></span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>(valid: Bool, validatable: NamedValidatable?, error: ValidationError?)</code></p>
+                        <p>Returns <code>true</code> if valid.</p>
                       </div>
                     </section>
                   </div>
@@ -395,9 +415,40 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SBValidator9ValidatorC8validate5namedSb5valid_AA16NamedValidatable_pSg11validatableAA15ValidationErrorCSg5errortSS_tF"></a>
+                    <a name="/s:11SBValidator9ValidatorC15errorOnValidateAA15ValidationErrorVSgyF"></a>
+                    <a name="//apple_ref/swift/Method/errorOnValidate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC15errorOnValidateAA15ValidationErrorVSgyF">errorOnValidate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Validate all validatables until error. If any error found, it will not try to validate next validatable and return the error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">errorOnValidate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ValidationError.html">ValidationError</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Structs/ValidationError.html">ValidationError</a></code> if any <code><a href="../Protocols/Validatable.html">Validatable</a></code> is invalid.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SBValidator9ValidatorC8validate5namedSbSS_tKF"></a>
                     <a name="//apple_ref/swift/Method/validate(named:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC8validate5namedSb5valid_AA16NamedValidatable_pSg11validatableAA15ValidationErrorCSg5errortSS_tF">validate(named:)</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC8validate5namedSbSS_tKF">validate(named:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -406,13 +457,19 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Validate specific validatable by its name</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Throws <code><a href="../Structs/ValidationError.html">ValidationError</a></code> if any <code><a href="../Protocols/Validatable.html">Validatable</a></code> is invalid.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">valid</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:11SBValidator16NamedValidatableP">NamedValidatable</a></span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -428,7 +485,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>name of the validatable</p>
+                                  <p>Name of the validatable</p>
                                 </div>
                               </td>
                             </tr>
@@ -437,7 +494,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>(valid: Bool, validatable: NamedValidatable?, error: ValidationError?)</code></p>
+                        <p>Returns <code>true</code> if valid.</p>
                       </div>
                     </section>
                   </div>
@@ -445,9 +502,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SBValidator9ValidatorC11validateAllSayAA16NamedValidatable_p11validatable_AA15ValidationErrorC5errortGyF"></a>
+                    <a name="/s:11SBValidator9ValidatorC11validateAllSayAA15ValidationErrorVGSgyF"></a>
                     <a name="//apple_ref/swift/Method/validateAll()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator9ValidatorC11validateAllSayAA16NamedValidatable_p11validatable_AA15ValidationErrorC5errortGyF">validateAll()</a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC11validateAllSayAA15ValidationErrorVGSgyF">validateAll()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,13 +519,75 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validateAll</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="nv">validatable</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:11SBValidator16NamedValidatableP">NamedValidatable</a></span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes/ValidationError.html">ValidationError</a></span><span class="p">)]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validateAll</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/ValidationError.html">ValidationError</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array of <code>(validatable: NamedValidatable, error: ValidationError)</code></p>
+                        <p>Array of <code><a href="../Structs/ValidationError.html">ValidationError</a></code> if any validatable is invalid otherwise nil.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SBValidator9ValidatorC10firstValidAA11Validatable_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/firstValid()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC10firstValidAA11Validatable_pSgyF">firstValid()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds the first valid <code><a href="../Protocols/Validatable.html">Validatable</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">firstValid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Protocols/Validatable.html">Validatable</a></code> that is valid.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SBValidator9ValidatorC12firstInvalidAA11Validatable_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/firstInvalid()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator9ValidatorC12firstInvalidAA11Validatable_pSgyF">firstInvalid()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds the first invalid <code><a href="../Protocols/Validatable.html">Validatable</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">firstInvalid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Validatable.html">Validatable</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Protocols/Validatable.html">Validatable</a></code> that is invalid.</p>
                       </div>
                     </section>
                   </div>
@@ -481,8 +600,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-02-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-05-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

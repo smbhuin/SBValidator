@@ -24,7 +24,6 @@ let package = Package(
             path: "Sources"),
         .testTarget(
             name: "SBValidatorTests",
-            dependencies: ["SBValidator"],
-            path: "Tests"),
+            dependencies: ["SBValidator"]),
     ]
 )

@@ -60,7 +60,7 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/SBValidator.git", from: "2.0.1")
+    .package(url: "https://github.com/smbhuin/SBValidator.git", from: "3.0.0")
 ]
 ```
 
@@ -68,7 +68,7 @@ or more strict
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/smbhuin/SBValidator.git", .exact("2.0.1"))
+    .package(url: "https://github.com/smbhuin/SBValidator.git", .exact("3.0.0"))
 ]
 ```
 
@@ -82,48 +82,55 @@ v.add(name: "Email", value: email, rules: [.required, .email])
 v.add(name: "Name", value: name, rules: [.required, .fullName])
 v.add(name: "Subject", value: subject, rules: [.required, .length(min: 10, max: 200)])
 v.add(name: "Message", value: message, rules: [.required, .length(min: 10, max: 2000)])
-let (valid, validatable, error) = v.validate()
+do {
+    try v.validate()
+} catch {
+    debugPrint(error)
+}
 ```
 
 ### Validation Rules
 
-| Rules          | Description               |
-| -------------- | ------------------------- |
+| Rules | Description |
+| -- | -- |
 | AlphaNumericRule | Only Alpha Numeric characters are allowed. |
 | AlphaRule | Only Alpha characters are allowed. |
 | ArrayLengthRule | Puts a limit on array length. |
-| ArrayRule |Apply rules on each element of array.|
-| CharacterSetRule |Provides set of characters to be allowed.|
-| ConfirmRule |Match with specific value.|
-| CoordinateRule |Takes latitude and longitude as `[Double]` and validates.|
-| CurrencyRule |Takes currency as `String` and validates.|
-| DateRule |Takes date as `String` and validates.|
-| EmailRule |Checks for valid email.|
-| EnumRule |Checks against a set of values.|
-| ExactLengthRule |Checks for fixed length of `String`|
-| FloatRule |Check for valid floating point number as `String`|
-| FullNameRule |Checks for full name of a person.|
-| HexColorRule ||
-| IPV4Rule ||
-| ISBNRule ||
-| ISO8601DateRule ||
-| LengthRule ||
-| MonthRule ||
-| NumericRule ||
-| PasswordRule ||
-| PhoneNumberRule ||
-| PinCodeRule ||
-| RangeRule ||
-| RegexRule ||
-| RequiredRule ||
-| ValidatableRule ||
-| ValidationRule ||
-| YearExpiryRule ||
-| ZipCodeRule ||
+| ArrayRule | Apply rules on each element of array. |
+| CharacterSetRule |Provides set of characters to be allowed. |
+| ConfirmRule | Match with specific value. |
+| CoordinateRule | Takes latitude and longitude as `[Double]` and validates. |
+| CurrencyRule | Takes currency as `String` and validates. |
+| DateRule | Takes date as `String` and validates. |
+| EmailRule | Checks for valid email. |
+| EnumRule | Checks against a set of values. |
+| ExactLengthRule | Checks for fixed length of `String` |
+| FloatRule | Check for valid floating point number as `String` |
+| FullNameRule | Checks for full name of a person. |
+| HexColorRule | Validates hex color code. |
+| IPV4Rule | Checks for IP v4. |
+| ISBNRule | Checks for valid ISBN number. |
+| ISO8601DateRule | Checks for Date String in IOS8601 format. |
+| LengthRule | Checks for minimun and maximum length provided. |
+| MonthRule | Checks for valid month number (`01` to `12`) |
+| NumericRule | Checks for decimal degits only. |
+| PasswordRule | Checks for password of desired strength. |
+| PhoneNumberRule | Checks for valid phone number. |
+| PinCodeRule | Checks for valid indian pin code. |
+| RangeRule | Checks against minimum and maximum value provided. |
+| RegexRule | Checks against regular expression provided. |
+| RequiredRule | Checks if it has value, not `nil` or `empty` |
+| ValidatableRule | For `struct` or `object` validation. |
+| YearExpiryRule | Validates credit/debit card's expiry year. |
+| ZipCodeRule | Checks for valid zip code. |
 
 ## API documentation
 
 For more information visit our [API reference](https://smbhuin.github.io/SBValidator/).
+
+## Credits
+
+Thanks to [SwiftValidator](https://github.com/SwiftValidatorCommunity/SwiftValidator)
 
 ## License
 

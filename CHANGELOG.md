@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 `SBValidator` adheres to [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## [3.0.0](https://github.com/smbhuin/SBValidator/releases/tag/3.0.0)
 
 #### Added
 - `CurrencyRule` added.

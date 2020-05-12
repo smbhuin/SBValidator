@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          SBValidator Docs
+          SBValidator 2.0.1 Docs
         </a>
-         (98% documented)
+         (97% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -78,6 +78,9 @@
                 <a class="nav-group-task-link" href="../Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CurrencyRule.html">CurrencyRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/DateRule.html">DateRule</a>
               </li>
               <li class="nav-group-task">
@@ -114,6 +117,9 @@
                 <a class="nav-group-task-link" href="../Classes/MonthRule.html">MonthRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NumericRule.html">NumericRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
@@ -121,6 +127,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PhoneNumberRule/Format.html">– Format</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PinCodeRule.html">PinCodeRule</a>
@@ -136,9 +145,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ValidatableRule.html">ValidatableRule</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/ValidationError.html">ValidationError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ValidationRule.html">ValidationRule</a>
@@ -165,12 +171,20 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ValidationError.html">ValidationError</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>ValidationRule</h1>
               <div class="declaration">
                 <div class="language">
@@ -192,7 +206,7 @@
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC7messageACyxGSS_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(message:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC7messageACyxGSS_tcfc">init(message:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC7messageACyxGSS_tcfc">init(message:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -223,7 +237,7 @@
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC8validateySSSgxSgF"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC8validateySSSgxSgF">validate(_:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC8validateySSSgxSgF">validate(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -268,10 +282,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -299,10 +309,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -330,16 +336,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC11arrayLength3min3maxACySayqd__GGSi_SitlFZ"></a>
                     <a name="//apple_ref/swift/Method/arrayLength(min:max:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11arrayLength3min3maxACySayqd__GGSi_SitlFZ">arrayLength(min:max:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11arrayLength3min3maxACySayqd__GGSi_SitlFZ">arrayLength(min:<wbr>max:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -361,16 +363,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC5array5rulesACySayqd__GGSayACyqd__GG_tlFZ"></a>
                     <a name="//apple_ref/swift/Method/array(rules:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5array5rulesACySayqd__GGSayACyqd__GG_tlFZ">array(rules:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5array5rulesACySayqd__GGSayACyqd__GG_tlFZ">array(rules:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -392,16 +390,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC12characterSetyACySSG10Foundation09CharacterE0VFZ"></a>
                     <a name="//apple_ref/swift/Method/characterSet(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC12characterSetyACySSG10Foundation09CharacterE0VFZ">characterSet(_:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC12characterSetyACySSG10Foundation09CharacterE0VFZ">characterSet(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -423,16 +417,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC7confirmyACyqd__Gqd__SQRd__lFZ"></a>
                     <a name="//apple_ref/swift/Method/confirm(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC7confirmyACyqd__Gqd__SQRd__lFZ">confirm(_:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC7confirmyACyqd__Gqd__SQRd__lFZ">confirm(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -454,10 +444,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -485,16 +471,39 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SBValidator14ValidationRuleC8currencyACySSGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/currency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC8currencyACySSGvpZ">currency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for <code><a href="../Classes/CurrencyRule.html">CurrencyRule</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">currency</span><span class="p">:</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC4date6formatACySSGSS_tFZ"></a>
                     <a name="//apple_ref/swift/Method/date(format:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC4date6formatACySSGSS_tFZ">date(format:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC4date6formatACySSGSS_tFZ">date(format:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -516,10 +525,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -547,16 +552,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC4enumyACyqd__GSayqd__GSQRd__lFZ"></a>
                     <a name="//apple_ref/swift/Method/enum(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC4enumyACyqd__GSayqd__GSQRd__lFZ">enum(_:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC4enumyACyqd__GSayqd__GSQRd__lFZ">enum(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -578,16 +579,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC11exactLengthyACySSGSiFZ"></a>
                     <a name="//apple_ref/swift/Method/exactLength(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11exactLengthyACySSGSiFZ">exactLength(_:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11exactLengthyACySSGSiFZ">exactLength(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -609,10 +606,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -640,10 +633,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -671,10 +660,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -702,10 +687,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -733,10 +714,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -764,16 +741,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC11iso8601Date7optionsACySSGSo09NSISO8601E13FormatOptionsV_tFZ"></a>
                     <a name="//apple_ref/swift/Method/iso8601Date(options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11iso8601Date7optionsACySSGSo09NSISO8601E13FormatOptionsV_tFZ">iso8601Date(options:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11iso8601Date7optionsACySSGSo09NSISO8601E13FormatOptionsV_tFZ">iso8601Date(options:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -788,7 +761,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(OSX 10.12, iOS 10.0, watchOS 3.0, *)</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="kt">OSX</span> <span class="mf">10.12</span><span class="p">,</span> <span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">3.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">class</span> <span class="kd">func</span> <span class="nf">iso8601Date</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="kt">ISO8601DateFormatter</span><span class="o">.</span><span class="kt">Options</span> <span class="o">=</span> <span class="p">[])</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -796,16 +769,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC6length3min3maxACySSGSi_SitFZ"></a>
                     <a name="//apple_ref/swift/Method/length(min:max:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC6length3min3maxACySSGSi_SitFZ">length(min:max:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC6length3min3maxACySSGSi_SitFZ">length(min:<wbr>max:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -827,10 +796,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -858,16 +823,39 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11SBValidator14ValidationRuleC7numericACySSGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/numeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC7numericACySSGvpZ">numeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Quick accessor for <code><a href="../Classes/NumericRule.html">NumericRule</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">numeric</span><span class="p">:</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC8password8strengthACySSGAA08PasswordC0C8StrengthO_tFZ"></a>
                     <a name="//apple_ref/swift/Method/password(strength:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC8password8strengthACySSGAA08PasswordC0C8StrengthO_tFZ">password(strength:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC8password8strengthACySSGAA08PasswordC0C8StrengthO_tFZ">password(strength:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -889,16 +877,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11SBValidator14ValidationRuleC11phoneNumberACySSGvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/phoneNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11phoneNumberACySSGvpZ">phoneNumber</a>
+                    <a name="/s:11SBValidator14ValidationRuleC11phoneNumber6formatACySSGAA05PhoneeC0C6FormatO_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/phoneNumber(format:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC11phoneNumber6formatACySSGAA05PhoneeC0C6FormatO_tFZ">phoneNumber(format:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -913,17 +897,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">phoneNumber</span><span class="p">:</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">phoneNumber</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Classes/PhoneNumberRule.html">PhoneNumberRule</a></span><span class="o">.</span><span class="kt">Format</span> <span class="o">=</span> <span class="o">.</span><span class="n">national</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidationRule</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -951,16 +931,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC5range3min3maxACyqd__Gqd___qd__tSLRd__s23CustomStringConvertibleRd__lFZ"></a>
                     <a name="//apple_ref/swift/Method/range(min:max:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5range3min3maxACyqd__Gqd___qd__tSLRd__s23CustomStringConvertibleRd__lFZ">range(min:max:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5range3min3maxACyqd__Gqd___qd__tSLRd__s23CustomStringConvertibleRd__lFZ">range(min:<wbr>max:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -982,16 +958,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC5regex7patternACySSGSS_tFZ"></a>
                     <a name="//apple_ref/swift/Method/regex(pattern:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5regex7patternACySSGSS_tFZ">regex(pattern:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC5regex7patternACySSGSS_tFZ">regex(pattern:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1013,10 +985,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1044,10 +1012,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1075,16 +1039,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:11SBValidator14ValidationRuleC10yearExpiry8validityACySSGSi_tFZ"></a>
                     <a name="//apple_ref/swift/Method/yearExpiry(validity:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11SBValidator14ValidationRuleC10yearExpiry8validityACySSGSi_tFZ">yearExpiry(validity:)</a>
+                    <a class="token" href="#/s:11SBValidator14ValidationRuleC10yearExpiry8validityACySSGSi_tFZ">yearExpiry(validity:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1106,10 +1066,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1145,8 +1101,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-02-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-05-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

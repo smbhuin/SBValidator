@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          SBValidator Docs
+          SBValidator 2.0.1 Docs
         </a>
-         (98% documented)
+         (97% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -77,6 +77,9 @@
                 <a class="nav-group-task-link" href="Classes/CoordinateRule.html">CoordinateRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CurrencyRule.html">CurrencyRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/DateRule.html">DateRule</a>
               </li>
               <li class="nav-group-task">
@@ -113,6 +116,9 @@
                 <a class="nav-group-task-link" href="Classes/MonthRule.html">MonthRule</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/NumericRule.html">NumericRule</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PasswordRule.html">PasswordRule</a>
               </li>
               <li class="nav-group-task">
@@ -120,6 +126,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PhoneNumberRule.html">PhoneNumberRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PhoneNumberRule/Format.html">– Format</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/PinCodeRule.html">PinCodeRule</a>
@@ -135,9 +144,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ValidatableRule.html">ValidatableRule</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/ValidationError.html">ValidationError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ValidationRule.html">ValidationRule</a>
@@ -164,12 +170,20 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ValidationError.html">ValidationError</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             
             <h1 id='sbvalidator' class='heading'>SBValidator</h1>
 
@@ -184,6 +198,7 @@
 <ul>
 <li>Rule based validation</li>
 <li>Class/Struct validation</li>
+<li>JSON validation</li>
 <li>Validatable/Validator chaining</li>
 <li>Linux Compatible (Can be used with <a href="https://www.kitura.io">Kitura</a>, <a href="https://vapor.codes">Vapor</a>, <a href="https://perfect.org">Perfect</a>)</li>
 </ul>
@@ -221,13 +236,13 @@ Specify in Cartfile:</p>
 
 <p>You can use <a href="https://swift.org/package-manager/">Swift Package Manager</a> and specify dependency in <code>Package.swift</code> by adding this:</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.0"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.1"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 
 <p>or more strict</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"2.0.0"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"2.0.1"</span><span class="p">))</span>
 <span class="p">]</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
@@ -240,6 +255,139 @@ Specify in Cartfile:</p>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">2000</span><span class="p">)])</span>
 <span class="k">let</span> <span class="p">(</span><span class="nv">valid</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">,</span> <span class="nv">error</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
 </code></pre>
+<h3 id='validation-rules' class='heading'>Validation Rules</h3>
+
+<table><thead>
+<tr>
+<th>Rules</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AlphaNumericRule</td>
+<td>Only Alpha Numeric characters are allowed.</td>
+</tr>
+<tr>
+<td>AlphaRule</td>
+<td>Only Alpha characters are allowed.</td>
+</tr>
+<tr>
+<td>ArrayLengthRule</td>
+<td>Puts a limit on array length.</td>
+</tr>
+<tr>
+<td>ArrayRule</td>
+<td>Apply rules on each element of array.</td>
+</tr>
+<tr>
+<td>CharacterSetRule</td>
+<td>Provides set of characters to be allowed.</td>
+</tr>
+<tr>
+<td>ConfirmRule</td>
+<td>Match with specific value.</td>
+</tr>
+<tr>
+<td>CoordinateRule</td>
+<td>Takes latitude and longitude as <code>[Double]</code> and validates.</td>
+</tr>
+<tr>
+<td>CurrencyRule</td>
+<td>Takes currency as <code>String</code> and validates.</td>
+</tr>
+<tr>
+<td>DateRule</td>
+<td>Takes date as <code>String</code> and validates.</td>
+</tr>
+<tr>
+<td>EmailRule</td>
+<td>Checks for valid email.</td>
+</tr>
+<tr>
+<td>EnumRule</td>
+<td>Checks against a set of values.</td>
+</tr>
+<tr>
+<td>ExactLengthRule</td>
+<td>Checks for fixed length of <code>String</code></td>
+</tr>
+<tr>
+<td>FloatRule</td>
+<td>Check for valid floating point number as <code>String</code></td>
+</tr>
+<tr>
+<td>FullNameRule</td>
+<td>Checks for full name of a person.</td>
+</tr>
+<tr>
+<td>HexColorRule</td>
+<td></td>
+</tr>
+<tr>
+<td>IPV4Rule</td>
+<td></td>
+</tr>
+<tr>
+<td>ISBNRule</td>
+<td></td>
+</tr>
+<tr>
+<td>ISO8601DateRule</td>
+<td></td>
+</tr>
+<tr>
+<td>LengthRule</td>
+<td></td>
+</tr>
+<tr>
+<td>MonthRule</td>
+<td></td>
+</tr>
+<tr>
+<td>NumericRule</td>
+<td></td>
+</tr>
+<tr>
+<td>PasswordRule</td>
+<td></td>
+</tr>
+<tr>
+<td>PhoneNumberRule</td>
+<td></td>
+</tr>
+<tr>
+<td>PinCodeRule</td>
+<td></td>
+</tr>
+<tr>
+<td>RangeRule</td>
+<td></td>
+</tr>
+<tr>
+<td>RegexRule</td>
+<td></td>
+</tr>
+<tr>
+<td>RequiredRule</td>
+<td></td>
+</tr>
+<tr>
+<td>ValidatableRule</td>
+<td></td>
+</tr>
+<tr>
+<td>ValidationRule</td>
+<td></td>
+</tr>
+<tr>
+<td>YearExpiryRule</td>
+<td></td>
+</tr>
+<tr>
+<td>ZipCodeRule</td>
+<td></td>
+</tr>
+</tbody></table>
 <h2 id='api-documentation' class='heading'>API documentation</h2>
 
 <p>For more information visit our <a href="https://smbhuin.github.io/SBValidator/">API reference</a>.</p>
@@ -254,8 +402,8 @@ Specify in Cartfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-02-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-05-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -47,6 +47,16 @@
                ReferencedContainer = "container:SBValidator.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DF709F9722F1C10800ACDFBB"
+               BuildableName = "SBValidator tvOS Tests.xctest"
+               BlueprintName = "SBValidator tvOS Tests"
+               ReferencedContainer = "container:SBValidator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
