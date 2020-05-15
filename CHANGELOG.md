@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - `CurrencyRule` added.
 - `NumericRule` added.
 - `errorOnValidate` method added in `Validator`
+- `firstValid` method added in `Validator`
+- `firstInvalid` method added in `Validator`
 
 #### Updated
 - `PhoneNumberRule` updated. You can now specify the `Format` of phone number.

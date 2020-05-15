@@ -22,9 +22,9 @@ public class PhoneNumberRule: RegexRule {
         func regex() -> String {
             switch self {
             case .national:
-                return "^\\d{4,12}$"
+                return "^\\d{4,14}$"
             case .international: // Recommended. Ref: https://www.itu.int/rec/T-REC-E.164
-                return "^\\+\\d{1,3}\\d{1,14}$"
+                return "^\\+\\d{4,15}$"
             }
         }
         
@@ -34,7 +34,7 @@ public class PhoneNumberRule: RegexRule {
             case .national:
                 return "is not valid."
             case .international:
-                return "is invalid. It must be in international format prefexed with +."
+                return "is invalid. It must be in international format prefixed with +."
             }
         }
     }
