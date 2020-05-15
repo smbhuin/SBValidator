@@ -20,7 +20,7 @@ public class YearExpiryRule : ValidationRule<String> {
      Initializes `YearExpiryRule` object with error message. Used to validate a card's expiry year.
      
      - parameter message: Error message string.
-     - returns: An initialized `YearExpiryRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `YearExpiryRule` object.
      */
     public init(validity: Int = 3, message: String = "") {
         self.validity = validity

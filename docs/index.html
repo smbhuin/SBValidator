@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          SBValidator 2.0.1 Docs
+          SBValidator 3.0.0 Docs
         </a>
          (97% documented)
       </p>
@@ -236,13 +236,13 @@ Specify in Cartfile:</p>
 
 <p>You can use <a href="https://swift.org/package-manager/">Swift Package Manager</a> and specify dependency in <code>Package.swift</code> by adding this:</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.0.1"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"3.0.0"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 
 <p>or more strict</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"2.0.1"</span><span class="p">))</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/smbhuin/SBValidator.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">exact</span><span class="p">(</span><span class="s">"3.0.0"</span><span class="p">))</span>
 <span class="p">]</span>
 </code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
@@ -253,7 +253,11 @@ Specify in Cartfile:</p>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Name"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="n">fullName</span><span class="p">])</span>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Subject"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">subject</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">200</span><span class="p">)])</span>
 <span class="n">v</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Message"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span> <span class="nv">rules</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kd">required</span><span class="p">,</span> <span class="o">.</span><span class="nf">length</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">2000</span><span class="p">)])</span>
-<span class="k">let</span> <span class="p">(</span><span class="nv">valid</span><span class="p">,</span> <span class="nv">validatable</span><span class="p">,</span> <span class="nv">error</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="n">v</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">debugPrint</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 <h3 id='validation-rules' class='heading'>Validation Rules</h3>
 
@@ -321,76 +325,75 @@ Specify in Cartfile:</p>
 </tr>
 <tr>
 <td>HexColorRule</td>
-<td></td>
+<td>Validates hex color code.</td>
 </tr>
 <tr>
 <td>IPV4Rule</td>
-<td></td>
+<td>Checks for IP v4.</td>
 </tr>
 <tr>
 <td>ISBNRule</td>
-<td></td>
+<td>Checks for valid ISBN number.</td>
 </tr>
 <tr>
 <td>ISO8601DateRule</td>
-<td></td>
+<td>Checks for Date String in IOS8601 format.</td>
 </tr>
 <tr>
 <td>LengthRule</td>
-<td></td>
+<td>Checks for minimun and maximum length provided.</td>
 </tr>
 <tr>
 <td>MonthRule</td>
-<td></td>
+<td>Checks for valid month number (<code>01</code> to <code>12</code>)</td>
 </tr>
 <tr>
 <td>NumericRule</td>
-<td></td>
+<td>Checks for decimal degits only.</td>
 </tr>
 <tr>
 <td>PasswordRule</td>
-<td></td>
+<td>Checks for password of desired strength.</td>
 </tr>
 <tr>
 <td>PhoneNumberRule</td>
-<td></td>
+<td>Checks for valid phone number.</td>
 </tr>
 <tr>
 <td>PinCodeRule</td>
-<td></td>
+<td>Checks for valid indian pin code.</td>
 </tr>
 <tr>
 <td>RangeRule</td>
-<td></td>
+<td>Checks against minimum and maximum value provided.</td>
 </tr>
 <tr>
 <td>RegexRule</td>
-<td></td>
+<td>Checks against regular expression provided.</td>
 </tr>
 <tr>
 <td>RequiredRule</td>
-<td></td>
+<td>Checks if it has value, not <code>nil</code> or <code>empty</code></td>
 </tr>
 <tr>
 <td>ValidatableRule</td>
-<td></td>
-</tr>
-<tr>
-<td>ValidationRule</td>
-<td></td>
+<td>For <code>struct</code> or <code>object</code> validation.</td>
 </tr>
 <tr>
 <td>YearExpiryRule</td>
-<td></td>
+<td>Validates credit/debit card&rsquo;s expiry year.</td>
 </tr>
 <tr>
 <td>ZipCodeRule</td>
-<td></td>
+<td>Checks for valid zip code.</td>
 </tr>
 </tbody></table>
 <h2 id='api-documentation' class='heading'>API documentation</h2>
 
 <p>For more information visit our <a href="https://smbhuin.github.io/SBValidator/">API reference</a>.</p>
+<h2 id='credits' class='heading'>Credits</h2>
+
+<p>Thanks to <a href="https://github.com/SwiftValidatorCommunity/SwiftValidator">SwiftValidator</a></p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>This library is licensed under MIT. Full license text is available in <a href="https://github.com/smbhuin/SBValidator/blob/master/LICENSE">LICENSE</a>.</p>
@@ -402,7 +405,7 @@ Specify in Cartfile:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-05-12)</p>
+      <p>&copy; 2020 <a class="link" href="https://github.com/smbhuin/SBValidator" target="_blank" rel="external">Soumen Bhuin</a>. All rights reserved. (Last updated: 2020-05-14)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

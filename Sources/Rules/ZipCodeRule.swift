@@ -20,7 +20,7 @@ public class ZipCodeRule: RegexRule {
      Initializes a `ZipCodeRule` object.
      
      - parameter message: String that holds error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "is not a valid 5 or 9 digit zipcode."){
         super.init(regex: ZipCodeRule.regex, message: message)

@@ -20,7 +20,7 @@ public class HexColorRule : RegexRule {
      Initializes a `HexaColorRule` object to verify that field has text in hexadecimal color format.
      
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "is not a valid hex color.") {
         super.init(regex: HexColorRule.regex, message: message)

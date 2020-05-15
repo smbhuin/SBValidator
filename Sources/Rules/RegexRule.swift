@@ -21,7 +21,7 @@ open class RegexRule: ValidationRule<String> {
      
      - parameter regex: Regular expression string to be used in validation.
      - parameter message: String of error message.
-     - returns: An initialized `RegexRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `RegexRule` object.
      */
     public init(regex: String, message: String = "is invalid.") {
         self._regex = regex

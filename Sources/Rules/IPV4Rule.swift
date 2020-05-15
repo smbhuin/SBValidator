@@ -20,7 +20,7 @@ public class IPV4Rule : RegexRule {
      Initializes a `IPV4Rule` object to verify that field has text is an IPV4Rule address.
      
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "is not a valid IPV4 address.") {
         super.init(regex: IPV4Rule.regex, message: message)

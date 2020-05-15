@@ -17,7 +17,7 @@ public class MonthRule : ValidationRule<String> {
      Initializes `MonthRule` object with error message. Used to validate a month represented as number.
      
      - parameter message: String of error message.
-     - returns: An initialized `MonthRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `MonthRule` object.
      */
     public override init(message : String = "not a valid month. must be 01 to 12."){
         super.init(message: message)

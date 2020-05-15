@@ -52,7 +52,7 @@ public class PasswordRule : RegexRule {
      
      - parameter strength: `PasswordRule.Strength`.
      - parameter message: String of error message.
-     - returns: An initialized `PasswordRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `PasswordRule` object.
      */
     public init(strength: PasswordRule.Strength = .weak, message: String = "") {
         super.init(regex: strength.regex(), message: message == "" ? strength.message() : message)

@@ -43,7 +43,7 @@ public class PhoneNumberRule: RegexRule {
      Initializes a `PhoneNumberRule` object. Used to validate that a field has a valid phone number.
      
     - parameter message: Error message that is displayed if validation fails.
-    - returns: An initialized `PhoneNumberRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+    - returns: An initialized `PhoneNumberRule` object.
     */
     public init(format: PhoneNumberRule.Format, message: String = "") {
         super.init(regex: format.regex(), message: message == "" ? format.message() : message)

@@ -21,7 +21,7 @@ open class CharacterSetRule : ValidationRule<String> {
      Initializes a `CharacterSetRule` object to verify that field has valid set of characters.
      
      - parameter characterSet: NSCharacterSet that holds group of valid characters.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(characterSet: CharacterSet, message: String = "contains invalid characters.") {
         self.characterSet = characterSet

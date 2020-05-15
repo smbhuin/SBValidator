@@ -17,7 +17,7 @@ public class FullNameRule : ValidationRule<String> {
      Initializes a `FullNameRule` object that is used to verify that text in field is a full name.
      
      - parameter message: String of error message.
-     - returns: An initialized `FullNameRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `FullNameRule` object.
      */
     public override init(message: String = "is not a valid full name.") {
         super.init(message: message)

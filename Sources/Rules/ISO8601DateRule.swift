@@ -21,7 +21,7 @@ public class ISO8601DateRule: ValidationRule<String> {
      Initializes a `ISO8601DateRule` object that will validate a value is not nil.
      
      - parameter message: String of error message.
-     - returns: An initialized `ISO8601DateRule` object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized `ISO8601DateRule` object.
      */
     public init(options: ISO8601DateFormatter.Options, message: String = "is invalid.") {
         self.options = options

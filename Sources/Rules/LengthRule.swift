@@ -22,7 +22,7 @@ public class LengthRule : ValidationRule<String> {
      - parameter min: Minimum required length of value.
      - parameter max: Maximum required length of value.
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(min: Int, max: Int, message: String? = nil) {
         self.min = min

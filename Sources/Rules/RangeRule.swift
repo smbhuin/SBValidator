@@ -22,7 +22,7 @@ public class RangeRule<V> : ValidationRule<V> where V : Comparable, V : CustomSt
      - parameter min: Minimum required quantity of value.
      - parameter max: Maximum required quantity of value.
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(min: V, max: V, message: String? = nil) {
         self.min = min

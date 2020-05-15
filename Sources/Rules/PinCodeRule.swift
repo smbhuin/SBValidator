@@ -20,7 +20,7 @@ public class PinCodeRule: RegexRule {
      Initializes a `PinCodeRule` object.
      
      - parameter message: String that holds error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "is not a valid 6 digit pincode."){
         super.init(regex: PinCodeRule.regex, message: message)

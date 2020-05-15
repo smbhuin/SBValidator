@@ -17,7 +17,7 @@ public class ISBNRule : ValidationRule<String> {
      Initializes a `ISBNRule` object to verify that value is a ISBN number.
      
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public override init(message: String = "is not a valid ISBN number.") {
         super.init(message: message)

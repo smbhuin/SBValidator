@@ -292,6 +292,7 @@ final class ValidatorTests: XCTestCase {
         ("FullName", testFullname),
         ("Alpha", testAlpha),
         ("AlphaNumeric", testAlphaNumeric),
+        ("Currency", testCurrency),
         ("Email", testEmail),
         ("Enum", testEnum),
         ("YearExpiry", testYearExpiry),

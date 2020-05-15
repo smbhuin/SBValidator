@@ -20,7 +20,7 @@ public class ArrayRule<V>: ValidationRule<Array<V>> {
      Initializes a `ArrayRule` object to validate that provided array has valid elements.
      
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "contains invalid element.", rules: [ValidationRule<V>]){
         self.rules = rules

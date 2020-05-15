@@ -20,7 +20,7 @@ public class EmailRule : RegexRule {
      Initializes an `EmailRule` object to validate an email field.
      
      - parameter message: String of error message.
-     - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
+     - returns: An initialized object.
      */
     public init(message: String = "is invalid."){
         super.init(regex: EmailRule.regex, message: message)
